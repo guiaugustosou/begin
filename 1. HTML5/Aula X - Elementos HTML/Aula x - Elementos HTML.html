@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+<title>Page Title</title>
+<link rel=stylesheet type="text/css" href="style.css";>
+<meta charset="utf-8"/>
+<meta name="author" content="Guilherme Augusto"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+</head>
+<body> 
+<h1>Elementos, Formatação e Estrutura HTML</h1>
+    <p>Além da estruturação já conhecida do HTML, a iniciar com a declaração DOCTYPE, seguida de html, head, body, há inúmeros recursos de formatação e estilização que serão abordados a seguir.</p>
+<h2>1. "background"</h2>
+    <p>Diversos aspectos do fundo da página podem ser alterados pela propriedade CSS background. Vejamos as funções.</p>
+<h4>1.1. background-color</h4>
+    <p>Define a cor de fundo de um elemento.</p>
+    <p>Sintaxe:</p>
+        <p>
+            background-color:valor
+        </p>
+        <p>
+            seletor:
+            {
+            background-color:#CCC;
+            }
+        </p>
+        <p>Aplicação no CSS interno:
+        </p>
+        <p>
+            <
+            !
+            DOCTYPE 
+            html
+            >
+        </p>
+        <p>
+            <
+            html 
+            lang=
+            "pt-br"
+            >
+        </p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p>
+            <
+            title
+                   >
+                Título da Página
+            <
+            /title>
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>
+            body
+            {
+            background-color:
+            #CCC;      
+            }
+        </p>
+        <p>
+            < 
+            /
+            style
+            >
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h4>1.2. background-image</h4>            
+    <p>Define a imagem de fundo de um elemento. Por padrão, sempre que utilizamos a propriedade background-image, o navegador repetirá a imagem quantas vezes for necessário até preencher todo o fundo do elemento.</p>
+    <p>Sintaxe:</p>
+        <p>
+            background-image:url("nome ou endereço da imagem")
+        </p>
+        <p>
+            seletor:
+            {
+            background-image:url("imagem.gif");
+            }
+        </p>
+        <p>No método CSS interno, fica da seguinte forma:
+        <p>
+            <
+            !
+            DOCTYPE 
+            html
+            >
+        </p>
+        <p>
+            <
+            html 
+            lang=
+            "pt-br"
+            >
+        </p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p>
+            <
+            title
+            >
+                Título da Página
+            <
+            /title>
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>
+            body
+            {
+            background-color:
+            url("image.gif");      
+            }
+        </p>
+        <p>
+            < 
+            /
+            style
+            >
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h4>1.3. background-repeat</h4>
+    <p>Define como a imagem se repetirá no fundo de um elemento.</p>
+    <p>Sintaxe:</p>
+        <p>seletor {background-image:url("nome_da_imagem.jpg");}</p>
+        <p>body {background-image:url("nome_da_imagem.jpg");}</p>
+<h4>1.3.1. background-repeat:repeat</h4>
+    <p>A imagem é repetida até cobrir todo o fundo. A última imagem será cortada se não couber.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat;}</p>
+<h4>1.3.2. background-repeat:no-repeat</h4>
+    <p>A imagem não se repete.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat;}</p>
+<h4>1.3.3. background-repeat:repeat-x</h4>
+    <p>A imagem se repete na horizontal (eixo x)</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat-x;}</p>
+<h4>1.3.4. background-repeat:repeat-y</h4>
+    <p>A imagem se repete na vertical (eixo y)</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat-y;}</p>
+<h4>1.3.5. background-repeat:space</h4>
+    <p>A imagem se repete sem recortes e com distribuição de espaçoes em branco entre elas para que não haja recortes da imagem</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:space;}</p>
+<h4>1.3.6. background-repeat:round</h4>
+    <p>A imagem se esticará ou comprimirá para se adaptar a tela.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:round;}</p>
+<h4>1.4. background-attachment</h4>
+    <p>Define se uma imagem de fundo é fixa ou rola com o resto da página. Esta propriedade aceita como valores: a) fixed, que deixa o fundo fixo e não rola quando o usuário mexe no scroll da página; b) scroll, que também rola o fundo ao utilizar o scroll da página.</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-attachment:fixed;}</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-attachment:scroll;}
+<h4>1.5. background-position</h4>
+    <p>Define a posição inicial de uma imagem de fundo. Os valores admitidos são os seguintes: </p>
+        <p>a) left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom - para posicionamentos fixos;</p>
+        <p>b) x% y% - para posicionamento no eixo x (horizontal) e eixo y (vertical), conforme a porcentagem/=;</p>
+        <p>c) xpos ypos - para posicionamento no eixo x (horizontal) e eixo y (vertical, com medida em pixels;</p>
+        <p>d) initial - é valor padrão (esquerda superior)</p>
+        <p>e)inherit - toma a propriedade do elemento pai</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; background-attachment:fixed; background-position: center;}
+<h4>1.6. background-size</h4>
+    <p>Define o tamanho da imagem de fundo. Admitem-se os seguintes valores:</p>
+        <p>a) auto - valor padrão (mesma largura e altura da imagem);</p>
+        <p>b) lenght:width height - define um valor em pixel para a largura e altura. Se apenas um é definido, o segundo fica como auto;</p>
+        <p>c) % - define um valor em porcentagem para a largura e altura. Se apenas um é definido, o segundo fica como auto;</p>
+        <p>d) cover - encaixa a imagem de fundo, preenchendo todo o espaço, sem repetição (pode ser que a imagem não apareça toda)</p>
+        <p>e) contain - encaixa a imagem perfeitamente no fundo da página;</p>
+        <p>f) initial: valor padrão (mesma largura e altura da imagem)</p>
+        <p>g) inherit - herda a propriedade do elemento pai</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; background-size: 300px 500px;}</p>
+<h4>1.7. background-origin</h4>
+    <p>Define como a imagem de fundo está posicionada. Os valores aplicáveis são os seguintes:</p>
+        <p>a) border-box - a imagem inicia no canto superior esquerdo e ocupa a área da borda (se houver);</p>
+        <p>b) padding-box - imagem inicia no canto superior esquerdo e desconsidera a área da borda (se houver)</p>
+        <p>c) content-box: imagem inicia no canto superior esquerdo e desconsidera a área da borda e do padding (espaçamento interno, se houver).</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; padding:50px; background-origin:padding-box;}</p>
+    <p>Obs: a propriedade padding:valor formata espaçamento interno.</p>
+<h4>1.8. background-clip</h4>
+    <p>Define a área de pintura do plano de fundo. As propriedades aplicáveis são:</p>
+        <p>a) border-box: começa do canto superior esquerdo e preenche todo o fundo incluído a borda (padrão);</p>
+        <p>b) padding-box: começa do canto superior esquerdo e não preenche a borda (padrão);</p>
+        <p>c) content-box - preenche apenas a área com conteúdo;</p>
+        <p>d) initial: define a propriedade como padrão (border-box).</p>
+    <p>Sintaxe:</p>
+        <p>body {border:20px black; padding:55px; background:yellow; background-clip:content-box;}</p>
+<h4>1.9. Declaração resumida do background</h4>
+    <p>É possível sintetizar (reduzir) o tamanho do comando background e suas propriedades, conforme a seguinte ordem:</p>
+        <p>seletor {background: background-color background image background-repeat background attachment background position;}
+    </p>
+    <p>Obs: se algum valor for omitido, toma-se o padrão.</p>
+    <p>Sintaxe:</p>
+        <p>body {background: #f00 url("fundo.jpg") no-repeat fixed 200px 150px;}</p>
+<h4>1.9. Múltiplos Fundos</h4>
+    <p>O CSS3 permite aplicar mais de uma imagem de fundo a um elemento. Ocorre uma sobreposição de fundos, conforme a ordem dos comandos na declaração. As propriedades de todas essas imagens é separada por vírgula. Vejamos a sintaxe:</p>
+    <p>body {background-image: url(img1.gif), url(img2.gif), url(img3.jpg); background-position: right bottom, left top, center top; background-repeat: no-repeat, repeat, no-repeat;}</p>
+<h2>2. "border"</h2>
+    <p>A borda de um elemento HTML é trabalhada pela propriedade border. Ela admite os seguintes valores:</p>
+    <p>a) border-width - define a largura da borda. O valor padrão é "medium" (médio)</p>
+    <p>b) border-style - define o estilo da borda. O valor padrão é "none" (nenhum).</p>
+    <p>c) border-color - define a cor da borda. O valor padrão é a cor do elemento definido. </p>
+    <p>d) inicial - define esta propriedade como seu valor padrão;
+    <p>e) inherit - herda essa propriedade de seu elemento pai</p>
+    <p>Sintaxe resumida:</p>
+        <p>seletor {border-width border-style border-color;}</p>
+        <p>h1 {border: 3px solid #F00;}</p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p> 
+            <
+            title
+            >
+            Page Title
+            <
+            /
+            title
+            >
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>        
+            body
+            {
+            border
+            :
+            10
+            px 
+            solid 
+            #FF0
+            ;
+            }
+        <p>
+            h1
+            {
+            border
+            :
+            3
+            px 
+            solid 
+            #F00
+            ;
+            }
+        </p>
+        <p>
+            p
+            {
+            border
+            :
+            3
+            px 
+            solid 
+            #0F0
+            ;
+            }
+        </p>
+        <p>
+            <
+            /
+            style
+            > 
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h2>3. "margin" e "padding"</h2>
+    <p>A margem e o espaçamento interno poderão ser modificados pelas propriedades "margin" (fomata o espaço da borda para fora) e "padding" (formata o espaço da borda para dentro). O atributo border fica entre a margin e o padding.</p>
+    <p>Margin aceita os seguintes valores:</p>
+    <p>a) margin-top - margem superior;</p>
+    <p>b) margin-right - margem da direita</p>
+    <p>c) margin-left - margem da esquerda</p>
+    <p>Padding aceita os seguintes valores:</p>
+    <p>a) padding-top - espaçamento superior;</p>
+    <p>b) padding-right - espaçamento da direita;</p>
+    <p>c) padding-bottom - espaçamento inferior;</p>
+    <p>d) padding-left - espaçamento da esquerda</p>
+<h4>3.1. Forma abreviada</h4>
+    <p>Conforme o sentido horário, podem ser inseridos até quatro valores na fórmula abreviada de margin, sendo o primeiro valor referente a superior, em seguida a da direita, inferior e esquerda:</p>
+        <p>margin: 15px 10px 20px 20px;</p>
+    <p>Se forem apenas dois valores, eles referir-se-ão ao mesmo eixo, isto é,  às margens superior e inferior; e direita e esquerda:</p>
+        <p>margin: 15px 20px</p>
+    <p>Por fim, se houver apenas um valor,  ele será atribuído às quatro margens:</p>
+        <p>margin: 12px</p>
+    <p>Obs: valores negativos são permitidos para margin, mas não para padding.</p>
+<h2>4. "font", "text" e "line"</h2>
+    <p>Os elementos textuais são modificados pelas tags font, text e line.</p>
+<h4>4.1. Font</h4>
+<h4>4.1.1. Font-family</h4>
+    <p>Formata a familia da fonte aplicada a um elemento. Você pode declarar até três fontes separadas por vírgulas, sendo que fontes que possuem espaços em seu nome devem vir dentro de aspas.</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-family: "Times New Roman", Georgia, Serif;
+            }
+        </p>
+<h4>4.1.2. Font-size</h4>
+    <p>Especifica o tamanho de uma fonte aplicada a um elemento</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            font-size: 120%;
+            }
+        </p>
+        <p>
+            h2 
+            {
+            font-size: 30px;
+            }
+        </p>
+        <p>
+            p 
+            {
+            font-size: 2em;
+            }
+        </p>
+<h4>4.1.3. Font-style</h4>
+    <p>Especifica os estilos italic, oblique ou normal para o elemento</p>
+    <p>Sintaxe:</p>
+        <p>
+            p
+            {
+            font-style: normal;
+            }
+        </p>
+        <p>
+            h1
+            {
+            font-style: italic;
+            }
+        </p>
+        <p>
+            h2 
+            {
+            font-style: oblique;
+            }
+        </p>
+<h4>4.1.4. Font-variant</h4>
+    <p>Define a fonte como minúsculas ou Versalete (maiúsculas).</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-variant: small-caps;
+            }
+        </p>
+<h4>4.1.5. Font-weight</h4>
+    <p>Define o peso da fonte, tais como bold (negrito).</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-weight: normal;
+            }
+        </p>
+        <p>
+            .teste {
+            font-weight: bold;
+            }
+        </p>
+<h4>4.2. Line</h4>
+<h4>4.2.1. Line-height</h4>
+    <p>Define a altura de uma linha.</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            line-height:20px;
+            }
+        </p>
+<h4>4.3. Text</h4>
+<h4>4.3.1. Text-align</h4>
+    <p>Alinha os textos na horizontal no centro (center), esquerda (left) e direita (right)</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            text-align: left;
+            }
+        </p>
+            p 
+            {
+            text-align: center;
+            }
+        <p>
+            h2 
+            {
+            text-align: right;
+            }
+        </p>
+<h4>4.3.2. Text-decoration</h4>
+    <p>Define a decoração do texto para os elementos. Podem ser none (nenhum), underline (linha de baixo), overline (linha de cima) ou line-through (linha através).</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            text-decoration: overline;
+            }
+        </p>
+<h4>4.3.3. Text-ident</h4>
+    <p>Recua a primeira linha, criando o recuo de um parágrafo</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            text-indent: 30px;
+            }
+        </p>
+<h4>4.3.4. Text-transform</h4>
+    <p>Transforma o texto em uppercase (maiúscula), lowercase (minúscula) e capitalize (primeira letra de cada palavra em maiúscula). O valor none também é aplicável.</p>
+    <p>Sintaxe:</p>
+        <p>
+            .minuscula 
+            {
+            text-transform: uppercase;
+            }
+        </p>
+        <p>
+            .maiuscula 
+            {
+            text-transform: lowercase;
+            }
+        </p>
+        <p>
+            .primeira_letra 
+            {
+            text-transform: capitalize;
+            }
+        </p>
+<h4>4.4. "@font-face"</h4>
+    <p>Permite apontar uma fonte fora do banco de fontes Websafe da máquina. Neste caso primeiro se indica qual o nome da fonte com font-family e logo em seguida qual sua localização com src:url(localização). Lembrando: src é abreviação de source ou origem em português.</p>
+    <p>Sintaxe:</p>
+        <p>
+            @font-face 
+            {
+            font-family: minhafonte;
+            src:url(teste_fonte.woff);
+            }
+        </p>
+    <p>Obs: o nome da fonte deve sempre ser minúsculo.</p>
+</body>
+</html>

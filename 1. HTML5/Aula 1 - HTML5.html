@@ -1,0 +1,4337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Page Title</title>
+<meta charset="utf-8"/>
+<meta name="author" content="Guilherme Augusto"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+</head>
+<body> 
+<h1> Hypertext Markup Language (HTML)
+<!-- Este é um comentário -->
+    <h1>Este é um cabeçalho :) </h1>
+    <p>Este é um parágrafo.</p> 
+    <p>Este é outro parágrafo.</p> 
+    <h1>Este é um cabeçalho/título de nível 1</h1> 
+    <h2>Este é um cabeçalho/título de nível 2</h2> 
+    <h3>Este é um cabeçalho/título de nível 3</h3> 
+    <h4>Este é um cabeçalho/título de nível 4</h4> 
+    <h5>Este é um cabeçalho/título de nível 5</h5> 
+    <h6>Este é um cabeçalho/título de nível 6</h6>
+<!-- Esses comentários não são mostrados pelo navegador :D -->
+<h1>1. Elementos de Metainformação SEO</h1>
+    <p>Os elementos de metainformação Search Engine Optimization ou Otimização para Mecanismo de Busca disponibilizam um conjunto de técnicas aplicáveis às páginas da web para melhorar seu ranqueamento, garantindo uma melhor visibilidade. Existem cinco tipos de atributos básicos que podem ser colocados como tag meta. Vejamos cada um deles.</p>
+    <p>É importante mencionar que as meta tag são inseridas no cabeçalho (head), guardando a sintaxe simplesmente entre sinais de menor (<) e maior, sem barra.</p>
+<h4>1.1. Name</h4>
+    <p>A tag meta de atributo "name" é destinada ao sistema de busca;</p>
+<h4>1.2. Http-equiv</h4>
+    <p>A tag meta de atributo "http-equiv" é destinada ao navegador (browser);</p>
+<h4>1.3. Property</h4>
+    <p> A tag meta de atributo "property" é destinada à redes sociais.</p>
+<h4>1.4. Content</h4>
+    <p>O atributo "content" sempre está presente nas tags meta, exceto na meta tag “charset”, pois sua função é especificar o conteúdo da metainformação;</p>
+<h4>1.5. Charset</h4>
+    <p>A tag meta atributo "charset" define a codificação de caracteres para a página. Temos três codificações que podemos utilizar como valor para "charset": ANSI, ISO-8859-1 e utf-8. HTML5 é, por padrão,  utf-8 (UNICODE), a mais completa em caracteres especiais;</p>
+<h2>2. Metatag "name" e suas funções</h2>
+<h4>2.1. Author</h4> 
+    <p>Serve para orientar o sistema de busca quanto ao autor da página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="author" 
+            content="Fulano de Tal"
+            >
+        </p>
+<h4>2.2. Copyright</h4>
+    <p>Serve para informar ao buscador os direitos autorais da página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="copyright" 
+            content="nome da instituição detentora dos direitos de copy"
+            >
+        </p>
+<h4>2.3. Description ou DC.Description</h4>
+    <p>Serve para fornecer ao buscador informações sintéticas sobre o conteúdo da página, para fins de resultado de pesquisa</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="description" 
+            content="conteúdo resumido da página"
+            >
+        </p>
+<h4>2.4. Keywords ou DC.Suject</h4>
+    <p>Esta metatag fornece ao buscador palavras-chave, que podem ser tomadas pelo buscador para indexar documentos e outras informações do conteúdo da página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="keywords" 
+            content="palavras-chave do documento"
+            >
+        </p>
+        <p>ou</p>
+        <p>
+            <
+            meta name="DC.suject" 
+            content="palavras-chave do documento"
+            >
+        </p>
+<h4>2.5. Robots</h4>
+    <p>Serve para forcer infomações para robôs de busca, derivando em subfunções no valor do atributo content</p>
+    <p>Sintaxe base:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="comando ao bot de pesquisa, podendo ser all, index, follow e outros"
+            >
+        </p>
+<h4>2.5.1. Subfunções Robots</h4>
+<h4>2.5.1.1. All</h4>
+	<p>Valor padrão, significa vazio. Nesse caso o robô de busca não recebe nenhuma informação.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="all"
+            >
+        </p>
+<h4>2.5.1.2. Index</h4>
+	<p>Nesse caso os robôs de busca podem incluir a página normalmente.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="Index"
+            >
+        </p>
+<h4>2.5.1.3. Follow</h4>
+	<p>Robôs podem indexar a página e além disso, seguir os links para outras páginas que ela contém.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="follow"
+            >
+        </p>
+<h4>2.5.1.4. NoIndex</h4>
+	<p>Utilizando esse valor, os links podem ser seguidos, mas a página não é indexada.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="noindex"
+            >
+        </p>
+<h4>2.5.1.5. NoFollow</h4>
+	<p>De forma contrária ao caso NoIndex, aqui a página é indexada, mas os links não são seguidos.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="nofollow"
+            >
+        </p>
+<h4>2.5.1.6. None</h4>
+    <p>Esse valor é utilizado quando queremos que os robôs ignorem a página.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="none"
+            >
+        </p>
+<h4>2.5.1.7. NoArchive</h4>
+	<p>Válido apenas para o mecanismo de busca Google. Nesse caso, a página não é arquivada.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="robots" 
+            content="noarchive"
+            >
+        </p>
+<h4>2.5.2. GoogleBot</h4>
+	<p>A função desse valor ao atributo name é indicar ao Google que você não deseja que a página seja indexada.</p>
+	<p>Sintaxe</p>
+        <p>
+            <
+            meta name="googlebot" content="noindex"
+            >
+        </p>
+<h4>2.6. Rating</h4>
+    <p>Serve para declarar a classificação etária da página ao buscador, variando entre classificação livre (general), até 14 anos (14 years) e acima de 18 anos (mature)</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="rating" 
+            content="general, 14 years ou mature"
+            >
+        </p>
+<h4>2.7. DC.Creator</h4>
+    <p>Tem mesma serventia da função name author</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.Creator" 
+            content="Fulano de Tal"
+            >
+        </p>
+<h4>2.8. DC.Creator.Address</h4>
+    <p>Serve para declarar ao buscador o endereço de e-mail do autor da página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.creator,address" 
+            content="autor da página@gmail.com"
+            >
+        </p>
+<h4>2.9. DC.Publisher</h4>
+    <p>Serve para declarar ao buscador a organização responsável pela página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.publisher" content="nome da publisher"
+            >
+        </p>
+<h4>2.10. DC.Custodian</h4>
+    <p>Serve para informar ao buscador o curador/responsável pela página</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.custodian" 
+            content="Fulano de Tal"
+            >
+        </p>
+<h4>2.11. DC.Date.Created</h4>
+    <p>Serve para declarar ao buscador a data da criação da página em formato AAAA-MM-DD</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.date.created" 
+            content="2022-02-14"
+            >
+        </p>
+<h4>2.12. DC.Date.Modified</h4>
+    <p>Serve para indicar ao buscador a data de modificação da página, também em formato AAAA-MM-DD</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.date.modified" 
+            content="2022-02-14"
+            >
+        </p>
+<h4>2.13. DC.Identifier</h4>
+    <p>Serve para informar ao buscador o endereço URL do documento</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.identifier" 
+            content="endereço URL"
+            >
+        </p>
+<h4>2.14. DC.Format</h4>
+    <p>Serve para indicar ao buscador o tipo de dado do documento (text/html, image/jpg, image/gif, video/quicktime)</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta name="DC.format" 
+            content="image/jpg"
+            >
+        </p>
+<h2>3. Metatag "http-equiv" e suas funções</h2>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="função" 
+            content="especificação da função"
+            >
+        </p>
+<h4>3.1. Cache-Control</h4>
+    <p>O valor desta metatag determina o que se armazena ou não em cache. Daí por que possui subfunções a depender do valor de content. Vejamos cada um dos comandos.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="cache-control" 
+            content="especificação da função"
+            >
+        </p> 
+<h4>3.1.1. Public</h4>
+    <p>Utilizando esse valor, os dados da página podem ser armazenados de forma a ser utilizado por diferentes usuários de um mesmo navegador, sendo que só é possível especificar usuários nos navegadores Firefox e Opera.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="cache-control" 
+            content="public"
+            >
+        </p>
+<h4>3.1.2. Private</h4>
+    <p>De forma contrária ao determinado pelo valor public, usando private, o cache é armazenado para um usuário apenas</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="cache-control" 
+            content="private"
+            >
+        </p>
+<h4>3.1.3. No-Cache</h4>
+    <p>A página não é armazenada em Cache de nenhuma forma. Esta função é igual à função pragma, com content "no-cache", recomendando-se usar ambas as formas se o servidor não for compatível com HTTP 1.1.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="cache-control" 
+            content="no-cache"
+            >'
+        </p>
+<h4>3.1.4. No-Store</h4>
+    <p>Nesse caso a página não é arquivada, mas é feito um cache temporário.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta http-equiv="cache-control"
+            content="no-sotre"
+            >
+        </p>
+<h4>3.2. Pragma no-cache</h4>
+    <p>Faz com que o navegador não armazene a página em cache. A única diferença em relação a "cache-control:no-cache" consiste no fato de ser reconhecida por todas as versões HTTP.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="pragma" 
+            content="no-cache"
+            >
+        </p>
+<h4>3.3. Content-language</h4>
+    <p>Declara os idiomas presentes num html, a fim de permitir a categorização pelos mecanismos de busca. Pode ser indicado mais de um idioma.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="content-language" 
+            content="pt-br"
+            >
+        </p>
+<h4>3.4. Expires</h4>
+    <p>Define a data de expiração da página. Erros comuns na definição desses valores podem ser interpretados como "agora".</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="expires" 
+            content="wed, 15 jan 2022 23:45:03 GMT"
+            >
+        </p> 
+<h4>3.5. Refresh</h4>
+    <p>Define um período para o browser atualizar a página, podendo haver redirecionamento a outra URL.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="refresh" 
+            content="50" 
+            ou  
+            meta http-equiv="refresh" 
+            content="50;url=http://
+                     google.com"
+            >
+        </p>
+<h4>3.6. Imagetoolbar</h4>
+    <p>No IExplorer, elimina a barra de opções quando o usuário passa o cursor sobre uma imagem</p>
+    <p>Sintaxe:</p>
+        <p> 
+            <
+            meta http-equiv="imagetoolbar" 
+            content="no"
+            >
+        </p>
+<h4>3.7. Content-Script-Type</h4>
+    <p>Define o tipo de linguagem de script do documento.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta http-equiv="content-style-type" 
+            content="text/css"
+            >
+        </p>
+<h2>4. Metatag "property" e suas funções</h2>
+    <p>Para que não seja perdido o controle da imagem e da descrição de uma página compartilhada no Facebook, usamos o Facebook OpenGraph para transformar os sites em objetos gráficos visualmente mais agradáveis e claros, sendo possível customizar a forma que a página será apresentada quando for compartilhada nas redes sociais. Esse é um dos recursos veiculáveis por meio da metatag atributo property.</p>
+<h4>4.1. Opengraph (og)</h4>
+    <p>A função "og" permite uma formatação com vários tópicos informativos, que serão apresentados no momento do compartilhamento de algum link de rede social. A seguir, elementos da configuração do facebook open graph</p>
+    <p>Sintaxe base:</p> 
+        <p>
+            <
+            meta property="og:..." 
+            content="..."
+            >
+        </p>
+<h4>4.1.1. Title</h4>
+    <p>Esta função atribui título ao painel de compartilhamento.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta property="og:title" content="Emagreça em 15 dias"
+            >
+        </p>
+<h4>4.1.2. Image</h4>
+    <p>Essa tag meta definirá a imagem a ser apresentada quando a página é compartilhada. É necessário colocar o endereço/URL da imagem que deseja apresentar.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta property="og:image" 
+            content=
+            "http://fontedaimagem.com/
+            imagem.jpg"
+            >
+        </p>
+<h4>4.1.3. URL</h4>
+    <p>Essa tag meta definirá o endereço da página em questão.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta property="og:url" 
+            content="http://urldapagina.com/"
+            >
+        </p>
+<h4>4.1.4.Type</h4>
+    <p>Essa tag meta definirá o tipo do objeto que está sendo apresentado. O tipo do objeto pode ser definido como, “video.movie”, “website”, “video.other”, “article”, por exemplo, dentre outras possibilidades, dependendo do que deseja apresentar.</p>
+    <p>Sintaxe:</p> 
+        <p>
+            <
+            meta property="og:type" 
+            content="video.mp4"
+            >
+        </p>
+<h4>4.1.5. Description</h4>
+    <p>Com essa tag meta é possível inserir uma descrição da sua página. É interessante colocar algo que chame a atenção do leitor. Essa descrição aparecerá abaixo do título e da URL.</p>
+    <p>Sintaxe:</p> 
+        <p>    
+            <
+            meta property="og:description" 
+            content="breve descritivo da página"
+            >
+        </p>
+<h2>5. Metatag "charset"</h2>
+    <p>Como já dito, esta tag meta informa ao navegador o tipo de codificação de caracteres da página. Embora não seja o único valor possível, o “utf-8” (8-bit Unicode Transformation Format ou Formato de transformação Unicode de 8 bits) codifica os caracteres no sistema UNICODE, que é um sistema que permite aos computadores representar e manipular o texto de qualquer sistema de escrita.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            meta charset:
+            "uft-8"
+            >
+        </p>
+<h1>Cascading Style Sheets (CSS)</h1>
+    <p>CSS é a linguagem de estilização de um documento HTML. Ela vai determinar como os elementos HTML serão exbidos. </p>
+    <p>A sintaxe para o CSS possui duas partes principais: um seletor (podendo ser h1, p, body etc) e uma ou mais declarações ("color : red;" "font-size: 14px", p. ex.) formadas por propriedades e valores, cada uma. 
+    <p>Exemplo:</p>
+        <p> seletor 
+            {
+            propriedade:valor;
+            }
+        </p>
+        <p>
+            body 
+            {
+            background-color: 
+            lightblue;
+            }
+        </p>
+        <p>
+            h1 
+            {
+            color: white;
+            text-align: center;
+            }
+        </p>
+        <p>
+            p 
+            {
+            font-family: verdana;
+            font-size: 20px;
+            }
+        </p>
+<h2>1. Metodos Inline, Interno e Externo</h2>
+    <p>Existem três formas para utilizarmos as CSS. Da mais específica à menos prioritária: a) método inline; método interno e método externo.</p>
+<h4>1.1. Método Inline</h4>
+    <p>Incidente na linha de comando, o método inline estiliza a tag específica à qual se conecta</p>
+    <p>Sintaxe:</p>
+        <p>
+            < 
+            body style="background-color:red;"
+            >
+        </p>
+        <p>
+            <
+            h1 style="color:green;
+            margin-left:"10px;">
+            Este é um cabeçalho verde<
+            /h1></p>
+        <p>Resultado:</p>
+        <h1 style="color:green;margin-left:"10px;">Este é um cabeçalho verde</h1>
+<h4>1.2. Método Interno</h4>
+    <p>Neste método utilizamos diretamente a tag style, que deve ser colocada entre a abertura e o fechamento da tag head. Entre a abertura e o fechamento da tag style você deve colocar as tags que deseja formatar com as propriedades e valores correspondentes.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            styl
+            e>
+            body {
+            background-color: 
+            yellow;        
+            }
+            h1 {
+            color:
+            blue;
+            margin-left: 
+            30px
+            }
+            <
+            /style
+            >
+        </p>
+<h4>1.3. Método Externo</h4>
+    <p>O uso de folhas de estilos externas é interessante porque você  pode alterar o estilo de um site inteiro alterando apenas um arquivo externo. Esse método é o mais indicado, pois esse arquivo externo com as instruções de estilo pode ser linkado em várias páginas de um site, tendo um maior aproveitamento do código criado.</p>
+<h4>1.3.1. Procedimento 1</h4> 
+    <p>a) criar um arquivo de extensão “.css” com as formatações que desejar; e b) referenciar esse arquivo no código HTML da página que deeseja implantar as instruções</p>
+    <p>Obs: o arquivo "css" não possui a mesma estrutura do html, dispensando a estrutura de declaração doctype, html, head e body. Nele contém apenas a codificação sintática da estilização a partir da linha 1.</p>
+<h4>1.3.2. Procedimento 2</h4>
+    <p>De forma semelhante ao método interno, escreva as tags a serem formatadas e, ao seu lado, abrir chaves "{" para definir os valores de estilização, fechando tudo com "}".</p>
+     <p>Sintaxe:</p>
+        <p>
+            body {
+            background-color:
+            yellow;
+            }
+            h1 {color:
+            blue;
+            margin-left:30px;
+            }
+        </p>
+<h4>1.3.3. Procedimento 3</h4>
+    <p>No arquivo HTML, você deve utilizar uma tag link entre a abertura e o fechamento da tag head. A sintaxe é composta pelo atributos a) "link", que declara ao navegador a existência de uma ligação externa atrelada à página HTML; b) "rel", que significa "relação" ou "relacionamento"; c) "type", que declara ao navegador o tipo da relação externa, isto é, o tipo do arquivo externo (texto/css); d) "href", significa hypertext reference, serve para indicar o local do arquivo ".css"</p>
+    <p>Obs1: se os arquivos HTML e CSS estiverem salvos na mesma pasta, o valor de "href" é meramente o nome do arquivo CSS.</p>
+    <p>Obs2: se o CSS estiver numa subpasta do mesmo diretório do HTML, basta referenciar a pasta, seguida de barra "/", até chegar no nome do arquivo.
+    <p>Obs3: se o CSS estiver em diretório diferente do HTML, há que se informar quantas pastas atrás está, colocando dois pontos (..), seguidos de barra (/). A codificação ../ signfica "na pasta de trás deste diretório"</p>
+    <p>Sintaxe:</p>
+        <p>
+            Conforme obs1: <
+            link
+            rel=
+            "stylesheet"
+            type=
+            "text/css"
+            href=
+            "nome_do_arquivo.css"
+            >
+        </p>
+        <p>
+            Conforme obs2: <
+            link
+            rel=
+            "stylesheet"
+            type=
+            "text/css"
+            href=
+            "style/nome_do_arquivo.css"
+            >
+        </p>
+        <p>
+            Conforme obs3, retrocedendo um nível: <
+            link
+            rel=
+            "stylesheet"
+            type=
+            "text/css"
+            href=
+            "../style/nome_do_arquivo.css"
+            >
+        </p>
+         <p>
+            Conforme obs3, retrocedendo três níveis: <
+            link
+            rel=
+            "stylesheet"
+            type=
+            "text/css"
+            href=
+            "../../../style/nome_do_arquivo.css"
+            >
+        </p>
+<h2>2. ID e class no CSS</h2>
+    <p>Padrões de formatação CSS podem ser substituídos por classes (class) ou identidades (id), para facilitar sua inserção no HTML. As ID e as class são criadas no texto CSS e referenciadas como atributo no HTML.</p>
+<h4>2.1. Identidade (id)</h4>
+    <p> As "id" são identificações aplicáveis uma única vez em todo o texto codificado, estilizando um elemento específico uma única vez. Por isso mesmo, são geralmente empregadas nos elementos estruturais da página.</p>
+    <p>Sintaxe:</p>
+        <p>           #nome_identidade{propriedade:valor;}</p>
+        <p>#idUm {background: blue;}</p>
+        <p>#idDois {background: yellow;}</p>
+<h4>2.1.1. Nome da ID</h4>
+<p>O nome da ID deve obeder a certas regras: a) não pode conter acentos nem caracteres especiais; b) não pode conter espaços; c) é case sensititve (diferencia maiúsculas de minúsculas)</p>
+<h4>2.1.2. Aplicação da ID</h4>
+    <p>O procedimento é o seguinte: a) primeiro você  cria a ID, seguindo a sintaxe correta, num arquivo CSS que esteja referenciado no HTML desejado; b) no HTML, escreva dentro da tag desejada o nome do id, da seguinte forma:</p>
+        <p>id="nome_do_id"</p>
+        <p>
+            <
+            body
+            id="meu_primeiro_id"
+            >
+        </p>
+<h4>2.2. Classes (class)</h4>
+    <p>As classes, diferentemente das id, são aplicávies várias vezes num mesmo HTML. Importante mencionar que várias propriedades podem ser inseridas numa única classe. Também mais de uma classe podem estilizar um mesmo elemento do HTML.</p> 
+    <p>Sintaxe:</p>
+        <p>.nome_da_classe:{propriedade:valor;}</p>
+        <p>.cor1 {color: blue;}</p>
+        <p>.cor2 {color: red;}</p>
+<h4>2.2.1. Aplicação da Class</h4>
+    <p>a) primeiro você  cria a class, seguindo a sintaxe correta, num arquivo CSS que esteja referenciado no HTML desejado; b) no HTML, escreva dentro da tag desejada o nome da class, da seguinte forma:</p>
+        <p>class="cor1"</p>
+        <p>
+            <
+            p class="cor1"
+            >Conteúdo do parágrafo estilizado com class cor1<
+            /
+            p
+            >
+<h2>3. Combinando Seletores</h2>
+    <p>A infinitude de seletores (tags) que são empregados num documento podem ser, à uma, selecionados e editados, sem que haja o trabalho de se alterá-los um por um. Apenas de se mencionar que a distinção ou especificação ocorre escrevendo-se a tag e o atributo, tudo junto (isso se eles forem de níveis diferentes). Já os níveis de busca são definidos a cada espaço. O conteúdo a ser selecionado sempre virá por último. Vejamos os exemplos</p>
+<h4>3.1. Seleção Level 1</h4>
+    <p>A seleção ocorre com a menção da tag seguida de um valor, que representa uma tag de nível inferior. Por exemplo: o seletor pvalor seleciona somente aqueles parágrafos que tiverem o valor mencionado. Assim, temos:</p>
+    <p>p.destaque selecionará todos os parágrafos que possuírem a class="destaque" (.destaque)</p>
+<h4>3.2. Seleção Level 2</h4>
+    <p>Neste caso, haverá dois valores a serem mencionados, um especificando a tag e outro determinando o conteúdo que será selecionado. A interpretação pode ser de trás para frente. Assim, temos:</p>
+    <p>div#1 h1 selecionará as tags h1 da div que possua a id 1 (#1)</p>
+<h4>3.3. Seleção Level 3</h4>
+    <p>Neste caso, haverá 3 níveis que serão acessados numa certa tag.</p> 
+    <p>Assim, #1 ul li b selecionará as tags b dentro das listas (li) que estejam dentro das tags ul, que, por sua vez, estejam dentro da id 1 (#1).</p>
+    <p>Outro exemplo: #conteudo p.destaque strong seleciona elementos strong dentro de parágrafos com a classe "destaque" que estejam dentro de um elemento com a id "conteudo".</p>
+<h4>3.4. Seleção Aditiva</h4>
+    <p>Neste caso, seleciona-se mais de uma tag de mesmo nível. Assim, há a escrita das tags a serem selecionadas tudo junto.</p>
+    <p>Exemplo: .mensagem.destaque seleciona apenas elementos que tenham a classe "mensagem" e a classe "destaque".</p></p>
+<h4>3.5. Múltipla Seleção</h4>
+    <p>Utilizando-se a vírgula, evita-se a necessidade de se criar várias linhas de seleção.</p>
+    <p>Assim, p.destaque, h1, a.saiba-mais selecionará as tags a com a classe saiba-mais, os parágrafos h1, bem como os parágrafos que possuam a classe destaque.</p>
+<h2>4. Frameworks</h2>
+    <p>São fórmulas prontas com conjuntos de códigos, para abreviar seu tempo de construção. São sites importantes como repositórios de frameworks:</p>
+        <p>http://www.blueprintcss.org</p>
+        <p>http://960.gs/</p>
+        <p>http://sencss.kilianvalkhof.com/</p>
+<h1>Cores em CSS</h1>
+    <p>Há, pelo menos, 3 sistemas de cores no que concerne a sintaxe em CSS: a) sintaxe hexadecimal; b) sintaxe por palavra-chave; c) sintaxe RGB.</p>
+<h2>1. Sintaxe Hexadecimal</h2>
+    <p>Esse sistema é baseado na lógica de cores RGB, mas permite uma gradação de 0 a 9 e, por letras, de a até f, assim ocorrendo 16 caracteres diferentes para graduação cromática (hexa-deci). É suportado pela maioria dos navegadores, com a seguinte formatação, sempre aos pares:</p>
+    <p>RR para red (vermelho)</p>
+    <p>GG para green (verde)</p>
+    <p>BB para blue (azul)</p>
+    <p>Sintaxe:</p>
+        <p>#RRGGBB</p>
+    <p>Graduação Cromática, do menos brilhante ao mais brilhante:</p>
+        <p>0 1 2 3 4 5 6 7 8 9 A B C D E F</p>
+    <p>Obs1: A sintaxe hexadecimal não é case-sensitive, você pode utilizar tanto letras maiúsculas quanto minúsculas.</p>
+<h4>1.1. Definição das Cores</h4>
+        <p>Branco: #FFFFFF</p>
+        <p>Preto: #000000</p>
+        <p>Vermelho: #FF0000 (brilho intenso apenas na faixa RR de RRGGBB)</p>
+        <p>Verde: #00FF00 (brilho intenso apenas na faixa GG)</p>
+        <p>Azul: #0000FF (brilho intenso apenas na faixa BB)</p>
+    <p>Obs2: O sistema hexadecimal é baseado em elementos duplos, nos quais são admitidas até 256 combinações diferentes (16 x 16). Se se misturarem expectros RGB, há uma possibilidade de mais de 16 milhões de cores (compatível com 24 bits).</p>
+    <p>Veja este conversor de cores do W3Schools: http://www.w3schools.com/colors_hexadecimal.asp</p>
+<h4>1.2. Cores WebSafe</h4>
+    <p>O sistema de cores segura para web (cores websafe) é um subsistema hexadecimal criado para compatibilizar com certas limitações de exibição que existiam antigamente. Este sistema admite apneas as gradações 0, 3, 6, 9, C e F, suprimindo, assim, 10 subtons cromáticos. Ao todo, existem 216 cores seguras</p>
+    <p>Tabela de cores seguras: http://htmlcolorcodes.com/assets/downloads/web-safe-colors/web-safe-color-chart.png</p>
+    <p>Obs: é possível abreviar a sintaxe das cores seguras sempre que houver caracteres repetidos dentro da mesma dupla. Assim, #FF3366 pode ser abreviado em #F36.
+<h2>2. Sintaxe RGB</h2>
+    <p>Suportado pela maioria dos navegadores, o sistema RGB segue, obviamente, a lógica cromática RGB, mas utiliza uma sintaxe mais simples: </p>
+        <p>rgb(valor, valor, valor)</p>
+    <p>Neste  caso, para definição das cores utiliza-se, para cada um dos campos, um valor entre 0 e 255, ou porcentagem, de 0% a 100%, definindo a intensidade para cada um desses expectros lumninosos. Exemplo:</p>
+        <p>#p1 {background-color: rgb(255, 0, 0);} para vermelho</p>
+        <p>#p2 {background-color: rgb(0, 100%,0);} para verde</p>
+        <p>#p3 {background-color: rgb(0, 0, 255);} para azul</p>
+<h2>3. Sintaxe por Palavra-Chave</h2>
+    <p>Forma mais simples e antiga, o sistema por palavra-chave utiliza palavras para definição das cores, suportando os navegadores um total de 165 cores com nomes predefinidos. Exemplo:</p>
+        <p>#p1 {background-color:red;}</p>
+        <p>#p1 {background-color: green}</p>
+        <p>Os nomes predefinidos das cores disponíveis podem ser observados nesta lista: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords</p>
+<h1>Unidades de Medida</h1>
+    <p>Em HTML, é possível exprimir as unidades métricas utilizando-se dois sistemas: a) as unidaades relativas; e b) as uniades absolutas.</p>
+<h2>1. Unidades Relativas</h2>
+    <p>As unidades relativas possuem esse nome pelo fato de que especifica um comprimento relativo a outra propriedade de medida.</p>
+<h4>1.1. Unidades Relativas "em" e "%"</h4>
+    <p>Tratam-se de uma proporção de um parâmetro preexistente. Assim, por exemplo, é possível definir que um determinado tamanho de fonte em um parágrafo será o dobro do tamanho da fonte de um outro parágrafo (valores múltiplos). Vejamos um exemplo referente ao tamanho da fonte (font-size):</p>
+        <p>
+            No arquivo CSS (externo), cria-se uma classe referente à unidade relativa "em" ou "%", da seguinte forma:
+        </p>
+        <p>
+            .fonte1 {font-size: 2em;}
+        </p>
+        <p>
+            .fonte2 {font-size: 50%;}
+        </p>
+        <p>
+            .fonte3 {font-size: 3em;}
+        </p>
+        <p>
+            No arquivo HTML, ficaria da seguinte forma:
+        </p>
+        <p>
+            <
+            p
+            >Este parágrafo será o paradigma. Ele possui o tamanho de fonte, por padrão do navegador, 16 pixels.
+            <
+            /p
+            >
+        </p>
+        <p>
+            <
+            p 
+            class=
+            "fonte1"
+            >Este parágrafo possui um tamanho de fonte de 32px (foi aplicado 2em = 32px)
+            <
+            /
+            p
+            >
+        </p>
+        <p>
+            <
+            p 
+            class=
+            "fonte2"
+            >Este parágrafo possui um tamanho de fonte de 8px (foi aplicado 50% = 8px)
+            <
+            /
+            p
+            >
+        </p>
+        <p>
+            <
+            p 
+            class=
+            "fonte3"
+            >Este parágrafo possui um tamanho de fonte de 48px (foi aplicado 3em = 48px)
+            <
+            /
+            p
+            >
+        </p>
+<h2>2. Unidades Absolutas</h2>
+    <p>As unidades absolutas referem-se às unidades sob símbolo universal cm (centímetros), mm (milímetros), in (polegadas/inches), px (pixels), pt (pontos), pc (picas) etc. Vejamos este exemplo de CSS interno:</p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>
+            h1 {
+            font-size
+            : 1.5cm;}
+        </p>
+        <p>
+            <
+            /
+            s tyle
+            >
+        </p>
+        <p>    
+            <
+            /
+            head>
+        </p>
+        <p>
+            <
+            body
+            >
+        </p>
+        <p>
+            <
+            h1
+            >Este parágrafo, por estilização interna, já sairá em 1.5cm
+            <
+            /
+            h1
+            >
+        </p>
+        <p>
+            <
+            /
+            body
+            >
+        </p>
+        <p>Obs: apenas de se mencionar que 1in equivale a 2,56cm, a 96px ou a 72 pt;  e 1pc equivale a 12pts</p>
+<h1>Elementos, Formatação e Estrutura HTML</h1>
+    <p>Além da estruturação já conhecida do HTML, a iniciar com a declaração DOCTYPE, seguida de html, head, body, há inúmeros recursos de formatação e estilização que serão abordados a seguir.</p>
+<h2>1. "background"</h2>
+    <p>Diversos aspectos do fundo da página podem ser alterados pela propriedade CSS background. Vejamos as funções.</p>
+<h4>1.1. background-color</h4>
+    <p>Define a cor de fundo de um elemento.</p>
+    <p>Sintaxe:</p>
+        <p>
+            background-color:valor
+        </p>
+        <p>
+            seletor:
+            {
+            background-color:#CCC;
+            }
+        </p>
+        <p>Aplicação no CSS interno:
+        </p>
+        <p>
+            <
+            !
+            DOCTYPE 
+            html
+            >
+        </p>
+        <p>
+            <
+            html 
+            lang=
+            "pt-br"
+            >
+        </p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p>
+            <
+            title
+                   >
+                Título da Página
+            <
+            /title>
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>
+            body
+            {
+            background-color:
+            #CCC;      
+            }
+        </p>
+        <p>
+            < 
+            /
+            style
+            >
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h4>1.2. background-image</h4>            
+    <p>Define a imagem de fundo de um elemento. Por padrão, sempre que utilizamos a propriedade background-image, o navegador repetirá a imagem quantas vezes for necessário até preencher todo o fundo do elemento.</p>
+    <p>Sintaxe:</p>
+        <p>
+            background-image:url("nome ou endereço da imagem")
+        </p>
+        <p>
+            seletor:
+            {
+            background-image:url("imagem.gif");
+            }
+        </p>
+        <p>No método CSS interno, fica da seguinte forma:
+        <p>
+            <
+            !
+            DOCTYPE 
+            html
+            >
+        </p>
+        <p>
+            <
+            html 
+            lang=
+            "pt-br"
+            >
+        </p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p>
+            <
+            title
+            >
+                Título da Página
+            <
+            /title>
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>
+            body
+            {
+            background-image:
+            url("image.gif");      
+            }
+        </p>
+        <p>
+            < 
+            /
+            style
+            >
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h4>1.3. background-repeat</h4>
+    <p>Define como a imagem se repetirá no fundo de um elemento.</p>
+    <p>Sintaxe:</p>
+        <p>seletor {background-image:url("nome_da_imagem.jpg");}</p>
+        <p>body {background-image:url("nome_da_imagem.jpg");}</p>
+<h4>1.3.1. background-repeat:repeat</h4>
+    <p>A imagem é repetida até cobrir todo o fundo. A última imagem será cortada se não couber.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat;}</p>
+<h4>1.3.2. background-repeat:no-repeat</h4>
+    <p>A imagem não se repete.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat;}</p>
+<h4>1.3.3. background-repeat:repeat-x</h4>
+    <p>A imagem se repete na horizontal (eixo x)</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat-x;}</p>
+<h4>1.3.4. background-repeat:repeat-y</h4>
+    <p>A imagem se repete na vertical (eixo y)</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:repeat-y;}</p>
+<h4>1.3.5. background-repeat:space</h4>
+    <p>A imagem se repete sem recortes e com distribuição de espaçoes em branco entre elas para que não haja recortes da imagem</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:space;}</p>
+<h4>1.3.6. background-repeat:round</h4>
+    <p>A imagem se esticará ou comprimirá para se adaptar a tela.</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:round;}</p>
+<h4>1.4. background-attachment</h4>
+    <p>Define se uma imagem de fundo é fixa ou rola com o resto da página. Esta propriedade aceita como valores: a) fixed, que deixa o fundo fixo e não rola quando o usuário mexe no scroll da página; b) scroll, que também rola o fundo ao utilizar o scroll da página.</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-attachment:fixed;}</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-attachment:scroll;}
+<h4>1.5. background-position</h4>
+    <p>Define a posição inicial de uma imagem de fundo. Os valores admitidos são os seguintes: </p>
+        <p>a) left top, left center, left bottom, right top, right center, right bottom, center top, center center, center bottom - para posicionamentos fixos;</p>
+        <p>b) x% y% - para posicionamento no eixo x (horizontal) e eixo y (vertical), conforme a porcentagem/=;</p>
+        <p>c) xpos ypos - para posicionamento no eixo x (horizontal) e eixo y (vertical, com medida em pixels;</p>
+        <p>d) initial - é valor padrão (esquerda superior)</p>
+        <p>e)inherit - toma a propriedade do elemento pai</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; background-attachment:fixed; background-position: center;}
+<h4>1.6. background-size</h4>
+    <p>Define o tamanho da imagem de fundo. Admitem-se os seguintes valores:</p>
+        <p>a) auto - valor padrão (mesma largura e altura da imagem);</p>
+        <p>b) lenght:width height - define um valor em pixel para a largura e altura. Se apenas um é definido, o segundo fica como auto;</p>
+        <p>c) % - define um valor em porcentagem para a largura e altura. Se apenas um é definido, o segundo fica como auto;</p>
+        <p>d) cover - encaixa a imagem de fundo, preenchendo todo o espaço, sem repetição (pode ser que a imagem não apareça toda)</p>
+        <p>e) contain - encaixa a imagem perfeitamente no fundo da página;</p>
+        <p>f) initial: valor padrão (mesma largura e altura da imagem)</p>
+        <p>g) inherit - herda a propriedade do elemento pai</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; background-size: 300px 500px;}</p>
+<h4>1.7. background-origin</h4>
+    <p>Define como a imagem de fundo está posicionada. Os valores aplicáveis são os seguintes:</p>
+        <p>a) border-box - a imagem inicia no canto superior esquerdo e ocupa a área da borda (se houver);</p>
+        <p>b) padding-box - imagem inicia no canto superior esquerdo e desconsidera a área da borda (se houver)</p>
+        <p>c) content-box: imagem inicia no canto superior esquerdo e desconsidera a área da borda e do padding (espaçamento interno, se houver).</p>
+    <p>Sintaxe:</p>
+        <p>body {background-image:url("nome_da_imagem.jpg"); background-repeat:no-repeat; padding:50px; background-origin:padding-box;}</p>
+    <p>Obs: a propriedade padding:valor formata espaçamento interno.</p>
+<h4>1.8. background-clip</h4>
+    <p>Define a área de pintura do plano de fundo. As propriedades aplicáveis são:</p>
+        <p>a) border-box: começa do canto superior esquerdo e preenche todo o fundo incluído a borda (padrão);</p>
+        <p>b) padding-box: começa do canto superior esquerdo e não preenche a borda (padrão);</p>
+        <p>c) content-box - preenche apenas a área com conteúdo;</p>
+        <p>d) initial: define a propriedade como padrão (border-box).</p>
+    <p>Sintaxe:</p>
+        <p>body {border:20px black; padding:55px; background:yellow; background-clip:content-box;}</p>
+<h4>1.9. Declaração resumida do background</h4>
+    <p>É possível sintetizar (reduzir) o tamanho do comando background e suas propriedades, conforme a seguinte ordem:</p>
+        <p>seletor {background: background-color background image background-repeat background attachment background position;}
+    </p>
+    <p>Obs: se algum valor for omitido, toma-se o padrão.</p>
+    <p>Sintaxe:</p>
+        <p>body {background: #f00 url("fundo.jpg") no-repeat fixed 200px 150px;}</p>
+<h4>1.9. Múltiplos Fundos</h4>
+    <p>O CSS3 permite aplicar mais de uma imagem de fundo a um elemento. Ocorre uma sobreposição de fundos, conforme a ordem dos comandos na declaração. As propriedades de todas essas imagens é separada por vírgula. Vejamos a sintaxe:</p>
+    <p>body {background-image: url(img1.gif), url(img2.gif), url(img3.jpg); background-position: right bottom, left top, center top; background-repeat: no-repeat, repeat, no-repeat;}</p>
+<h2>2. "border"</h2>
+    <p>A borda de um elemento HTML é trabalhada pela propriedade border. Ela admite os seguintes valores:</p>
+    <p>a) border-width - define a largura da borda. O valor padrão é "medium" (médio)</p>
+    <p>b) border-style - define o estilo da borda. O valor padrão é "none" (nenhum).</p>
+    <p>c) border-color - define a cor da borda. O valor padrão é a cor do elemento definido. </p>
+    <p>d) inicial - define esta propriedade como seu valor padrão;
+    <p>e) inherit - herda essa propriedade de seu elemento pai</p>
+    <p>Sintaxe resumida:</p>
+        <p>seletor {border-width border-style border-color;}</p>
+        <p>h1 {border: 3px solid #F00;}</p>
+        <p>
+            <
+            head
+            >
+        </p>
+        <p> 
+            <
+            title
+            >
+            Page Title
+            <
+            /
+            title
+            >
+        </p>
+        <p>
+            <
+            s tyle
+            >
+        </p>
+        <p>        
+            body
+            {
+            border
+            :
+            10
+            px 
+            solid 
+            #FF0
+            ;
+            }
+        <p>
+            h1
+            {
+            border
+            :
+            3
+            px 
+            solid 
+            #F00
+            ;
+            }
+        </p>
+        <p>
+            p
+            {
+            border
+            :
+            3
+            px 
+            solid 
+            #0F0
+            ;
+            }
+        </p>
+        <p>
+            <
+            /
+            style
+            > 
+        </p>
+        <p>
+            <
+            /
+            head
+            >
+        </p>
+<h2>3. "margin" e "padding"</h2>
+    <p>A margem e o espaçamento interno poderão ser modificados pelas propriedades "margin" (fomata o espaço da borda para fora) e "padding" (formata o espaço da borda para dentro). O atributo border fica entre a margin e o padding.</p>
+    <p>Margin aceita os seguintes valores:</p>
+    <p>a) margin-top - margem superior;</p>
+    <p>b) margin-right - margem da direita</p>
+    <p>c) margin-left - margem da esquerda</p>
+    <p>Padding aceita os seguintes valores:</p>
+    <p>a) padding-top - espaçamento superior;</p>
+    <p>b) padding-right - espaçamento da direita;</p>
+    <p>c) padding-bottom - espaçamento inferior;</p>
+    <p>d) padding-left - espaçamento da esquerda</p>
+<h4>3.1. Forma abreviada</h4>
+    <p>Conforme o sentido horário, podem ser inseridos até quatro valores na fórmula abreviada de margin, sendo o primeiro valor referente a superior, em seguida a da direita, inferior e esquerda:</p>
+        <p>margin: 15px 10px 20px 20px;</p>
+    <p>Se forem apenas dois valores, eles referir-se-ão ao mesmo eixo, isto é,  às margens superior e inferior; e direita e esquerda:</p>
+        <p>margin: 15px 20px</p>
+    <p>Por fim, se houver apenas um valor,  ele será atribuído às quatro margens:</p>
+        <p>margin: 12px</p>
+    <p>Obs: valores negativos são permitidos para margin, mas não para padding.</p>
+<h2>4. "font", "text" e "line"</h2>
+    <p>Os elementos textuais são modificados pelas tags font, text e line.</p>
+<h4>4.1. Font</h4>
+<h4>4.1.1. Font-family</h4>
+    <p>Formata a familia da fonte aplicada a um elemento. Você pode declarar até três fontes separadas por vírgulas, sendo que fontes que possuem espaços em seu nome devem vir dentro de aspas.</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-family: "Times New Roman", Georgia, Serif;
+            }
+        </p>
+<h4>4.1.2. Font-size</h4>
+    <p>Especifica o tamanho de uma fonte aplicada a um elemento</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            font-size: 120%;
+            }
+        </p>
+        <p>
+            h2 
+            {
+            font-size: 30px;
+            }
+        </p>
+        <p>
+            p 
+            {
+            font-size: 2em;
+            }
+        </p>
+<h4>4.1.3. Font-style</h4>
+    <p>Especifica os estilos italic, oblique ou normal para o elemento</p>
+    <p>Sintaxe:</p>
+        <p>
+            p
+            {
+            font-style: normal;
+            }
+        </p>
+        <p>
+            h1
+            {
+            font-style: italic;
+            }
+        </p>
+        <p>
+            h2 
+            {
+            font-style: oblique;
+            }
+        </p>
+<h4>4.1.4. Font-variant</h4>
+    <p>Define a fonte como minúsculas ou Versalete (maiúsculas).</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-variant: small-caps;
+            }
+        </p>
+<h4>4.1.5. Font-weight</h4>
+    <p>Define o peso da fonte, tais como bold (negrito).</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            font-weight: normal;
+            }
+        </p>
+        <p>
+            .teste {
+            font-weight: bold;
+            }
+        </p>
+<h4>4.2. Line</h4>
+<h4>4.2.1. Line-height</h4>
+    <p>Define a altura de uma linha.</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            line-height:20px;
+            }
+        </p>
+<h4>4.3. Text</h4>
+<h4>4.3.1. Text-align</h4>
+    <p>Alinha os textos na horizontal no centro (center), esquerda (left) e direita (right)</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            text-align: left;
+            }
+        </p>
+            p 
+            {
+            text-align: center;
+            }
+        <p>
+            h2 
+            {
+            text-align: right;
+            }
+        </p>
+<h4>4.3.2. Text-decoration</h4>
+    <p>Define a decoração do texto para os elementos. Podem ser none (nenhum), underline (linha de baixo), overline (linha de cima) ou line-through (linha através).</p>
+    <p>Sintaxe:</p>
+        <p>
+            h1 
+            {
+            text-decoration: overline;
+            }
+        </p>
+<h4>4.3.3. Text-ident</h4>
+    <p>Recua a primeira linha, criando o recuo de um parágrafo</p>
+    <p>Sintaxe:</p>
+        <p>
+            p 
+            {
+            text-indent: 30px;
+            }
+        </p>
+<h4>4.3.4. Text-transform</h4>
+    <p>Transforma o texto em uppercase (maiúscula), lowercase (minúscula) e capitalize (primeira letra de cada palavra em maiúscula). O valor none também é aplicável.</p>
+    <p>Sintaxe:</p>
+        <p>
+            .minuscula 
+            {
+            text-transform: uppercase;
+            }
+        </p>
+        <p>
+            .maiuscula 
+            {
+            text-transform: lowercase;
+            }
+        </p>
+        <p>
+            .primeira_letra 
+            {
+            text-transform: capitalize;
+            }
+        </p>
+<h4>4.4. "@font-face"</h4>
+    <p>Permite apontar uma fonte fora do banco de fontes Websafe da máquina. Neste caso primeiro se indica qual o nome da fonte com font-family e logo em seguida qual sua localização com src:url(localização). Lembrando: src é abreviação de source ou origem em português.</p>
+    <p>Sintaxe:</p>
+        <p>
+            @font-face 
+            {
+            font-family: minhafonte;
+            src:url(teste_fonte.woff);
+            }
+        </p>
+    <p>Obs: o nome da fonte deve sempre ser minúsculo.</p>
+<h1>Imagens</h1>
+    <p>Para a inserção de uma imagem no HTML utilizamos as seguintes tags e atributos:</p> 
+    <p>a) tag img (image);</p>
+    <p>b) atributo src (source ou origem - lembrar-se de escrever a extensão da imagem, que pode ser .jpg, .png ou .gif) - JPEG são comprimidos, eles são preferíveis e o ajudarão amelhorar o tempo de carregamento do seu site. Arquivos JPEG possuem a qualidade de imagem necessária para a maioria dos sites na Internet. Caso você tenha alguma exigência especial em relação à imagem, comopor exemplo, você deseja fazer upload de imagens com alta qualidade ou imagens com fundo transparente, o formato PNG é o melhor de todos. Este formato deve ser usado esporadicamente, já que um grnade número de imagens com alta qualidade podem prejudicar o tempo de carregamento do seu site. Arquivos GIF são recomendados apenas para gifs animados.;</p> 
+    <p>c) alt (alternate) - Serve  para que, caso ela não carregue, apareça um texto alternativo explicando qual imagem deveria estar ali. Ela também informa ao google o que é a sua imagem. Outra utilização importante é garantir a acessibilidade do site, pois os deficiêntes visuais utilizam os softwares sintetizadores de voz e estes farão a leitura do "alt" da imagem para garantir que toda a informação do seu sistema seja repassada corretamente e que seu site seja 100% acessível a todos os usuários.</p>
+    <p>d) title (descrição) - É o complemento do alt, e serve para fazer uma descrição de sua imagem. Nele podemos utilizar quantas palavras quisermos, mas temos de tomar cuidado para não ser considerado pelos sistemas de busca como SPAN. O atributo  title é aquele que faz com que apareça o tooltip que é aquela caixinha que aparece quando você posiciona o mouse sobre a imagem. </p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            img 
+            src
+            ="minha_imagem.jpg"
+            alt
+            ="teste de imagem"
+            title
+            ="descrição da imagem sem limite de palavras"
+            >
+        </p>
+        <p>
+            <
+            body
+            >
+        </p>
+        <p>
+            <
+            img 
+            src
+            ="minha_imagem.jpg" 
+            alt
+            ="teste de imagem" 
+            title
+            ="este é um teste de utilização de imagem"
+            >
+        </p>
+        <p>
+            <
+            /
+            body
+            >
+        </p>
+<h2>1. Formatando Imagens no CSS</h2>
+    <p>Imagens permitem diversas formatações em CSS sendo as mais comuns: a) border: borda; b) width: largura; e c) height:altura.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            img 
+            src
+            ="minha_imagem.jpg" 
+            alt
+            ="teste de imagem" 
+            title
+            ="este é um teste de utilização de imagem"
+            style
+            =
+            "width:400px;
+             height:300px;
+             border:2px
+             solid
+             #F00;"
+            >
+        </p>
+    <p>O CSS interno fica assim:</p>
+        <p>
+            <
+            head>
+        </p>
+        <p>          
+            <
+            title
+            >
+            trabalhando com imagens
+            <
+            /
+            title
+            >
+        </p>
+        <p>
+            <
+            s 
+            tyle>
+        </p>
+        <p>            
+            img
+            {
+            border:2px 
+            solid 
+            #F00;
+            width:
+            400px;
+            height:
+            300px;
+            }
+            <
+            /
+            style
+            >
+        </p>
+        <p>
+            <
+            /
+            head>
+        </p>
+        <p>
+            <
+            body>
+        </p>
+        <p>
+            <
+            img src="minha_imagem.jpg" alt="teste de imagem" title="este é um teste de imagem" style="width:400px; height:300px; border:2px solid #F00;"
+            >
+        </p>    
+<h4>1.1. "figure" e "figcaption"</h4>
+    <p>Para uma melhor configuração da tag img podemos utilizar, em conjunto,  as tags "figure" e "figcaption". Figure: define um elemento no fluxo e permite sua formatação, como posicionamento por exemplo. Figcaption: define uma legenda para o elemento. Aliás, esses elementos não são exclusivos para formatação de imagens, cabendo em outras tags e elementos HTML.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            figure>
+        </p>
+        <p>
+            <
+            img src="minha_imagem.jpg" 
+            alt="teste de imagem" 
+            title="este é um teste de imagem" 
+            style="width:400px;height:300px;border:2px solid #F00;"
+            >
+        </p>
+        <p>
+            < /
+            figure>
+        </p>
+    <p>É possível conjugar o CSS intern com o elemento figure para configuração de imagens:</p>
+        <p>
+            < head >
+        </p>
+        <p>
+            < title >trabalhando com imagens</ title>
+        </p>
+        <p>
+            <sty le>
+        </p>         
+        <p>
+            img{border:2px solid #F00; width:400px; height:300px;}
+        <p>          
+            </ style>
+        </p>
+        <p>
+            </ head>
+        </p>
+        <p>
+            < body>
+        </p>
+        <p>       
+            < figure>
+        </p>
+        <p>
+            < 
+            img src=
+            "minha_imagem.jpg" 
+            alt="teste de imagem" 
+            title=
+            "este é um teste de imagem" 
+            >
+        </p>
+        <p>
+            <
+            /figure>
+        </p>
+        <p> 
+            <
+            /body>
+        </p>
+<h4>1.2. "figcaption"</h4>
+    <p>A inserção do emento figcaption finaliza esta formatação e permite a criação de uma legenda para a imagem. Com a inserção deste elemento o código HTML ficaria da seguinte forma:</p>
+    <p>Sintaxe:</p>
+        <p>
+            < 
+            head>
+        </p>
+        <p>
+            <
+            title>trabalhando com imagens<
+            /
+            title>
+        </p>
+        <p>
+            < sty
+            le>
+        </p>
+        <p>
+            img{border:2px solid #F00; 
+            width:400px; height:300px;}
+        </p>
+        <p>
+            <
+            / style>
+        </p>
+        <p>
+            < / 
+            head>
+        </p>
+        <p>
+            <
+            body>
+        </p>
+        <p>       
+            <
+            figure
+            >
+        </p>
+        <p>
+            <
+            img src=
+            "minha_imagem.jpg" 
+            alt="teste de imagem" 
+            title="este é um teste de imagem" 
+            >
+        </p>
+        <p>
+            < figcaption>
+            Aqui vão as informações da Figura para a criação de uma legenda</figcaption>
+        </p>
+        <p>
+            <
+            /
+            figure> 
+        </p> 
+        <p>
+            <
+            / 
+            body>
+        </p>
+<h4>1.3. "display"</h4>
+    <p>A propriedade display permite informar como o elemento aparecerá numa linha. Pode ser utilizada para formatar o elemento "figure". Os valores aplicáveis a esta propriedade são: 
+    </p>
+    <p>a) inline: este é o valor padrão, ou sejam em linha, em que o elemento aparece como uma única linha de conteúdo, com elementos dos dois lados (esquerdo e direito);
+    </p>b) block: elemento aparece sozinho na linha, sem elementos de seu lado direito ou esquerdo;
+    <p>c) none: elemento não aparece na linha;</p>
+    <p>d) list-item: elemento aparece como item de uma lista, com marcador;</p>
+    <p>e) initial: elemento aparece como padrão, ou seja, inline.</p>
+    <p>Neste link é possível testar essas configurações: https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=initial</p>
+    <p>Sintaxe:</p>
+        <p>
+            < 
+            h ead>
+        </p>
+        <p>
+            <
+            t itle>
+            trabalhando com imagens
+            < /
+            title>
+        </p>
+        <p>
+            <
+            sty le
+            >
+        </p>
+        <p>
+            img{border:2px solid #F00; width:400px; 
+            height:300px;}
+        </p>
+        <p>
+            figure {display: block; margin-top:50px; 
+            margin-bottom: 80px; margin-left: 150px; 
+            margin-right: 40px;}
+        </p>
+        <p> 
+            <
+            /
+            style>
+        </p>
+        <p>
+            <
+            /
+            head>
+        </p>
+        <p>
+            <
+            b ody
+            >
+        </p>
+        <p>
+            <
+            p
+            > 
+            Este é um teste de formatação do elemento figure. Observe a distância entre os textos e a distância das margens. Veja que a configuração do elemento figure não afeta o elemento figcaption
+            < / 
+            p>
+        </p>       
+        <p>
+            < 
+            f igure
+            >
+        </p>
+        <p>	
+            <
+            img src="minha_imagem.jpg" 
+            alt="teste de imagem" 
+            title="este é um teste de imagem" 
+            >
+        </p>
+        <p>
+            <
+            f igcaption
+            >
+            Aqui vão as informações da Figura para a criação de uma legenda
+            < /
+            figcaption>
+        </p>
+            <p
+            >        
+            < /
+            figure> 
+        </p>
+        <p> 
+            <
+            p>
+            Este é um teste de formatação do elemento figure, Observe a distância entre os textos e a distância das margens</p>
+            < /
+            p>
+        <p>
+            < /
+            body>
+        </p>  
+    <p>Teste a propriedade em: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_figure</p>
+<h2>2. Hiperlinks</h2>
+    <p>Para a criação de hiperlinks simples utilizamos a tag "a" que é a abreviação de anchor ou âncora em português. Para fazer esta ligação precisamos avisar ao navegador em que local está o documento que será linkado e, para isto, utilizamos o atributo href (hipertext reference - hipertexto de referência) que serve, então, para especificar o endereço de destino.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            a 
+            href=
+            "www.meulink.com.br"
+            >
+            O texto do link fica aqui.
+            <
+            /
+            a
+            >
+        </p>
+    <p>Aqui você pode treinar links:<br> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_w3schools
+    </p>
+<h4>2.1. Links Locais</h4>
+    <p>Arquivos na mesma pasta ou mesmo diretório são linkados apenas citando o nome do arquivo.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            a 
+            href=
+            "meu_arquivo_word.html"
+            >
+            Texto do link
+            <
+            /
+            a
+            >
+    </p>
+<h4>2.2. Títulos nos Links</h4>
+    <p>Você pode incluir um título ao seu link, para isto basta incluir o atributo title no elemento.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            a 
+            href=
+            "http://www.google.com" 
+            title="insira seu título aqui"
+            >
+            Texto do link aqui
+            <
+            /
+            a
+            >
+        </p>
+    <p>Treine aqui a criação de links: <br>
+        https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_w3schools
+    </p>
+<h4>2.3. Alvo do Link (target)</h4>
+    <p>Você pode indicar o local em que o link será aberto. Para isto utilzamos o atributo "target" ou alvo. Para abrir o link em uma outra janela no mesmo navegador utilizamos "_blank"</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            a 
+            href=
+            "http://www.google.com" 
+            title=
+            "insira seu título aqui"
+            target=
+            "_blank"
+            >
+            Texto do link aqui
+            <
+            /
+            a
+            >
+        </p>
+    <p>Treine aqui a criação de links: <br>
+        https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_target
+    </p>
+<h4>2.4. Link para download</h4>
+    <p>Os links que forem feitos para arquivos que não forem .html tais como .doc, .pdf, etc, serão baixados na máquina normalmente. Mas, caso você queira que os objetos linkados sejam sempre baixados na máquina, utilize o atributo download, que configurará o nome do arquivo baixado, de forma que o nome original não é utilizado; dentre outros comportamentos do sistema, como pedido de indicação do diretório para salvar o download, p. ex.</p>
+    <p>Sintaxe:</p>
+        <p>
+            <
+            a 
+            href=
+            "exemplo.pdf" 
+            download=
+            "nome do download"
+            >
+            Texto do link aqui
+            <
+            /
+            a
+            >
+        </p>
+    <p>Treine aqui a criação de links: <br>
+    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_w3schools</p>
+<h2>3. Links e CSS</h2>
+    <p>Por padrão, um hiperlink sempre será exibido da mesma forma: a) Quando o  link está como não visitado ele fica sublinhado e marcado com a cor azul; b) Quando o  link está como link visitado ele é sublinhado e marcado com a cor roxa; c) Quando o  link está como link ativo ele é sublinhado e marcado com a cor vermelha.</p>
+    <p>Isso pode ser alterado via CSS: a) a:link: Formata o estilo do link padrão; b) a:visited: Formata o estilo padrão do link visitado; c) a:hover:  Formata o estilo do link quando o usuário passa o mouse sobre ele; d) a:active:  Formata o estilo do link ativo (clicado).</p>
+    <p>Sintaxe no CSS externo:</p>
+        <p>
+            a:link 
+            {
+            color: #FF0;
+            background-color: #000;
+            text-decoration: none;
+            }
+            <br>
+            a:visited 
+            {
+            color: #F0F;
+            background-color: transparent;
+            text-decoration: none;
+            }
+            <br>
+            a:hover 
+            {
+            color: #F00;
+            background-color: transparent;
+            text-decoration: underline;
+            }
+            <br>
+            a:active 
+            {
+            color: #0F0;
+            background-color: transparent;
+            text-decoration: underline;
+            }
+        </p>
+    <p>Treine aqui a criação de links: <br>
+    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_colors</p>
+<h1>Layouts (div, float e position)</h1>
+    <p>Neste tópico vamos aprender como construir layouts utilizando a tag div do HTML e as propriedades float e position no CSS</p>
+<h2>1. div</h2>
+    <p>A tag div é utilizada para criar uma divisão ou seção no documento HTML. A criação dessas seções é muito útil quando deseja-se caracterizar um bloco de conteúdo de uma página utilizando CSS.</p>
+    <p>Sintaxe Inline:</p>
+        <p>
+            <
+            body
+            ><br> 
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>    
+            <
+            div 
+            style=
+            "color:
+            #F00;
+            background-color:
+            #FF0;
+            width:
+            300px;
+            height:
+            200px;
+            border:
+            4px 
+            solid
+            #0F0;"
+            ><br>
+            <
+            h2
+            >
+            Cabeçalho de nível 2 de cor vermelha
+            <
+            /
+            h2
+            ><br>
+            <
+            p
+            >
+            Conteúdo de um parágrafo na cor vermelha
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            > 
+            Esta div tem cor de fundo amarela, com 330px de largura e 200px de altura e borda de 4 px verde
+            <
+            /
+            p
+            ><br>
+            <
+            /
+            div
+            ><br>
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>
+            <
+            /
+            body
+            >
+        </p>
+    <p>Treine div aqui:<br>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_div_test</p>
+<h4>1.1. div e float</h4>
+    <p>Você pode posicionar sua tag div fazendo com que ela flutue à direita (float:right;) ou à esquerda (float:left).</p>
+    <p>Sintaxe Interno:</p>
+        <p>
+            <
+            head
+            ><br>
+            <
+            title
+            > A tag div
+            <
+            /
+            title
+            ><br>
+            <
+            sty le
+            ><br>
+            #minha_div
+            {
+            color:
+            #F00;
+            background-color:
+            #FF0;
+            width:
+            300px;
+            height:
+            200px;
+            border:
+            4px 
+            solid 
+            #0F0;
+            float:
+            right;
+            }<br>
+            <
+            /
+            style
+            ><br>
+            <
+            /
+            head
+            ><br>
+            <
+            body
+            ><br>
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br> 
+            <
+            div 
+            id=
+            "minha_div"
+            ><br>
+            <
+            h2
+            >
+            Cabeçalho de nível 2 de cor vermelha
+            <
+            /
+            h2
+            ><br>
+            <
+            p
+            >
+            Conteúdo de um parágrafo na cor vermelha
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            >
+            Esta div tem cor de fundo amarela, com 330px de largura e 200px de altura e borda de 4 px verde
+            <
+            /
+            p
+            ><br>
+            <
+            h2
+            >
+            Esta div está flutuando à direita
+            <
+            /
+            h2
+            ><br>
+            <
+            /
+            div
+            ><br>   
+            <
+            /
+            body
+            >
+        </p>
+    <p>Treine fload e div aqui:<br>https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float</p>
+<h4>1.2. div e position</h4>
+    <p>Nós podemos construir layouts utlizando as tags div, mas as posicionando em um lugar fixo da página. A propriedade position possui os seguintes atributos:</p>
+    <p>a) position:absolute; - O posicionamento fica no topo e à esquerda; <br>b) position:relative; - O posicionamento é a posição original do elemento, mas se este tiver um elemento pai, sua posição será considerada a partir deste elemento pai;<br> c) 
+    postion:static;-  é o valor padrão, no qual os elementos aparecem de acordo com a ordem que estiverem declarados no documento;<br> d) position: fixed; - O posicionamento ocorre  em relação à janela do navegador.</p>
+    <p>Treine div e position aqui:<br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_position&preval=absolute</p>
+<h4>1.2.1. position:absolute</h4>
+    <p>As tags div com propriedade position:absolute  podem ser posicionadas à partir do topo (top) da página e à partir da esquerda (left) da página.</p>
+    <p>Sintaxe Interno:</p>
+        <p>
+            <
+            head
+            ><br>
+            <
+            title
+            >
+            A tag div
+            <
+            /
+            title
+            ><br>
+            <
+            s tyle
+            ><br>
+            #minha_div
+            {
+            position: 
+            absolute;
+            top: 
+            50px;
+            left:
+            80px;
+            color:
+            #F00;
+            background-color:
+            #FF0;
+            width:
+            300px;
+            height:
+            200px;
+            border:
+            4px 
+            solid 
+            #0F0;        
+            }<br>   
+            <
+            /
+            style
+            ><br>
+            <
+            /
+            head
+            ><br>
+            <
+            body
+            ><br> 
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>      
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>      
+            <
+            p
+            >
+            Texto sem formatação via CSS.
+            <
+            /
+            p
+            ><br>
+            <
+            div 
+            id=
+            "minha_div"
+            ><br>
+            <
+            h2
+            >
+            Cabeçalho de nível 2 de cor vermelha
+            <
+            /
+            h2
+            ><br>
+            <
+            p
+            >
+            Conteúdo de um parágrafo na cor vermelha
+            <
+            /
+            p
+            ><br>
+            <
+            p
+            > 
+            Esta div tem cor de fundo amarela, com 300px de largura e 200px de altura e borda de 4 px verde, com posição absoluta de left 80px e top 50px
+            <
+            /
+            p
+            ><br>
+            <
+            /
+            div
+            ><br>
+            <
+            /
+            body
+            >
+        </p>
+    <p>Obs: Nesse exemplo, a div está por cima dos parágrafos, ou seja, sua posição absoluta não levará em conta os demais conteúdos da página, podendo, inclusive, uma div ser posicionada sobre a outra.</p>
+    <p>treine position absulte:<br>
+    https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position_absolute</p>
+<h4>1.2.2. position:relative</h4>
+    <p>As tags div com propriedade position:relative o posicionamento ocorre de acordo com a posição original do elemento, mas se este tiver um elemento pai, sua posição será considerada a partir deste elemento pai.</p>
+    <p>Sintaxe Interno:</p>
+        <p>
+            <
+            head
+            ><br>
+                <
+            title
+            > 
+            A tag div
+            <
+            /
+            title
+            ><br>
+            <
+            sty le
+            ><br>
+            #div_pai
+            {
+            position:
+            relative;
+            background-color:
+            #CCC;
+            width:
+            500px;
+            height:
+            300px;
+            border:
+            2px 
+            solid 
+            #F00;
+            margin-left: 
+            200px;
+            margin-top: 
+            100px;
+            }<br>
+            #minha_div
+            {
+            position:
+            absolute;
+            top:
+            50px;
+            left:
+            80px;
+            color:
+            #F00;
+            background-color:
+            #FF0;
+            width:
+            200px;
+            height:
+            200px;
+            border:
+            4px 
+            solid 
+            #0F0;
+            }<br>
+            <
+            /
+            style
+            ><br>
+            <
+            /
+            head
+            ><br>
+            <
+            body
+            ><br>
+            <
+            div 
+            id=
+            "div_pai"
+            ><br>
+            <
+            div 
+            id=
+            "minha_div"
+            ><br>
+            <
+            p
+            >
+            Esta div está posicionada com position absolute e está obedecendo seu posicionamento a partir de uma div pai que está com position relative
+            <
+            /
+            p
+            ><br>
+            <
+            /
+            div
+            ><br>
+            <
+            /
+            div
+            ><br>
+            <
+            /
+            body
+            >
+        </p>
+    <p>Obs: As propriedades float e position absolute podem ser aplicadas a diversos elementos HTML e não apenas à div, ok?</p>
+    <p>Treine position absolute e relativa aqui:<br>http://www.w3im.com/pt/css/css_positioning.html</p>
+<h1>Aprimorando Layouts</h1>
+    <p>Tradicionalmente, os layouts em HTML eram compostos por divs, que seguimentavam as codificações por bloco, a fim de construir uma peça do layout. Ocorre que, com a chegada do HTML5, novas ferramentas permitem tornar a composição de layouts mais eficiente, sem que haja a necessidade de se interpretrar as divs. Vejamos:</p>
+    <p>
+        <
+        header
+        > 
+        - Permite definir um cabeçalho para um documento HTML ou uma seção;<br><br>
+        <
+        nav
+        > - Permite definir um contêiner para links de navegação;<br><br>
+        <
+        section
+        > - Permite definir uma seção em um documento HTML;<br><br>
+        <
+        article
+        > - Permite definir um artigo autónomo independente; <br><br>
+        <
+        aside
+        > - Permite definir  o conteúdo além do conteúdo (como uma barra lateral); <br><br>
+        <
+        footer
+        > - Permite definir um um rodapé para um documento HTML ou uma seção;<br><br>
+        <
+        details
+        > - Permite definir detalhes adicionais;<br><br>
+        <
+        summary
+        > - Permite definir um cabeçalho para o elemento.
+    </p>
+    <p>Treine elementos semânticos em HTML5:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_layout_float<br><br>
+    Há na internet diversos sites que disponibilizam layouts prontos em HTML5 para edição, um exemplo destes sites é o OS Templates que permite que você baixe e edite centenas de layouts.<br>
+    http://www.os-templates.com/free-basic-html5-templates/basic-86</p>
+<h2>1. "header"</h2>
+    <p>Utilizamos o elemento header para definir um cabeçalho de uma página ou de uma seção. É neste elemento que inserimos, por exemplo, o logo, o título, o menu de navegação e o campo de busca de nosso site.<br><br>
+    Sintaxe:<br><br>        
+         <
+        header
+        ><br>
+        <
+        ul
+        ><br>
+        <
+        li
+        >Home<
+        /
+        li
+        ><br>
+        <
+        li
+        >Quem somos<
+        /
+        li
+        ><br>
+        <
+        li
+        >Nossos produtos<
+        /
+        li
+        ><br>
+        <
+        li
+        >Contato<
+        /
+        li
+        ><br>
+        <
+        /
+        ul
+        ><br>
+        <
+        /
+        header
+        ><br>
+    </p>
+<h2>2. "nav"</h2>
+    <p> Este elemento serve para agrupar uma         lista de links que pode ser utilizada       para navegação local ou global (links       internos ou externos). Estes grupos de       links podem ser utilizados em diferentes     partes do layout, tais como no cabeçalho     ou mesmo no rodapé.<br><br>
+        Sintaxe:<br><br>
+            <
+            header
+            ><br>
+	        <
+            nav
+            ><br>
+	        <
+            ul
+            ><br>
+	        <
+            li
+            >Home<
+            /
+            li
+            ><br>
+	        <
+            li
+            >Quem somos<
+            /
+            li
+            ><br>
+            <
+            li
+            >Nossos produtos<
+            /
+            li
+            ><br>
+	        <
+            li
+            >Contato<
+            /
+            li
+            ><br>
+	        <
+            /
+            ul
+            ><br>
+	        <
+            /
+            nav
+            ><br>
+	        <
+            /
+            header
+            ><br>
+    </p>
+<h2>3. "section"</h2>
+    <p> Serve para criar seções no seu layout.       Pode ser utilizado com os elementos         article e header.<br><br>
+        Sintaxe:<br><br>
+            <
+            section
+            ><br>
+	        <
+            article
+            ><br>
+	        <
+            header
+            ><br>
+	        <
+            h2
+            >Título do Artigo<
+            /
+            h2
+            ><br>
+	        <
+            p
+            >Publicado em 22 de Março de 2017 por <
+            a 
+            href=
+            "#"
+            >Author<
+            /
+            a
+            > - <
+            a 
+            href
+            ="#"
+            >30 comentários<
+            /
+            a
+            ><
+            /
+            p
+            ><br>
+	        <
+            /
+            header
+            ><br>
+	        <
+            p
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore <
+            /
+            p
+            ><br>
+	        <
+            /
+            article
+            ><br>
+            <
+            /
+            section
+            ><br>
+    </p>
+<h2>4. "article"</h2>
+    <p>Este elemento é responsável pelo escopo      da página, ou seja, pelo conteúdo            principal do seu site ou layout, o que      chamamos de artigo. As informações desta    área costumam ser maiores e podem conter    imagens, links, parágrafos, etc. Dentro      do elemento article podemos utilizar        outros elementos do HTML5, tais como        header, footer, etc.<br><br>
+       Sintaxe:<br><br>
+            <
+            article
+            ><br>
+	        <
+            header
+            ><br>
+	        <
+            h2
+            >Título do Artigo<
+            /
+            h2
+            ><br>
+	        <
+            p
+            >Publicado em 22 de Março de 2017 por <
+            a 
+            href=
+            "#"
+            >Author<
+            /
+            a
+            > - <
+            a 
+            href=
+            "#"
+            >30 comentários<
+            /
+            a
+            >
+            <
+            /
+            p
+            ><br>
+	        <
+            /
+            header
+            ><br>
+	        <
+            p
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore <
+            /
+            p
+            ><br>
+            <
+            footer
+            ><br>
+	        <
+            p
+            >Saiba mais...<
+            /
+            p
+            ><br>
+	        <
+            /
+            footer
+            ><br>
+            <
+            /
+            article
+            ><br>
+    </p>
+<h2>5. "aside"</h2>
+    <p> Este elemento permite criar uma barra       lateral para inserir conteúdos que           estejam relacionados com o conteúdo do       article, tais como menu lateral, banner,     etc.<br><br>
+        Sintaxe:<br><br>
+            <
+            article
+            ><br>    
+            <
+            aside
+            ><br>
+            <
+            h2
+            >Aqui você pode saber mais...<
+            /
+            h2
+            ><br>
+            <
+            p
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore<
+            /
+            p
+            ><br>
+            <
+            /
+            aside
+            ><br>
+            <
+            aside
+            ><br>
+            <
+            h2
+            >Aqui você pode saber mais...<
+            /
+            h2
+            ><br>
+            <
+            p
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore<
+            /
+            p
+            ><br>
+            <
+            /
+            aside
+            ><br>
+            <
+            /
+            article
+            ><br>
+    </p>
+<h2>6. "footer"</h2>
+    <p> O elemento footer per ccmite definir um     um rodapé para um documento HTML ou uma     seção.<br><br>
+        Sintaxe:<br><br>
+            <
+            section
+            ><br>
+            <
+            article
+            ><br>
+            <
+            header
+            ><br>
+            <
+            h2
+            >Título do Artigo<
+            /
+            h2
+            ><br>
+            <
+            p
+            >Publicado em 22 de Março de 2017 por <
+            a 
+            href=
+            "#"
+            >Author<
+            /
+            a
+            > - <
+            a 
+            href=
+            "#">30 comentários<
+            /
+            a
+            ><
+            /
+            p
+            ><br>
+            <
+            /
+            header
+            ><br>
+            <
+            p
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.<
+            /
+            p
+            ><br>
+            <
+            footer
+            ><br>
+            <
+            p
+            >Saiba mais...<
+            /
+            p
+            ><br>
+            <
+            /
+            footer
+            ><br>
+            <
+            /
+            article
+            ><br>
+            <
+            /
+            section
+            ><br>
+    </p>
+<h2>7. "details" e "summary"</h2>
+    <p> Os  elementos details e summary são         utilizados juntos. O primeiro serve para     que se crie um espaço (com uma seta)         para que o usuário clique e receba mais     informações, sendo que o segundo serve       para criar uma legenda para as               informações.<br><br>
+        Sintaxe:<br><br>
+            <
+            details
+            ><br>
+            <
+            summary
+            >Clique aqui para mais detalhes <
+            /
+            summary
+            ><br>
+            <
+            p
+            >Aqui você têm mais informações sobre os detalhes.
+            <
+            /
+            p
+            ><br>                
+            <
+            /
+            details
+            >
+    </p>
+<h2>8. Aplicação de CSS nos elementos de Layout</h2>
+    <p> Para cada layout é possível criar           formatações específicas para estes           elementos utilizando o CSS.<br><br>
+        Sintaxe:<br><br>
+            header{background-color:#CCC;}<br>
+            nav{background-color:#FF0;}<br>
+            section{background-color:#FFF;padding: 10px;border: }<br>
+            article{background-color:#0F0;display: block;}<br>
+            aside{background-color:#00F;width:50%;float:left;}<br>
+            footer{background-color:#000;color:#FFF;height: 50px;}<br>
+            details{color:#F00;}
+    </p>
+<h2>9. Valores para construção de layouts</h2>
+    <p> A usabilidade não é uma propriedade         singular ou unidimensional de uma           interface do sistema tecnológico de         informação. A usabilidade está               distribuída à diversos elementos, sendo     tradicionalmente associada, segundo         Jakob Nielsen, aos seguintes fatores:<br><br>
+        - Facilidade de aprendizagem: o sistema deve ser fácil de assimilar pelo utilizador, para que este possa começar a trabalhar rapidamente;
+    <br><br>
+        - Eficiência: o sistema deve ser eficiente para que o utilizador, depois de o saber usar, possa atingir uma boa produtividade;
+    <br><br>
+        - Facilidade de memorização: o sistema deve ser facilmente memorizado, para que depois de algum tempo sem o utilizar, o utilizador se recorde como usá-lo;
+    <br><br>
+        - Segurança: o sistema deve prever erros, evitar que os utilizadores os cometam e, se o cometerem, permitir fácil recuperação ao estado anterior.
+    <br><br>
+        - Satisfação: o sistema deve ser usado de uma forma agradável, para que os utilizadores fiquem satisfeitos com a sua utilização. (REBELO, ONLINE)
+    </p>
+<h1>Menus</h1>
+    <p>Menus são basicamente listas em HTML, estilizadas em CSS. No HTML podemos utilizar dois tipos de lista: a) lista ordenada (ordened list); e b) lista não ordenada (unordened list). É ainda possível criar uma lista dentro de outra lista (listas intercaladas).</p>
+<h2>1. Lista Ordenada (ordened list)</h2>
+    <p>É definida pela seção 
+        <
+        o
+        l
+        >
+        <
+        /
+        o
+        l
+        >,
+    onde constará cada elemento da lista, definido por 
+        <
+        l
+        i
+        >
+        Item da lista
+        <
+        /
+        l
+        i
+        >
+        <br><br>
+        Sintaxe: <br><br>
+            <
+            body
+            ><br>
+            <
+            ol
+            ><br>
+            <
+            l i
+            >Item da lista  1<
+            /
+            li
+            ><br>
+            <
+            l i
+            >Item da lista  2<
+            /
+            l i
+            ><br>
+            <
+            l
+            i
+            >Item da lista  3<
+            /
+            l
+            i
+            ><br>
+            <
+            /
+            ol
+            ><br>
+            <
+            /
+            body
+            ><br>
+    </p>
+    <p>Treine a elaboração de listas aqui: <br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_ordered</p>
+<h2>2. Lista Não Ordenada (unordened list)</h2>
+    <p>É definida pela seção 
+        <
+        u
+        l
+        >
+        <
+        /
+        u
+        l
+        >,
+    onde constará cada elemento da lista, definido por 
+        <
+        l
+        i
+        >
+        Item da lista
+        <
+        /
+        l
+        i
+        >
+        <br><br>
+        Sintaxe: <br><br>
+            <
+            body
+            ><br>
+            <
+            ul
+            ><br>
+            <
+            l i
+            >Item da lista  1<
+            /
+            li
+            ><br>
+            <
+            l i
+            >Item da lista  2<
+            /
+            l i
+            ><br>
+            <
+            l
+            i
+            >Item da lista  3<
+            /
+            l
+            i
+            ><br>
+            <
+            /
+            ul
+            ><br>
+            <
+            /
+            body
+            ><br>
+    </p>
+    <p>Treine a elaboração de listas aqui: <br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_unordered</p>
+<h2>3. Listas Intercaladas</h2>
+    <p>É possível criar listas dentro de listas, ao que chamamos de listas intercaladas.<br><br>
+    Sintaxe:<br><br>
+        <
+        body
+        ><br>
+            <
+            ol
+            ><br>
+               <
+               li
+               >Item da lista  1<
+               /
+               li
+               ><br>
+                    <
+                    ul
+                    ><br>
+                        <
+                        li
+                        >Subitem  1<
+                        /
+                        li
+                        ><br>
+                            <
+                            ol
+                            ><br>
+                                <
+                                li
+                                >Subitem  1<
+                                /
+                                li
+                                ><br>
+                                < 
+                                li
+                                >Subitem  2<
+                                /
+                                li
+                                ><br>
+                                < 
+                                li
+                                >Subitem  3<
+                                /
+                                li
+                                ><br>
+                            <
+                            /ol
+                            ><br>
+                        <
+                        li
+                        >Subitem  2<
+                        /
+                        li
+                        ><br>
+                        <
+                        li
+                        >Subitem  3<
+                        /
+                        li
+                        ><br>
+                    <
+                    /
+                    ul
+                    ><br>
+               < 
+               li
+               >Item da lista  2<
+               /
+               li
+               ><br>
+                    <
+                    ol
+                    ><br>
+                        <
+                        li
+                        >Subitem  1<
+                        /
+                        li
+                        ><br>
+                        <
+                        li
+                        >Subitem  2<
+                        /
+                        li
+                        ><br>
+                        <
+                        li
+                        >Subitem  3<
+                        /
+                        li
+                        ><br>
+                    <
+                    /
+                    ol
+                    ><br>
+               <
+               li
+               >Item da lista  3<
+               /
+               li
+               ><br>
+            <
+            /
+            ol
+            ><br>
+        <
+        /
+        body
+        >
+    </p>
+    <p>Treine listas intercaladas aqui: <br>https://codepen.io/pen/</p>
+<h2>4. Formatando Listas em CSS</h2>
+<h4>4.1. "list-style-type"</h4>
+    <p>As listas criadas em HTML podem ser formatadas utilizando a propriedade list-style-type em CSS que permitem mudar o tipo de lista a ser apresentada. Os atributos são diferentes de acordo com o tipo de lista utilizada.</p>
+<h4>4.1.1. "list-style-type" e "ul"</h4>
+    <p>No caso de listas não ordenadas (ul), são cabíveis os seguintes argumentos a) circle; b) disc; c) square; d) none.<br><br>
+    Sintaxe:<br><br>
+        ul {list-style-type: circle;}<br>
+        ul  {list-style-type: disc;}<br>
+        ul {list-style-type: square;}<br>
+        ul {list-style-type: none;}<br><br>
+    Treine a estilização de listas não ordenadas aqui:<br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_ul_list-style-type&preval=disc
+    </p>
+<h4>4.1.2. "list-style-type" e "ol"</h4>
+    <p>O sistema de listas ordenadas já comporta maiores variações quanto ao atributo list-style-type. Vejamos a sintaxe de cada um deles:<br><br>
+        ol {list-style-type: armenian;}<br>
+        ol {list-style-type: cjk-ideographic;}<br>
+        ol {list-style-type: decimal;}<br>
+        ol {list-style-type: decimal-leading-zero;}<br>
+        ol {list-style-type: georgian;}<br>
+        ol {list-style-type: hebrew;}<br>
+        ol {list-style-type: hiragana;}<br>
+        ol {list-style-type: hiragana-iroha;}<br>
+        ol {list-style-type: katakana;}<br>
+        ol {list-style-type: katakana-iroha;}<br>
+        ol {list-style-type: lower-alpha;}<br>
+        ol {list-style-type: lower-greek;}<br>
+        ol {list-style-type: lower-latin;}<br>
+        ol {list-style-type: lower-roman;}<br>
+        ol {list-style-type: upper-alpha;}<br>
+        ol {list-style-type: upper-greek;}<br>
+        ol {list-style-type: upper-latin;}<br>
+        ol {list-style-type: upper-roman;}<br>
+        ol {list-style-type: none;}<br>
+        ol {list-style-type: inherit;}<br><br>
+        Pratique a estilização de listas ordenadas aqui: <br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&preval=hiragana-iroha<br>https://www.w3schools.com/cssref/tryit.asp?filename=trycss_list-style-type_all<br>https://www.w3schools.com/cssref/tryit.asp?filename=trycss_list-style-type_ex        
+    </p>
+<h4>4.2. "list-style-image"</h4>
+    <p>As listas criadas em HTML podem ser formatadas utilizando a propriedade list-style-image em CSS que permitem criar uma lista que utilize imagens.<br><br>
+    Sintaxe:<br><br>
+        ul {list-style-image: url('sqpurple.gif');}<br><br>
+    Treine a utilização da propriedade list-style-image no lin a seguir:<br> https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-image
+    </p>
+<h4>4.3. "list-style-position"</h4>
+    <p>As listas criadas em HTML podem ser formatadas utilizando a propriedade list-style-position em CSS que permitem alterar a posição dos itens da lista, ou seja, se estes marcadores devem aparecer dentro ou fora do fluxo de conteúdo.<br><br>
+    Sintaxe:<br><br>
+        ul {list-style-position: inside;}<br>
+        ul {list-style-position: outside; /*posicionamento padrão*/}<br><br>
+    Treine a utilização de list-style-position aqui:<br>https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-position
+    </p>
+<h4>4.4. "list-style" abreviada</h4>
+    <p>Você pode abreviar uma linha de comando em CSS da propriedade list-style desde que obedeça a seguinte ordem (se algum valor não for declarado, assume-se o valor padrão:<br><br>ul {list-style-type list-style-position list-style-image}<br><br>
+    Sintaxe:<br><br>
+        ul {list-style: square inside url("marcador.gif");}<br><br>
+    Treine a utilização da forma abreviada da estilização de listas:<br>https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style
+    </p>
+<h4>4.5. Listas  Coloridas</h4>
+    <p>Nós podemos aplicar cores as listas sendo que uma determinada formatação aplicada a lista (ol ou ul) altera toda a lista, enquanto aquela aplicada apenas ao item da lista (li) altera apenas estes itens.<br><br>
+    Sintaxe:<br><br>
+        <
+        s tyle
+        ><br>
+            ol {background: #CCC;                padding: 10px;}<br>
+            ul {background: #00F; padding: 10px;}<br>
+            ol li {background: #FF0; padding: 5px; margin-left: 55px;}<br>
+            ul li {background: #FFF; margin: 15px; color:#000;}<br>
+        <
+        /
+        style><br><br>
+    Treine a estilização de listas coloridas aqui: <br>https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style_colors
+    </p>
+<h4>4.6. Estilização do Marcador da Lista</h4>
+    <p>Você pode alterar a cor e tamanho de um marcador, desde que substitua seus marcadores padrão (tanto da ul quanto da ol) por um outro marcador e especifique as alterações que deseja.<br><br> 
+    Sintaxe:<br><br>
+        <
+        s tyle
+        ><br>
+           ul {list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }/* remove os marcadores da lista */<br>
+            ol {list-style-type: none; padding: 20px; margin: 0;}/* remove os marcadores da lista */<br>
+            li {padding-left: 16px;}<br>
+            li:before {content: "&"; padding-right: 8px; color: blue; font-size:2em;}<br>/* formata o marcador, insere o marcador desejado e altera a cor do marcador, bem como o tamanho do marcador*/<br>
+        <
+        /
+        style
+        ><br><br>
+    Treine a estilização de marcadores aqui: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content_list-bullets
+<h2>5. Criando Menus</h2>
+    <p>Agora que aprendemos como criar listas vamos ver como os desenvolvedores utilizam a formatação em CSS para estas listas, transformando-as em menus interessantes para os sites.</p>
+<h4>5.1. Menus na Vertical</h4>
+    <p>Para construção de um menu a partir de uma lista podemos seguir os seguintes passos.</p>
+<h4>5.1.1. Criar uma Lista Básica</h4>
+    <p>Para começar a construção de nosso menu, vamos utilizar uma lista simples como a abaixo:<br><br>
+        <
+        ul
+        ><br>
+            <
+            l
+            i
+            >
+            <
+            a 
+            href=
+            "http://www.meusite.com.br" target="_blank" title="link para Meu Site">Meu Site<
+            /
+            a
+            ><
+            /
+            li
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >News<
+            /
+            a
+            ><
+            /
+            li
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >Contact<
+            /
+            a
+            >
+            <
+            /
+            li
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >About<
+            /
+            a
+            ><
+            /
+            li
+            ><br>
+        <
+        /
+        ul
+        >
+    </p>
+<h4>5.1.2. Formatar a Lista e Seus Itens</h4>
+    <p>Vamos formatar as proprieades de uma lista e de seus itens utilizando os comandos em CSS abaixo:<br><br>
+        ul {list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #F00; border:1px solid #CCC;}<br>
+        li {text-align: center; border-bottom: 1px solid #555;}<br>
+    </p>
+<h4>5.1.3. Formatar os Links na Vertical</h4>
+    <p>Podemos formatar a tag a (que cria os links) e preparando nosso menu para ficar posicionado na vertical com o código CSS abaixo:<br><br>
+    li a {display: block; color: #00F; padding: 8px 16px; text-decoration: none; font-size:1em;}            
+    </p>
+<h4>5.1.4. Formatar a Cor de Fundo do Link Ativo</h4>
+    <p>Podemos formatar a tag a (que cria os links) mudando a cor do link ativo (quando o usuário passa o mouse sobre o link) com o código CSS abaixo:<br><br>
+        li a: hover {background-color: #FF0; color: #000; font-size:1.5em;}
+    </p>
+<h4>5.1.5. Resultado Sintático</h4>
+    <p>
+        <
+        s tyle
+        ><br>
+        ul {list-style-type: none; margin: 0; padding: 0; width: 200px; background-color: #F00; border:1px solid #CCC;}<br>
+        li {text-align: center; border-bottom: 1px solid #555;}<br>
+        li a {display: block; color: #00F; padding: 8px 16px; text-decoration: none; font-size:1em;}<br>
+        li a: hover {background-color: #FF0;
+        color: #000; font-size:1.5em;}<br>
+        <
+        /
+        style
+        ><br>
+        <
+        /
+        head
+        ><br>
+        <
+        body
+        ><br>
+         <
+        ul><br>
+        <
+        li
+        ><
+        a 
+        href=
+        "http://www.meusite.com.br" 
+        target=
+        "_blank" 
+        title=
+        "link para Meu Site"
+        >Meu Site<
+        /
+        a>
+        <
+        /
+        li
+        ><br>
+        <
+        li
+        ><
+        a 
+        href=
+        "#"
+        >News<
+        /
+        a
+        ><
+        /
+        li
+        ><br>
+        <
+        li
+        ><
+        a 
+        href=
+        "#"
+        >Contact<
+        /
+        a
+        ><
+        /
+        li
+        ><br>
+        <
+        li
+        ><
+        a 
+        href=
+        "#">About<
+        /
+        a
+        ><
+        /
+        li
+        ><br>
+        <
+        /
+        ul
+        ><br>
+        <
+        /
+        body
+        ><br>
+    </p>
+    <p>Treine menus na vertical aqui: <br>
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_gray<br>
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_active<br>
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_borders<br>
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_fixed</p>
+<h4>5.2. Menus na Horizontal</h4>
+    <p>Para criar um menu na horizontal, vamos utilizar os mesmo passos e códigos acima, mas incluindo nos seletores abaixo as seguintes propriedades CSS.</p>
+<h4>5.2.1. "overflow"</h4>
+    <p>No seletor em CSS que formata a ul:  acrescentar a propriedade overflow: hidden, que é uma propriedade que avisa que o conteúdo que passe do total do elemento deverá ficar invisível.<br><br>
+    Treine overflow (transbordar) aqui:<br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_overflow
+    </p>
+<h4>5.2.2. "float"</h4>
+    <p>No seletor em CSS que formata a li:  acrescentar a propriedade float:left; que fará o elemento flutuar à esquerda (ma pode flutuar também à direita).<br><br>
+    Treine float (flutuar) aqui:<br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_float&preval=right</p>
+<h4>5.2.3. Resultado Sintático</h4>
+        <
+        head
+        ><br>
+        <
+        s tyle
+        ><br>
+            ul {list-style-type: none; margin: 0; padding: 0; background-color: #F00; border:1px solid #CCC; overflow: hidden;}/* avisa que o conteúdo que passe do total do elemento deverá ficar invisível*/<br>
+            li {text-align: center; border-bottom: 1px solid #555; float:left; }/* flutua nosso menu à esquerda */<br>
+            li a {display: block; color: #00F; padding: 8px 16px; text-decoration: none; font-size:1.2em;}<br>
+            li a:hover {background-color: #FF0; color: #000; font-size:1.2em;}<br>
+            <
+            /
+            style
+            ><br>
+            <
+            /
+            head
+            ><br>
+            <
+            body
+            ><br>
+            <
+            ul
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "http://www.uninove.br" 
+            target="_blank" 
+            title="link para site da Uninove"
+            >UNINOVE<
+            /
+            a
+            ><
+            /
+            li
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >News<
+            /
+            a
+            ><
+            /
+            li><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >Contact<
+            /
+            a
+            ><
+            /
+            li
+            ><br>
+            <
+            li
+            ><
+            a 
+            href=
+            "#"
+            >About<
+            /
+            a><
+            /
+            li><br>
+            <
+            /
+            ul
+            ><br>
+            <
+            /
+            body
+            ><br>
+        <p>Treine menus na vertical aqui:<br>https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_dividers<br>
+        https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed<br>
+        https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed2<br>
+        https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_gray<br>
+        </p>
+<h1>Tabelas</h1>
+    <p>Nós criamos tabelas em HTML para organizar nossas informações e conteúdos em forma de dados tabulares. Nas versões anteriores do HTML as tabelas foram, inclusive, utilizadas para construção de layouts mas, desde a versão 4.01 este tipo de aplicação caiu em desuso, principalmente devido à que surgiram novas possibilidades como as Divs (divisões) e no HTML os novos elementos semânticos de construção de layouts.<br><br>
+    Mas as tabelas ainda tem sua importância, pois nos ajudam a visualizar de forma rápida e fácil valores que possuem algum tipo de conexão. Sendo assim, atualmente, utilizamos as tabelas em HTML para estruturar e apresentar dados. <br><br>
+    IMPORTANTE: Quando bem elaboradas, as tabelas ajudam as pessoas com deficiência visual a interpretar melhor os dados tabulares disponibilizados, proporcionando, então, uma melhor acessibilidade de seu sistema.</p>
+<h2>1. Criando Tabelas em HTML5</h2>
+<h4>1.1. "table"</h4>
+    <p>Para a construção de seção de uma tabela em HTML utilizamos a tab table, na seguinte formatação, que corresponde a 1 tabela: <br><br>
+        <
+        t able
+        ><
+        /
+        table
+        >
+    </p>
+<h4>1.2. "table row"</h4>
+    <p>Para criar as linhas da tabela, utilizamos a tag tr (ou table row) na seguinte formatação, para 3 linhas:<br><br>
+        <
+        t
+        r
+        ><
+        /
+        tr
+        >
+    </p>
+<h4>1.3. "table data"</h4>
+    <p>Não é possível inserir conteúdos no tr de uma tabela, apenas em seu td. Dentro de cada linha de uma tabela podemos incluir os campos para inserção de dados da tabela ou os table data (células), utilizando a tag td (ou table data), na seguinte formatação, para 2 célular em cada linha:<br><br>
+        <
+        t d
+        ><
+        /
+        td
+        >    
+    </p>
+<h4>1.4. Cebeçalhos</h4>
+    <p>Você pode criar cabeçalhos em uma tabela, os table header, utilizando a tag th. Neste caso o conteúdo dentro da tag th ficaria automaticamente em negrito. O formato de uso desta tag é:<br><br>
+        <
+        th
+        >cabeçalho de uma tabela ou table header<
+        /th
+        ><br><br>
+    A table header é inserida na linha abaixo da tag de abertura da table row (tr).
+    </p>
+<h4>1.5. Tabela Completa</h4>
+    <p>Sintaxe:<br><br>
+        <
+        table
+        ><br>
+          <
+          tr
+          >< !--linha 1 da tabela --><br>
+          <
+          th
+          >cabeçalho de uma tabela ou table header<
+          /th
+          ><br>
+            <
+            td
+            >conteúdo 1 da linha 1<
+            /td
+            ><br>
+            <
+            td
+            >conteúdo 2 da linha 1<
+            /td
+            ><br>
+            <
+            td>conteúdo 3 da linha 1<
+            /td><br>
+          <
+          /
+          tr
+          ><br>
+          <
+          tr
+          >< !--linha 2 da tabela --><br>
+            <
+            td
+            >conteúdo 1 da linha 2<
+            /td><br>
+            <
+            td
+            >conteúdo 2 da linha 2<
+            /td
+            ><br>
+            <
+            td
+            >conteúdo 3 da linha 2<
+            /
+            td
+            ><br>
+          <
+          /tr
+          ><br>
+        <
+        /table
+        ><br><br>
+    Treine a criação de tabelas simples:<br>
+    https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_table_test<br><br>
+    Treine a criação de cabeçalhos:<br>
+    https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_table_header
+    </p>
+<h2>2. Tabelas e CSS3</h2>
+    <p>Uma tabela como as dos códigos acima infelizmente não seria vista corretamente no navegador, pois não há informações sobre formatação. Sendo assim, para iniciar uma formatação de uma tabela em CSS teríamos de informar, por exemplo, os valores para a borda da seguinte forma:<br><br>
+        <
+        s tyle
+        ><br>
+            table, th, td 
+            {
+            border: 1px solid #0F0;}<br>
+        <
+        /style>
+    </p>
+<h4>2.1. Outras propriedades CSS</h4>
+    <p>Para complementar, poderíamos realizar a formatação de mais propriedades em CSS de nossa tabela, tais como cor de fundo, largura, altura, etc:<br><br>
+        a) border-collapse: collapse; (o valor padrão é separate)<br><br>
+        b) padding: Define o espaço interno das células da tabela<br><br>
+        c) text-align: Define o alinhamento horizontal das células da tabela<br><br>
+        d) vertical-align: Define o alinhamento vertical das células da tabela<br><br>
+        e) border-spacing: Define o espaço entre as células de uma tabela<br><br>
+        f)background-color: Define a cor de fundo de uma tabela ou célula<br><br>
+        g) width: Define largura de tabela ou célula<br><br>
+        h) height: Define altura de tabela ou célula<br><br>
+    Todos os demais comandos de formatação de textos e de objetos (tamanho da fonte, imagem de fundo, cor do texto, alinhamento de texto, formatação de borda, etc...se aplicam normalmente à tabelas em HTML.<br><br>        
+    Treine o emprego dessas propriedades de estilo:<br>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_table_header        
+    </p>
+<h2>3. Legendas</h2>
+    <p>Para criar uma legenda em uma tabela utilizamos a tag caption, após a declaraçãod e abertura table.<br><br>
+        <
+        caption
+        >Legenda<
+        /
+        caption><br><br>        
+        <
+        table
+        ><br>
+          <
+          caption
+          >Legenda da tabela<
+          /
+          caption
+          ><br>
+          <
+          tr
+          >< !--linha 1 da tabela --><br>
+          (...)<br><br>
+          Treine tabelas com legendas:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_tables2
+    </p>
+<h2>4. Mesclando Células</h2>
+    <p>Quando precisamos mesclar células de uma tabelas utilizamos os seguintes atributos, sempre aplicados aos table data ou td (células) das tabelas, ou ainda junto à tag de cabeçalho:<br><br>
+    a)colspan: para mesclar colunas.<br><br>
+    b)rowspan: para mesclar linhas.<br><br>
+    A Sintaxe completa fica assim:<br><br>
+        <
+        table
+        ><br>
+          <
+          caption
+          >Legenda da tabela<
+          /caption
+          ><br>
+          <
+          tr
+          >< !--linha 1 da tabela --><br>
+            <
+            th 
+            colspan
+            =3
+            >cabeçalho de uma tabela e colspan = 3<
+            /th
+            ><br> 
+          <
+          /
+          tr
+          ><br>
+          <
+          tr
+          >< !--linha 2 da tabela --><br>
+            <
+            td 
+            rowspan
+            =3
+            >Linha 2 com rowspan = 3<
+            /td
+            ><br>
+          <
+          tr
+          >< !--linha 3 da tabela --><br>
+            < 
+            td
+            >conteúdo 1 da linha 3<
+            /
+            td
+            ><br>
+            <
+            td
+            >conteúdo 2 da linha 3<
+            /td
+            ><br>
+            <
+            td
+            >conteúdo 3 da linha 3<
+            /td
+            ><br>
+          <
+          /tr
+          ><br>
+        <
+        /table
+        ><br>
+    </p>
+<h2>5. Formatando Grupo de Colunas</h2>
+    <p>É possível formatar um grupo de colunas, por meio do método inline, utilizando a tag colgroup para iniciar a seção, sempre antes da tag da primeira linha (tr) da tabela, e col para lançar as propriedades de estilo.<br><br>
+        <
+        colgroup
+        ><br>
+            <
+            col 
+            span=
+            "3" 
+            style=
+            "background-color:#F00;"
+            >< !-- aplicará a formatação sobre três colunas --><br>
+            <
+            col style=
+            "background-color:#FF0;"
+            >< !-- aplicará a formatação sobre as colunas restantes -->
+        <
+        /colgroup
+        ><br>
+        <
+        tr
+        >< !--linha 1 da tabela --><br><br>
+    Treine colgroup e col:<br>https://www.w3schools.com/tags/tag_colgroup.asp 
+    </p>
+<h2>6. "thead", "tbody" e "tfoot"</h2>
+    <p>Utilizamos a tag thead para agrupar o conteúdo de cabeçalho em uma tabela. Este elemento deve ser utilizado em conjunto com os elementos tbody (corpo da tabela)  e tfoot (rodapé da tabela)  para definir  estas partes de uma tabela. <br><br>
+    Os navegadores podem utilizar estes elementos para permitir a rolagem do corpo de uma tabela, independentemente do seu cabeçalho e rodapé. Além desta possibilidade, ao imprimir uma  tabela que abrange várias páginas, esses elementos podem permitir que o cabeçalho e o rodapé da tabela sejam impressos na parte superior e inferior de cada página.<br><br>        
+    Dica: sempre utilize o elemento thead como "filho" de um elemento "table" ou após qualquer elemento caption e colgroup e antes de qualquer elemento tbody, tfoot e tr. Os elementos thead. tbody e tfoot devem conter elementos tr em seu interior para funcionar.<br><br>
+    <
+    head
+    ><br>
+        <
+        meta 
+        charset
+        ="utf-8"
+        /
+        ><br>
+        <
+        title
+        >Tabelas<
+        /
+        title
+        ><br>
+        <
+        s tyle
+        ><br>
+        table {border: 1px solid #000;     text-align: center;               height: 300px;               width:100%;}<br>
+        thead {background: #0F0;;color:#00F;}<br>
+        tbody {background: #FF0;;color:#F00;}<br>
+        tfoot {background: #00F;;color:#F0F;}<br>
+        <
+        /style><br>
+    <
+    /
+    head><br>
+    <
+    body
+    ><br>
+        <
+        table
+        ><br>
+            <
+            caption
+            >Legenda da tabela<
+            /
+            caption
+            ><br>
+            <
+            thead
+            ><br>
+                <
+                tr
+                >< !--linha 1 da tabela --><br>
+                    <
+                    td 
+                    colspan=
+                    "3"
+                    >conteúdo thead<
+                    /
+                    td><br>
+                <
+                /
+                tr><br>
+            <
+            /
+            thead
+            ><br>
+            <
+            tbody
+            ><br>
+                <
+                tr
+                >< !--linha 2 da tabela --><br>
+                    <
+                    td
+                    >conteúdo tbody<
+                    /
+                    td
+                    ><br>
+                    <
+                    td
+                    >conteúdo tbody<
+                    /
+                    td
+                    ><br>
+                    <
+                    td
+                    >conteúdo tbody<
+                    /
+                    td
+                    ><br>
+                <
+                /
+                tr
+                ><br>
+            <
+            /
+            tbody
+            ><br>
+            <
+            tfoot
+            ><br>
+                <
+                tr
+                >< !--linha 3 da tabela --><br>
+                    <
+                    td 
+                    colspan=
+                    "3"
+                    >conteúdo tfoot<
+                    /
+                    td
+                    ><br>
+                <
+                /
+                tr
+                ><br>
+            <
+            /
+            tfoot
+            ><br>
+        <
+        /
+        table
+        ><br> 
+    <
+    /
+    body
+    ><br><br>
+    Treine elementos thead:<br>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_tbody
+    </p>
+<h1>Iframes</h1>
+    <p>O iframe é a abreviação do inglês "internal frame" e significa quadro interno. Utilizamos o iframe quando queremos criar um espaço em uma página HTML para  introduzir um conteúdo (tais como vídeos e banners) ou mesmo outra página HTML dentro da página que o contém.</p>
+<h2>1. Uso de Iframes</h2>
+    <p>O uso de iframes é comum, por exemplo, inserção de banners de propaganda (o google adsense utiliza este recurso, por exemplo) ou mesmo quando precisamos renderizar um conteúdo  independente em uma página de forma segura, isto é, sem que o conteúdo daquele local interfira com o restante da página, deixando-a mais lenta, por exemplo. <br><br>
+    Sendo assim, atualmente a principal utilização de iframes nos sistemas web são aqueles relacionados à integração entre aplicações web distintas de uma forma independente e segura (links para redes sociais são muitas vezes criados utilizando iframes, como o twitter, por exemplo).</p>
+<h2>2. Sintaxe do Iframe</h2>
+    <p>Para a construção de um iframe utilizamos, dentro da seção body, a seguinte linha de comando:<br><br>
+        <
+        iframe
+        ><
+        /iframe
+        >
+    </p>
+<h4>2.1. Conteúdo do Iframe</h4>
+    <p>Para que um conteúdo inicial seja colocado no iframe utilizamos o src (source) da seguinte forma:<br><br>
+        <
+        iframe
+        src=
+        "https://www.youtube.com/embed/_YvHRGsCgMc"
+        ><
+        /iframe
+        ><br><br>
+    Obs: Alguns sites e sistemas impedem que o seu conteúdo seja visualizado por meio de um iframe, que é o caso o youtube. Perceba que para poder abrir este vídeo em nosso iframe utilizamos o link que foi disponibilizado quando clicamos em compartilhar  depois em  Incorporar do youtube (https://www.youtube.com/embed/_YvHRGsCgMc) e não o link da página  do youtube (https://www.youtube.com/watch?v=_YvHRGsCgMc) que está na barra do navegador.
+    </p>
+<h4>2.2. Formatação do Iframe</h4>
+    <p>Para formatar um iframe em CSS podemos utilizar, dentre outras, as seguintes propriedades:<br><br>
+    a) width - define a largura do iframe;<br>b) height - define a altura do iframe;<br> c) border - define a borda do iframe. (quando não queremos uma borda inserimos o valor none - nenhum).<br><br>
+    Sintaxe:<br><br>
+        <
+        iframe 
+        src=
+        "https://www.youtube.com/embed/_YvHRGsCgMc" 
+        style="width:500px;height:400px;border:none;"
+        ><
+        /
+        iframe><br><br>
+    Obs: No caso de iframes o HTML5 suporta os atributos width para largura, height para altura e frameborder para tamanho da borda (que pode ser 0 ou 1). Os códigos disponibilizados pelo youtube e o google maps, inclusive, informam seus códigos desta forma.</p>
+<h4>2.3. Rolagem no Iframe</h4>
+    <p>Quando o conteúdo a ser aberto em um iframe é maior que seu tamanho previamente determinado, então as barras de rolagem aparecerão automaticamente. Se não quisermos que isto aconteça, podemos utilizar o atributo scrolling que pode ter os seguintes valores:<br><br>
+        a) scrolling=no - não exibe as barras de rolagem;<br>
+        b) scrolling=yes -  sempre exibe as barras de rolagem;<br>
+        c) scrolling=auto - as barras de rolagem surgirão se o conteúdo for maior que o iframe.<br><br>
+    Sintaxe:<br><br>
+        <
+        iframe 
+        src=
+        "http://www.uninove.br" 
+        style="width:500px;height:400px;border:none;" 
+        scrolling="no"><
+        /
+        iframe>
+    <br><br>Obs: O atributo scrolling não é mais suportado no HTML5 e, então, sua tendência será desaparecer. Em seu lugar no HTML5 pode-se utilizar em CSS a propriedade overflow:hidden (transbordar:oculto), mas esta propriedade não é reconhecida no iframe em alguns navegadores, sendo assim , atualmente sugere-se utilizar as duas formas em conjunto para garantir que as barras não aparecerão.<br><br>
+    Treine overflow: <br>https://www.w3schools.com/cssref/playit.asp?filename=playcss_overflow&preval=auto
+    </p>
+<h4>2.4. Iframe em Tela Cheia</h4>
+    <p>Para colocar um iframe em tela cheia utilizamos o atributo allowfullscreen:<br><br>Sintaxe:<br><br>
+        <
+        iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3272656480763!2d-46.59655808544332!3d-23.52072888470303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ccbce4b58d%3A0xa84fb909b063f1c0!2sUninove+central+do+aluno!5e0!3m2!1spt-BR!2sbr!4v1496272360034" 
+        width="600" 
+        height="450" 
+        frameborder="0" 
+        style="border:0" 
+        allowfullscreen
+        ><
+        /iframe>
+        <br><br><
+        iframe 
+        width="560" 
+        height="315"   
+        src="https://www.youtube.com/embed/_YvHRGsCgMc" 
+        frameborder="0" 
+        allowfullscreen
+        ><
+        /
+        iframe><br><br>
+    Obs: Mas para que esta propriedade funcione, é necessário que haja um método  element.mozRequestFullScreen() declarado. Se  este método não estiver corretamente definido, o iframe não  poderá  aparecer em modo de tela cheia.<br><br>
+    Treine element.mozRquestFullScreen():<br>
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen
+    </p>
+<h4>2.5. Links para o Iframe</h4>
+    <p>Nós podemos direcionar os links para que eles abram os conteúdos diretamente de um iframe. Para isso, utilizamos o atributo name para nomear diretamente na declaração do iframe. Em seguida, o iframe vira o alvo de um link num outro ponto da página. Fica assim:<br><br>
+        <
+        iframe 
+        src=
+        "http://www.meusite.com.br" 
+        style="width:500px;height:400px;border:none;overflow:hidden;" 
+        scrolling="no" 
+        name="teste_iframe"
+        ><
+        /
+        iframe><br><br>
+    Em seguida, é só colocar o nome do iframe como alvo de um link (target) numa âncora (a). Fica assim:<br><br>
+        <
+        a 
+        href="http://www.meusite.com.br" title="link para o meu site" target="teste_iframe">  
+        O texto do link fica aqui.
+        <
+        /a>
+    </p>
+<h2>3. Questões de Segurança</h2>
+    <p>Há desenvolvedores que desaconselham o uso de iframes, principalmente devido a que os sistemas de busca indicam ao usuário um link para conteúdo disponibilizado no iframe ao invés de indicar a página em que ele está inserido e devido a que o mesmo é considerado inseguro, pois pode permitir o acesso a conteúdos maliciosos.</p>
+<h2>4. Soluções de Segurança</h2>
+    <p>Quanto à questões relacionadas à segurança, com o HTML5 surgiram algumas opções que garantem melhor segurança. Você utiliza iframes sem perceber quando navega na web e os sistemas os utilizam quando são necessárias incorporações seguras de seus conteúdos.<br><br>
+    Um exemplo disto  acontece quando você  assiste a um vídeo no youtube (pois sem perceber está  utilizando o iframe) ou mesmo quando decide incorporar um vídeo do youtube em seu site, pois o próprio youtube lhe dá o código do iframe para que você possa inserir este vídeo, bastando para isso clicar em 'compartilhar' e depois em 'incorporar'. O mesmo vai ocorrer se você quiser incorporar um mapa do google maps em seu sistema clicando em compartilhar e depois em incorporar.</p>
+<h2>5. Procedimentos de Segurança</h2>
+<h4>5.1. "sandbox"</h4>
+    <p>O atributo sandbox desativa todas as ameaças que poderiam existir em um conteúdo que fosse disponibilizado por meio de um iframe tais como:<br><br>
+    a) Execução de plugins;<br>
+    b) Ativação de formulários;<br>
+    c) Execução de scripts;<br>
+    d) Ativação de links fora do iframe;<br>
+    e) Acesso a cookies;<br>
+    f) Armazenamento local;<br>
+    g) Acesso a outras páginas no mesmo domínio (origem).<br><br>
+    Obs: sandbox com argumento vazio significa ativar todas as proibições (sandbox="")<br><br>
+    Sintaxe:<br><br>
+        <
+        iframe 
+        src=
+        "http://www.meusite.com.br" 
+        style="width:700px;height:700px;border:none;overflow:hidden;" 
+        scrolling="no" 
+        name="teste_iframe" 
+        sandbox=""
+        ><
+        /iframe><br><br>
+    Caso você precise pode desativar algumas destas restrições utilizando os seguintes valores para o atributo sandbox:<br><br>
+        a) allow-top-navigation: permitir os links;<br>
+        b) allow-forms: permitir a submissão de formulário;<br>
+        c) allow-same-origin: permite que o conteúdo do iframe seja tratado como sendo da mesma origem;<br>
+        d) allow-scripts- permitem que os scripts sejam executados;<br> 
+        e) allow-pointer-lock: permite os Apis;<br>
+        f) allow-popups: permite pop-ups;<br>
+    </p>
+<h4>5.2. "srcdoc"</h4>
+    <p>Com o uso deste atributo (recomenda-se utilizar em conjunto com o sandbox), caso o navegador o contemple, o conteúdo disponibilizado no srcdoc será exibido e o link do src será ignorado.<br><br>
+        Sintaxe:
+        <
+        iframe 
+        src="http://www.meusite.com.br" 
+        style="width:700px;height:700px;border:none;overflow:hidden;" scrolling="no" name="teste_iframe" sandbox="" srcdoc="teste de segurança"
+        ><
+        /iframe>
+    <br><br> Nesse caso, a página meu site não seria aberta, mas seria exibido o texto "teste de segurança".
+<h4>5.3. "seamless"</h4>
+    <p>Com o uso deste atributo o conteúdo do iframe será exibido como sendo parte da página, ou seja, bordas e barras de rolagem não aparecerão. Mas não é apenas visualmente que isto acontece, ao utilizar este atributos algumas vantagens de ter o conteúdo do iframe considerado como "parte" de sua página, dentre outras, são:<br><br>
+        <br>a) Links do iframe abrirão na janela pai;
+        <br>b) CSS do iframe será adicionado à cascata da página em que o iframe está inserido;
+        <br>c) Se for visualizado por um leitor de tela, o conteúdo será lido como conteúdo da página (ou seja, o leitor não avisa que é um conteúdo externo).<br><br>
+    Sintaxe:<br><br>    
+        <
+        iframe 
+        src=
+        "http://www.meusite.com.br" style="width:700px;height:700px;border:none;overflow:hidden;" 
+        scrolling="no" 
+        name="teste_iframe"  
+        seamless
+        ><
+        /
+        iframe><br><br>
+    Obs: Para utilizar este atributo, devido às suas características, você precisa ter certeza que não há nenhum conteúdo malicioso no conteúdo que será aberto no iframe.
+    </p>
+<h1>Formulários</h1>
+    <p>Com os formulários fazemos pesquisas, entramos em sistemas e fazemos cadastros todo o tempo que estamos navegando na internet. Dos mais simples aos mais complexos, eles estão presentes em todas nossas atividades corriqueiras e, sendo assim, compreender seu funcionamento é essencial para quem quer desenvolver corretamente sistemas web.</p>
+    <p>Os formulários em HTML são elaborados com base seção form, inserida dentro da seção body, conforme a seguinte sintaxe:<br><br>
+        <
+        form
+        ><
+        /form><br><br>
+    Mas apenas esta inserção não apresentaria nada no navegador, pois precisamos ainda incluir os atributos obrigatórios em um formulário e também informar quais são os campos de entrada de dados que queremos utilizar em nosso formulário.
+    </p>
+<h2>1. Destino dos Dados</h2>
+    <p>No elemento form podem ser utilizados atbutos para informar ao navegador para onde os dados que estão sendo recolhidos no formulário sejam enviados e também como queremos que estes dados  do formulários sejam enviados. Para declarar estas informações utilizamos os atributos:<br><br>
+        a) action:  informa o local (URL) que queremos que os  dados recolhidos do formulário sejam enviados.<br><br>
+        b) method: define qual o método HTTP que iremos utilizar para  enviar os dados que podem ser:<br><br> 
+        b.1) "GET"  (obter) ou <br><br>
+        b.2) "POST" (postar).</p>
+    <h4>1.1. "post" e "get"</h4>
+        <p>"post" e "get" são argumentos do atributo "method", que caracteriza a declaração de abertuda "form".<br><br>
+        A diferença entre get e post está na forma de utilização do formulário, quando queremos fazer uma consulta no banco, utilizamos o get (obter) mas quando queremos que os dados sejam enviados ao servidor utilizamos o post (postar).
+        </p>
+    <h4>1.1.1. Questões de Segurança</h4>
+        <p>O método get não é seguro, pois as informações são enviadas pela linha do navegador e podem ser, então, visualizadas quando estão sendo utilizadas. Já o método post cria um pacote encriptado e envia este pacote que será desencriptado quando chegar ao destino sendo, assim, mais seguro.<br><br>Quando fazemos uma consulta no google, por exemplo, estamos utilizando o método get e podemos ver as informações na linha de endereço do navegador.
+        </p>
+    <h4>1.1.2. Características Técnicas</h4>
+        <p>Com capacidade de 1024 caracteres, o método "get" é utilizado quando se quer passar poucas ou pequenas informações para realizar uma pesquisa ou simplesmente passar uma informação para outra página através da URL (de Uniform Resource Locator). Caso este limite seja ultrapassado, corre-se o risco de obter um erro na página, uma vez que as informações foram passadas de forma incompleta. A função do método GET é pura e simplesmente recuperar um recurso existente no servidor. O resultado de uma requisição GET é “cacheável” pelo cliente, ou seja, fica no histórico do navegador. <br><br>
+        Por sua vez, "post" utiliza a URI (de Uniform Resource Identifier) para envio de informações ao servidor. A URI não é retornável ao cliente, o que torna o método POST mais seguro, pois não expõe os dados enviados no navegador. Como não tem limite de capacidade para envio de informações, este método se torna melhor que o GET. No POST, uma conexão paralela é aberta e os dados são passados por ela.</p>
+        <p>
+            <
+            form 
+            action="teste.php" 
+            method="post"
+            ><
+            /form
+            ><br><br>< !--No exemplo acima estamos enviando o formulário para uma página fictícia teste.php.--> 
+        </p>
+<h2>2. Nomeando o Formulário</h2>
+    <p>Todo formulário deve ser nomeado, tanto para se poder realizar uma validação quando necessário, quanto para que seja possível identificar para que banco de dados os dados deste formulário serão enviados. Todos seus campos de entrada de dados também devem ser nomeados pois, do contrário, não será possível enviar os dados que estiverem sem nome para o banco de dados. Vejamos a sintaxe:<br><br>
+        <
+        form 
+        action=
+        "teste.php" 
+        method="post" 
+        name="meu_formulario"
+        ><
+        /form>
+    </p>
+<h2>3. Entrada de Dados</h2>
+    <p>Há vários tipos de entrada de dados em formulários no HTML. Vejamos cada um.</p>
+<h4>3.1. "input"</h4>
+    <p>Utilizamos o elemento input para receber dados em um formulário. Ele se baseia em declaração única, não possuindo tag de fechamento. Essa tag fica na seção form, sendo uma célula.<br><br>
+            <
+            form 
+            action="teste.php" 
+            method="post" 
+            name="meu_formulario"><br>
+            <
+            input
+            ><br>< !--observe que o elemento input não tem fechamento--><br> 
+            <
+            /form><br><br>
+    Mesmo o elemento input possui variações, conforme os seguintes tipos.</p>
+<h4>3.1.1. "input type=text"</h4>
+    <p>Cria um campo de entrada de texto de linha única. Podemos limitar o número de caracteres dos campos que aceitam textos utilizando o atributo  "maxlength". Vejamos um exemplo:
+    <br><br>
+            <
+            form 
+            action="teste.php" 
+            method="post" 
+            name="meu_formulario"
+            ><br>
+            Login: <
+            input 
+            type=
+            "text"  name=
+            "login" 
+            maxlength=
+            "20"
+            ><br>
+            <
+            /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_text
+    </p>
+<h4>3.1.2. "input type=password"</h4>
+    <p>Cria um botão de texto de linha única em que não é possível a leitura. No lugar do texto, aparecem símbolos. Também podemos limitar o número de caracteres dos campos que aceitam textos utilizando o atributo maxlength.<br><br>
+            <
+            form action="teste.php" method="post" name="meu_formulario"><br>
+            Login: <
+            input type="text" name="login" maxlength="20"><br>
+            Senha: <
+            input type="password" name="senha" maxlength="8"><br>
+            <
+            /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_password
+    </p>
+<h4>3.1.3. "input type=radio"</h4>
+    <p>Cria  uma opção de seleção. Como todos os elementos input radio tem o mesmo nome, quando um é selecionado, o outro é desmarcado. Neste caso o atributo value é obrigatório, pois será o valor enviado ao banco de dado.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+                Sexo:<br>
+                <
+                input type="radio" name="sexo" value="M">Masculino<br>
+                <
+                input type="radio" name="sexo" value="F">Feminino<br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>http://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_radio
+    </p>
+<h4>3.1.4. "input type=checkbox"</h4>
+    <p>Cria opções de seleção. Mas ao contrário do input rádio, cada um dos elementos recebe um nome e, por isto, a opção de seleção não é limitada. Podemos iniciar o formulário com uma ou mais opções marcadas utilizando o checked. O value é opcional, pois serão enviadas como a informação "on" para aqueles que forem marcados e "off" para os não marcados.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+            Deseja receber informações por:<br>
+            <
+            input type="checkbox" name="email" checked>E-mail<br>
+            <
+            input type="checkbox" name="fone" checked>Telefone<br>
+            <
+            input type="checkbox" name="correio" checked>Correio<br>
+            <
+            /form><br><br>
+        Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_checkbox
+    </p>
+<h4>3.1.5. "input type=color"</h4>
+    <p>Cria um campo de entrada que permite a seleção de uma cor.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+            Selecione uma cor: 
+            <br>
+            <
+            input type="color" name="cor"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_color
+    </p>
+<h4>3.1.6. "input type=data"</h4>
+    <p>Cria um campo de entrada com uma data por meio de digitação ou seleção por calendário. Você  pode, se quiser, adicionar restrições às datas utilizando os atributos max e min. <br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+            Selecione uma data:<br><
+            input type="date" name="data"><br>
+            Selecione uma data antes de 01/01/2012:<br><
+            input type="date" name="data_2011" max="2011-12-31"><br>
+            Selecione uma data depois de 01/01/2012:<br><
+            input type="date" name="data_2012" min="2012-01-02"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_date_max_min
+    </p>
+<h4>3.1.7. "input type=datatime-local"</h4>
+    <p>Cria um campo de entrada com data e hora, sem fuso horário.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+             Selecione uma data e um horário:<br><
+            input type="datetime-local" name="data_hora_local"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_datetime-local
+    </p>
+<h4>3.1.8. "input type=email"</h4>
+    <p>Cria um campo de entrada para e-mail. Alguns navegadores já realizam a validação deste campo automaticamente.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Informe seu e-mail de contato:<br> <
+            input type="email" name="email"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_email
+    </p>
+<h4>3.1.9. "input type=month"</h4>
+    <p>Cria um campo de entrada para selecionar um mês e ano.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Selecione o mês e ano de seu nascimento: <br><
+            input type="month" name="nascimento"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_email
+    </p>
+<h4>3.1.10. "input type=number"</h4>
+    <p>Cria um campo de entrada numérico. Você pode restringir quais números serão aceitos utilizando os atributos min e max.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Selecione um número qualquer<br>
+            <
+            input type="number" name="numero"><br>          
+            Selecione um número de 1 a 10: <br> <
+            input type="number" name="numero_restrito" min="1" max="10"> <br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_number
+    </p>
+<h4>3.1.11. "input type=range"</h4>
+    <p>Cria uma entrada de controle deslizante numérico (padrão é de 0 a 100). Você pode definir restrições utilizando os atributos min, max e step (informa um passo, ou seja, de quanto em quanto deve ser contado).<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Dê uma nota para nossos serviços: 0<br><
+            input type="range" name="satisfacao" min="1" max="10"><br>10
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_range
+    </p>
+<h4>3.1.12. "input type=search"</h4>
+    <p>Cria uma entrada de campo de pesquisa (um campo de pesquisa é um campo de texto padrão). A diferença está que quando você digita um texto, aparece o "x" para excluir. <br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Digite uma palavra chave para pesquisa: <br><
+            input type="search" name="busca">
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_search
+    </p>
+<h4>3.1.13. "input type=search"</h4>
+    <p>Cria um campo de entrada para número de telefone. (suportado apenas no safari 8).  <br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Informe seu telefone: <br><
+            input type="tel" name="telefone"> 
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_tel
+    </p>
+<h4>3.1.14. "input type=time"</h4>
+    <p>Cria um campo de entrada que permite a seleção de hora (sem fuso horário).<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Informe a hora de seu voo: <br><
+            input type="time" name="hora_voo">
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_time
+    </p>
+<h4>3.1.15. "input type=url"</h4>
+    <p>Cria um campo de entrada que contém um endereço url. Alguns navegadores já realizam a validação deste campo automaticamente.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Informe o endereço (URL) de seu website: <br><
+            input type="url" name="site"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_url
+    </p>
+<h4>3.1.16. "input type=week"</h4>
+    <p>Cria um campo de entrada que permite selecionar uma semana e ano.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Selecione a semana do ano que deseja obter licença:<br> <
+            input type="week" name="licenca">
+ <br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_week
+    </p>
+<h4>3.1.17. "input type=file"</h4>
+    <p>Cria um campo de seleção de arquivo.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Selecione um arquivo para envio:<br>  <
+            input type="file" name="arquivo"><br>        
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_multiple
+    </p>
+<h4>3.1.18. "input type=button"</h4>
+    <p>Cria um botão nulo, sem ação.  Utilize o atributo value para determinar o nome do botão.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            Botão de teste<br> <
+            input type="button" value="botão de teste"><br>        
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_button
+    </p>
+<h4>3.1.19. "input type=reset"</h4>
+    <p>Cria um botão de reinicialização do formulário (limpa todos os campos). Utilize o atributo value para determinar o nome do botão.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>            
+            <
+            input type="reset" value="limpe os dados do formulário">
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_reset
+    </p>
+<h4>3.1.20. "input type=submit"</h4>
+    <p>Cria um botão de submissão do formulário. Utilize o atributo value para determinar o nome do botão.<br><br>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>              
+            <
+            input type="submit" value="envie o formulário"><br>
+        <
+        /form><br><br>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_submit
+    </p>
+<h4>3.1.21. Formulário Completo</h4>
+    <p>
+    <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+            Login: <br><
+            input type="text" name="login"><br>
+            Senha: <br><
+            input type="password" name="senha"><br><
+            p><br>
+            Sexo:<br>
+            <
+            input type="radio" name="sexo" value="M"><br>Masculino<br>
+            <
+            input type="radio" name="sexo" value="F"><br>Feminino<br><
+            p><br>
+            Deseja receber informações por:<br>
+            <
+            input type="checkbox" name="email" checked><br>E-mail<br>
+            <
+            input type="checkbox" name="fone" checked><br>Telefone<br>
+            <
+            input type="checkbox" name="correio" checked><br>Correio<br><
+            p><br>
+            Selecione uma cor:<br> <
+            input type="color" name="cor"><br><
+            p><br>
+            Selecione uma data: <br><
+            input type="date"><br><
+            p><br>
+            Selecione uma data antes de 01/01/2012:<br> <
+            input type="date" name="data_2011" max="2011-12-31"><br><
+            p><br>
+            Selecione uma data depois de 01/01/2012: <br><
+            input type="date" name="data_2012" min="2012-01-02"><br><
+            p><br>
+            Selecione uma data e um horário:<br> <
+            input type="datetime-local" name="data_hora_local"><br>
+            <
+            p><br>
+            Informe seu e-mail de contato:<br> <
+            input type="email" name="email"><br><
+            p><br>
+            Selecione o mês e ano de seu nascimento:<br> <
+            input type="month" name="nascimento"><br><
+            p><br>
+            Selecione um número qualquer:<br>   <
+            input type="number" name="numero"><br>
+            <
+            p><br>
+            Selecione um número de 1 a 10:<br> <
+            input type="number" name="numero_restrito" min="1" max="10"><br>
+            <
+            p><br>
+            Dê uma nota para nossos serviços: 0<br><
+            input type="range" name="satisfacao" min="1" max="10">10<br>
+            <
+            p><br>
+            Digite uma palavra chave para pesquisa:<br> <
+            input type="search" name="busca"><br>
+            <
+            p><br>
+            Informe seu telefone:<br> <
+            input type="tel" name="telefone"><br>
+            <
+            p><br>
+            Informe a hora de seu voo:<br> <
+            input type="time" name="hora_voo"><br><
+            p><br>
+            Informe o endereço (URL) de seu website:<br> <
+            input type="url" name="site"><br>
+            <
+            p><br>
+            Selecione a semana do ano que deseja ter licença:<br> <
+            input type="week" name="licenca"><br>       
+            <
+            p><br>
+            Selecione um arquivo para envio: <br><
+            input type="file" name="arquivo"><br>       
+            <
+            p><br>
+            Botão de teste <br><
+            input type="button" value="botão de teste"><br>
+            <
+            p><br>
+            <
+            input type="reset" value="limpe os dados do formulário"><br>
+            <
+            p><br>
+            <
+            input type="submit" value="envie o formulário"><br>
+        <
+        /form>
+    </p>
+<h2>4. "textarea" (área de texto)</h2>
+    <p>Com o elemento textarea podemos criar um campo de entrada de dados que permite a digitação de uma grande quantidade de texto. Para especificar sua largura e altura utilizamos os atributos:<p>
+    a) cols: define a largura do textarea (colunas);<p>
+    b) rows: define a altura do textarea (linhas). <p>
+    Caso o texto digitado for maior que o tamanho do textarea, barras de rolagem aparecerão automaticamente. <p>
+        <
+        textarea name="recado" rows="15" cols="40"><br>
+        Deixe aqui seu recado para que possamos entrar em contato.<br>
+        <
+        /textarea><p>
+    Treine sua utilização: <br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_textarea
+    </p>
+<h2>5. "select" e "option"</h2>
+    <p>Utilizamos o elemento select quando queremos criar uma lista suspensa para nosso formulário. Para criar as opções de nossa lista, utilizamos o elemento "option" sendo que podemos deixar uma destas opções previamente selecionadas utilizando o atributo "select".<p>
+        Selecione um estado:<br> 
+            <
+            select name="estado"><br>
+                <
+                option value="SP">São Paulo<
+                    /option><br>
+                <
+                option value="RJ">Rio de Janeiro<
+                    /option><br>
+                <
+                option value="MG">Minas Gerais<
+                    /option><br>
+                <
+                option value="Nenhum" selected>Selecione um estado<
+                    /option><br>
+            <
+            /select><p>
+        Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_select        
+    </p>
+<h4>5.1. "optgroup" e "label"</h4>
+    <p>Utilizamos este elemento em conjunto com o elemento select quando precisamos organizar as informações do select em grupos. Para definir um título para cada grupo utilizamos o elemento label.<p>
+            <  
+                label for="feira">Feira<
+                /label><br>
+           <
+                select name="select" id="feira"><br>
+               <
+                option selected value="1">Escolha um item<
+                /option><br>
+               <
+                optgroup label="frutas"><br>
+                   <
+                option value="banana">Banana<
+                /option><br>
+                   <
+                option value="laranja">Laranja<
+                /option><br>
+                   <
+                    option value="melancia">Melancia<
+                    /option><br>
+                    <
+                    option value="uva">Uva<
+                        /option><br>
+                <
+                /optgroup>
+                <
+                optgroup label="Verduras"><br>
+                    <
+                    option value="alface">Alface<
+                        /option><br>
+                   <
+                        option value="agriao">Agrião<
+                        /option><br>
+                    <
+                    option value="rucula">Rúcula<
+                        /option><br>
+                    <
+                        /optgroup><br>
+            <
+            /select><p>
+        Treine optgroup:<br>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_optgroup
+        </p>
+<h2>6. "datalist"</h2>
+    <p>Com o elemento "datalist" podemos criar um campo "input" que vem com uma lista suspensa de dados pré-definidos que serão exibidos todos se o usuário clicar no campo ou aos poucos, de acordo com a inserção de texto pelo usuário. No "input" inserimos um atributo "list" sendo que o elemento "datalist" deve ser utilizado com um "id".<p>
+        Informe a marca de seu carro:<br> 
+            <
+                input list="carros"><br>
+            <
+                datalist id="carros"><br>
+              <
+                option value="Ford"><br>
+              <
+                option value="BMW"><br>
+              <
+                option value="Fiat"><br>
+              <
+                option value="GM"><br>
+              <
+                option value="Honda"><br>
+              <
+                option value="Audi"><br>
+            <
+                /datalist><p>
+        Treine sua utilização:<br> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_datalist</p>
+<h2>7. "keygen"</h2>
+    <p>Com este elemento, podemos autenticar usuários de forma segura, pois ele cria um campo gerador de par de chaves. Com o envio do formulário, temos a geração de duas chaves, uma pública e outra privada, sendo que a pública fica armazenada localmente e a privada fica no servidor. Com a chave pública, podemos gerar, por exemplo, um certificado de cliente para autenticar um usuário no futuro.<p>
+        <
+        form action="teste.php" method="post" name="meu_formulario"><br>
+            Usuário: <br><
+            input type="text" name="user"><br>
+            <
+            keygen name="seguro"><br>
+            <
+            input type="submit" name="criar chave de segurança"><br>
+        <
+        /form><p>
+    Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_keygen
+    </p>
+<h2>8. "output"</h2>
+    <p>Com o elemento output podemos criar uma entrada de dados que apresenta o resultado de uma soma a partir de um valor pré-determinado. Para funcionar este elemento. precisamos de uma informação em javascript inserida no elemento form e da utilização do "input ranger" e "number".<p>
+            <
+            form action="teste.php" method="post" name="meu_formulario"oninput="x.value=parseInt(a.value)+parseInt(b.value)"><br>
+                 Informe quanto deseja receber de aumento, iniciando em 1%:<br> 
+                 0%<br>
+                <
+                input type="range" id="a" name="a" value="1"><br>
+                 100% +<br>
+                <
+                input type="number" id="b" name="b" value="1"><br>
+                 =<br>
+                <
+                output name="x" for="a b"><
+                    /output><br>%<br>
+                <
+                br><
+                br><br>
+                <
+                input type="submit" value="enviar"><br>
+            <
+            /form><p>
+        Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output
+    </p>
+<h2>9. "fieldset"</h2>
+    <p>Utilizamos o fieldset quando queremos agrupar dados que estão relacionados em um formulário. Para definir uma legenda para o grupo de dados utilizamos o elemento "legend".<p>
+        <
+                form action="teste.php" method="post" name="meu_formulario"><br>
+        <
+                fieldset><br>
+          <
+                legend>Login<
+                /legend><br>
+            Login: <br><
+                input type="text" name="login"><br>
+            Senha: <br><
+                input type="password" name="senha"><br>
+            <
+            p><br>
+        <
+                /fieldset><br>
+        <
+                fieldset><br>
+          <
+                legend>Outras informações<
+                /legend><br>   
+            Sexo:<br><
+            br><br>
+            <
+                input type="radio" name="sexo" value="M"><br>Masculino<br>
+            <
+                input type="radio" name="sexo" value="F"><br>Feminino<br>
+            <
+            p><br>
+            Deseja receber informações por:<br><
+                br><br>
+            <
+                input type="checkbox" name="email" checked><br>E-mail<br>
+            <
+                input type="checkbox" name="fone" checked><br>Telefone<br>
+            <
+                input type="checkbox" name="correio" checked><br>Correio
+            <
+                p><br>
+            Selecione uma cor:<br> <
+                input type="color" name="cor"><br>
+          <
+                /fieldset><br>
+           <
+                fieldset><br>
+          <
+                legend>Datas importantes<
+                /legend><br>  
+            Selecione uma data: <br><
+                input type="date"><br>
+            <
+               p><br>
+            Selecione uma data antes de 01/01/2012: <br><
+                input type="date" name="data_2011" max="2011-12-31"><br>
+            <
+            p><br>
+            Selecione uma data depois de 01/01/2012:<br> <
+                input type="date" name="data_2012" min="2012-01-02"><br>
+            <
+            p><br>
+            Selecione uma data e um horário: <br><
+                input type="datetime-local" name="data_hora_local"><br>
+            <
+                p><br>
+            <
+                /fieldset><br>
+             
+            <
+                input type="reset" value="limpe os dados do formulário"><br>
+            
+            <
+                input type="submit" value="envie o formulário"><br>
+        <
+                /form><p>
+        Treine sua utilização: <br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_legend
+    </p>
+<h2>10. E-mail por Destino do Formulário</h2>
+    <p>Nós podemos enviar as informações de um formulário para um e-mail pré-determinado. Para isso, precisamos informar no atributo "action" qual o e-mail que receberá os dados do formulário e  informar que esses dados serão enviados como uma planilha de texto com o atributo 'enctype="text/plain"'.
+    <p> <
+        form action="mailto:meu_email@gmail.com" method="post" name="meu_formulario" enctype="text/plain">
+    <p>Treine sua utilização:<br>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_mail
+    </p>
+<h2>11. Validação de Formulários HTML</h2>
+    <p>Sempre que vamos preencher um formulário há a necessidade de que façamos este preenchimento de forma correta, previamente especificado pelo desenvolvedor. Esta validação pode ser de um campo obrigatório apenas até o preenchimento correto de informações tais como e-mail, telefone ou mesmo de um formato de data específico. Este tipo de validação serve tanto para que sejam enviadas informações corretas quanto para proteger as empresas e os usuários.</p>
+<h4>11.1. Tipos de Validação</h4>
+    <p>A validação de um formulário pode ocorrer do lado do cliente ou do lado do servidor. No caso de validação do lado cliente pode ser realizada por meio da utilização de javascript (que pode ser customizada) ou por meio de validação com a utilização de HTML5,  que tem uma melhor perfomance do que com javascrit, mas não é tão customizável.
+    </p>
+<h4>11.2. Validação com HTML5</h4>
+<h4>11.2.1. "required" (requeridos)</h4>
+    <p>Este atributo deve ser utilizado sempre que um campo de entrada de dados for obrigatório. Temos de prestar atenção pois não podemos utilizá-la em todas os tipos de entrada, mas é de grande ajuda. Ao tentar enviar o formulário clicando no botão "submit" o usuário receberá uma mensagem de que o campo é obrigatório. 
+        <p>
+            Login: <br>
+            <
+            input type="text" name="login" required><p>
+            Senha:<br> 
+            <
+            input type="password" name="senha" required><p>
+        Treine sua utilização:<br>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_required
+        </p>
+<h4>11.2.2. "min", "max" e "step"</h4>
+    <p>Utilizamos os atributos min e max para determinar valores máximos e mínimos para um campo. Com o "step" criamos as "setinhas para baixo e para cima" no campo, e determinamos o avanço numérico (de quanto em quanto) será alterado o valor.<p>
+        <
+        input type=number min="0" max="100" step="10">
+            
+    </p>
+<h4>11.2.3. "pattern" (padronizar)</h4>
+    <p>Utilizamos o atributo pattern quando queremos criar uma expressão regular para determinar um padrão de preenchimento de um campo, como um e-email ou mesmo CPF. Abaixo temos alguns exemplos de sua utilização.
+    </p>
+<h4>11.2.3.1. Apenas letras Minúsculas ou Maiúsculas</h4>
+    <p> Para letras maiúsculas, basta trocar o a-z por A-Z. <p>
+        <
+        input type="text" name="texto"  required pattern="[a-z\s]+$">
+    </p>
+<h4>11.2.3.2. Apenas números</h4>
+    <p>
+        <
+        input type="text" name="numeros" required  pattern="[0-9]+$">   
+    </p>
+<h4>11.2.3.3. Data Específica</h4>
+    <p>Lembrando que utilizamos os atributos "min" e "max" quando queremos definir valores mínimos e máximos para o nosso campo de formulário.<p>
+        <
+        input type="date"  name="data" maxlength="10"  required  pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2010-01-01" max="2016-01-01">  
+    </p>
+<h4>11.2.3.4. Hora</h4>
+    <p> <
+        input type="time"  maxlength="8" name="hora" required pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$">    
+    </p>
+<h4>11.2.3.5. Telefone</h4>
+    <p>Máscara: (xx) xxxx-xxxx<p>
+        <
+        input type="tel"  maxlength="15" name="telefone"  required pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$">
+    </p>
+<h4>11.2.3.6. E-mail</h4>
+    <p>
+        <
+        input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    </p>
+<h4>11.2.4. "placeholder" (espaço reservado)</h4>
+    <p>Com o atributo "placeholder", podemos dar uma dica por meio de um texto que aparecerá em nosso campo de entrada de dados do formulário. Este texto desaparece automaticamente quando o usuário começa a preencher o campo.<p>
+        <
+        input type="text" name="numeros" required  pattern="[0-9]+$" placeholder="digite apenas números">
+    </p>
+<h4>11.2.5. "multiple"</h4>
+    <p>Com este atributo podemos inserir mais de um valor no campo de entrada. É utilizado nos campos de entrada de e-mail e arquivo.
+            <p>
+        <
+        input type="file" name="teste" multiple>
+    </p>
+<h2>12. Formatação de Formulários via CSS</h2>
+   <p>Nós podemos formatar formulários utilizando os comandos conhecidos de CSS, tais como borda, texto, cor de fundo, etc.<p>
+        <
+        head><br>
+            <
+            meta charset="utf-8"><br>
+            <
+            title>Formulários<
+            /title><br>
+            <
+            s tyle><br><br>
+            body <br>{
+
+                   color: #fff;<br>
+                   font-size: 1.5em;<br>
+                   margin:0;<br>
+                   padding:0;<br>
+                   padding-bottom:60px;
+                }<br><br>
+
+            fieldset<br>{
+                   color:#00F;<br> 
+                   padding:8px;<br>
+                   background: #f29107;<br>
+                   text-align:left;<br>
+                      border:2px solid #F00;
+                }<br><br>
+
+            legend <br>{
+                   color:#F00; <br>
+                   background:#FFFFFF;<br>
+                   padding:10px;<br>
+                       font-size:20px;<br>
+                       text-align:center;<br>
+                       font-weight: bold;<br>
+                       font-style: italic;
+                }<br><br>
+               input<br>{
+                       background:#CCC;<br>
+                       color:#600;<br>
+                       font-weight: bold;
+                }<br><br>
+            <
+            /style><br>
+        <
+        /head><br>
+    </p>
+<h1>Animações e Transições</h1>
+<h1>Som e Vídeo</h1>
+<h1>Layout Responsivo</h1>
+</body>
+</html>
