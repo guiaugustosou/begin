@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>2 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-row w3-padding-64">
+    <!-- SO -->
+            <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sistema Operacional (SO)</h1>
+            <h2 class="w3-text-grey">1. Função</h2>
+            <P>
+              O sistema operacional <b>separa as aplicações do hardware por elas acessado</b>, ele gerencia o software e o hardware para gerar os resultados desejados. <i>O sistema operacional é, primordialmente, um gerenciador de recursos</i>:
+            <ul>
+                <li>Hardware;</li><p>
+                <li>Aplicações de Software.</li>
+            </ul><p>
+                <figure>
+                    <img src="SO.jpg" alt="SO" style=width:500px>
+                    <figcaption>Onde o SO atua no computador</figcaption>
+                </figure><p>
+            Como <b>gerenciador de recursos</b>, o SO:
+            <ul>
+                <li>Permite que <i>múltiplos programas sejam executados ao mesmo tempo</i>;</li><p>
+                <li><i>Gerencia e proteje</i> a memória, os dispositivos de entrada e saída e outros recursos;</li><p>
+                <li>Inclui a <i>multiplexação (partilha) de recursos</i> de duas maneiras diferentes;<p>
+                    <ul>
+                        <li>No tempo; e</li><p>
+                        <li>No espaço.</li>
+                    </ul><p>
+                </li>
+            </ul>
+            </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+            <!-- Tipos de SO -->
+            <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Tipos de Sistemas Operacionais</h1>
+            <P>Quando falamos em sistemas operacionais, o que vem à mente são os que utilizamos diariamente nos nossos PCs (em casa ou no trabalho) ou nos celulares, mas os SO vão muito além disso. Desde o início, os SO evoluíram muito (conjuntamente com os computadores), pois tiveram que ser adaptados às novas tecnologias que foram surgindo. A história mostra uma <i>união sólida entre a eletrônica e a informática</i>. Esta segunda, sempre se estribando na primeira e evoluindo junto. Vamos abordar neste tópico os vários conceitos dos SO, pois atualmente os SO possuem um pouco de cada tipo e são considerados híbridos.
+            </P>
+            <h2 class="w3-text-grey">1. Monoprogramável/Monotarefa</h2>
+            <P>
+              Com o surgimento dos primeiros computadores, vieram os sistemas monoprogramável / monotarefa e sua característica principal é a execução <b>apenas de uma tarefa por vez</b>. Para outro processo ser executado, deve-se aguardar o término total do processo anterior, igual ao conceito de "fila única de atendimento". Exemplo: há a necessidade se processar 3 programas: B31, Z65 e J88. Deve ser definida uma ordem de execução, ou seja, qual será o primeiro, qual será o segundo e o terceiro. Digamos que a sequência é a mesma citada acima. Dessa forma, o programa B31 é chamado para a execução e somente ao término deste poderá ser chamado o Z65. Ao término da execução do programa Z65 será chamado o programa J88. Um por vez, sem exceção.
+            <ul>
+                <li><b>Desvantagem</b>: esse tipo de SO <b>desperdiçava a capacidade de processamento dos computadores</b>, pois enquanto o programa aguardava por um evento I/O (uma impressão de relatório, por exemplo), o processador ficava ocioso e a memória era subutilizada, caso o programa não a utilizasse totalmente.</li><p>
+                <li><b>Vantagem</b>: não havia concorrência em nenhum recurso do computador: não havia fila de impressão, não havia o estado de “wait” (aguardando) um acesso ao HD.</li>
+            </ul>
+            </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+         <!-- Tópico -->
+        <div class="w3-twothird w3-container">
+            <h2 class="w3-text-grey">2. Multiprogramável/Multitarefa</h2>
+            <P>Exatamente por causa da subutilização de recursos na monoprogramação e o elevado custo desse sistema, desenvolveram-se os sistemas multiprogramáveis / multitarefa, em que a principal característica é o <b>compartilhamento de recursos</b>, proporcionando dessa forma a redução de custos. Nesse sistema, <i>enquanto uma tarefa aguarda por um evento I/O, outra tarefa pode ser executada, fazendo uso do processador e da memória</i>. Um exemplo é o atendimento da próxima pessoa de uma fila enquanto a pessoa que está sendo atendida aguarda alguma providência. 
+            <ul>
+                <li><b>Desvantagem</b>: é a implementação, pois o Sistema Operacional precisa gerenciar os recursos compartilhados.</li>
+            </ul><p>
+            Esses sistemas dividem-se em: <b>Sistemas Batch, Tempo Compartilhado e Tempo Real</b>. Dependendo da implementação, o sistema operacional pode gerenciar um ou mais tipos.
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>2.1. Sistemas Batch</h3>
+              <P style=margin:17px>
+                É chamado de “processamento em lote”, pois as informações são <b>armazenadas em arquivos específicos e, num posterior momento são processadas</b>. Um exemplo disso é quando vamos a algum local e somos atendidos por um atendente que faz uma atualização das nossas informações no sistema (imagine que há muitas atualizações a serem feitas no sistema). É comum ouvirmos: “Pronto! Eu já atualizei aqui no Sistema, mas só aparecerá na tela amanhã”. Essa situação é exatamente o caso de uma atualização que depende de um processamento batch. Os dados atualizados pelo atendente ficam gravados num arquivo. Esse arquivo será utilizado somente a noite (ou madrugada) no processamento batch. Após o processamento batch as informações são atualizadas no sistema e, caso forem pesquisadas no dia seguinte, estarão OK, conforme o atendente informou. Nesses sistemas, a principal característica é a pouca intervenção do usuário.<p style=margin:17px> Na década de 1960, quando começaram a ser implementados, <i>os programas eram submetidos a cartões perfurados, produzindo uma saída em disco ou fita</i>. Vemos aplicações em batch em <b>cálculos numéricos, compilações, ordenações, backups</b>.
+                <ul> 
+                    <li><b>Vantagem</b>: otimização da utilização da capacidade de processamento, pois, deixa-se para processar “depois” o que não precisa ser processado imediatamente.</li><p>
+                    <li><b>Desvantagem</b>: caso ocorra um erro no processamento, há o comprometimento da disponibilização das informações atualizadas no “dia seguinte”, que podem atrasar.</li>
+                </ul>
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>2.2. Sistemas de Tempo Compartilhado</h3>
+              <P style=margin:17px>
+                Também conhecido como “Time sharing”, <i>consegue executar diversas tarefas ao mesmo tempo (simultaneamente)</i>, pois existe a divisão do tempo do processador em pequenos intervalos, denominados fatias de tempo.  O processador dedica uma fatia de tempo a cada processamento das tarefas e, caso a tarefa não termine durante a fatia a ela determinada, há uma interrupção e ela volta para a fila de escalonamento, aguardando novamente sua vez. Isso ocorre ciclicamente, até o final das execuções das tarefas. Um exemplo: temos 4 tarefas a serem executadas, 3 dessas tarefas tem 3 passos, apenas uma delas tem 4 passos a serem processados:
+              <ul> 
+                <li>Tarefa A1: passos A1.1, A1.2., A1.3</li><p>
+                <li>Tarefa H3: passos  H3.1 , H3.2 , H3.3;</li><p>
+                <li>Tarefa Y6: passos  Y6.1 , Y6.2 , Y6.3 , Y6.4;</li><p>
+                <li>Tarefa X7: passos  X7.1 , X7.2 , X7.3.</li>
+            </ul><p style=margin:17px>
+            Todas as 4 tarefas (A1, H3, Y6 e X7) são chamadas para processamento. O processador atende:
+            <ul> 
+                <li>O primeiro passo da A1 que é o passo A1.1;</li><p>
+                <li>O primeiro passo da H3 que é o passo H3.1;</li><p>
+                <li>O primeiro passo da Y6 que é o passo Y6.1;</li><p>
+                <li>O primeiro passo da X7 que é o passo X7.1.</li>
+            </ul><p style=margin:17px>
+            Como nenhuma tarefa terminou, o processador atende então:
+            <ul> 
+                <li>O segundo passo da A1 que é o passo A1.2;</li><p>
+                <li>O segundo passo da H3 que é o passo H3.2;</li><p>
+                <li>O segundo passo da Y6 que é o passo Y6.2;</li><p>
+                <li>O segundo passo da X7 que é o passo X7.2.</li>
+            </ul><p style=margin:17px>
+            Ainda nenhuma tarefa terminou, o processador atende então:
+            <ul> 
+                <li>O terceiro passo da A1 que é o passo A1.3 e a tarefa A1 termina;</li><p>
+                <li>O terceiro passo da H3 que é o passo H3.3 e a tarefa H3 termina;</li><p>
+                <li>O terceiro passo da Y6 que é o passo Y6.3;</li><p>
+                <li>O terceiro passo da X7 que é o passo X7.3 e a tarefa X7 termina.</li>
+            </ul><p style=margin:17px>
+             Perceba que já foram executadas (processadas) as tarefas A1, H3 e X7, essas finalizaram porém, como ainda falta um passo da tarefa Y6, o processador atende:
+            <ul> 
+                <li>O quarto passo da Y6 que é o passo Y6.4 e a tarefa Y6 termina.</li>
+            </ul><p style=margin:17px>
+            Ao término de todas as execuções das tarefas, o processador fica disponível, aguardando o processamento de novas tarefas. Percebeu como ele atende “uma por vez”, mas processa um pedaço de cada uma? Esse é o conceito de “Compartilhamento de Tempo” (Time sharing). <b>Diferente do sistema batch, esse tipo de sistema operacional permite a interação do usuário. Dessa maneira, os terminais possuem teclado, vídeo e mouse</b>.
+            <ul> 
+                <li><b>Vantagem</b>: otimização da capacidade de processamento do computador.</li><p>
+                <li><b>Desvantagem</b>: concorrência de recursos, pode haver fila para liberação de dispositivos de E/S (I/O).</li>
+            </ul>
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>2.3. Sistema de Tempo Real</h3>
+              <P style=margin:17px>
+                Sistemas de tempo real (Real Time) tem como característica o <b>tempo rígido no processamento das informações</b>, ou seja, as informações são atualizadas no sistema no mesmo instante. Seu objetivo é proporcionar o <b>máximo de confiabilidade com o mínimo de intervenção humana</b>. <i>Se houver atraso no processamento, os danos podem ser irreparáveis</i>. Não existe fatia de tempo, <b>o programa é executado enquanto não surgir outro com maior prioridade</b>. Encontramos esse sistema em: sistemas de <b>controles de veículos espaciais e aviões, torres de controle de aeroportos, robótica, controles industriais, refinaria de petróleo, usinas nucleares e também no controle do metrô</b>.
+            <ul> 
+                <li><b>Vantagem</b>: as informações sempre estão atualizadas.</li><p>
+                <li><b>Desvantagem</b>: custos, pois envolve uma série de estratégias de contingência que, em função da necessidade das informações estarem atualizadas e disponíveis.</li>
+            </ul>
+            </P>
+        </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+         <!-- Tópico -->
+        <div class="w3-twothird w3-container">
+            <h2 class="w3-text-grey">3. Sistemas de Computadores Pessoais</h2>
+            <P>Os sistemas operacionais de computadores pessoais são considerados “maiores”. Isso por causa da necessidade de satisfação do usuário final. Cada um possui uma necessidade específica, como: <b>computação gráfica, games, filmes, música</b>. O sistema operacional precisa estar preparado para atender a todas essas demandas. 
+            <ul>
+                <li><b>Desvantagem</b>: falta de segurança, pois caso o usuário erre, pode ocorrer o comprometimento das informações.</li><p>
+                <li><b>Vantagem</b>: o usuário tem livre acesso a todas as informações e dispositivos disponíveis, pode ordenar e decidir o que fazer primeiro.</li>
+            </ul>
+            </P>
+            <h2 class="w3-text-grey">4. Sistemas com Múltiplos Processadores</h2>
+            <P>Sistemas com múltiplos processadores caracterizam-se por possuir<b> dois ou mais processadores trabalhando em perfeita comunicação</b>. Esse sistema possui duas classificações:
+            <ol>
+                <li>Fortemente acoplado;</li><p>
+                <li>Fracamente acoplado.</li>
+            </ol><p>
+            Para diferenciá-los, é necessário conhecer a forma de comunicação entre os processadores, o grau de compartilhamento de memória e dispositivos I/O.
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>4.1. Sistemas Fortemente Acoplados</h3>
+              <P style=margin:17px>
+                Vários processadores, <b>compartilhando barramento, memória, clock, I/O e gerenciados por apenas um sistema operacional</b>. Classificam-se em:
+                <ol> 
+                    <li>Fortemente acoplado assimétrico;</li><p>
+                    <li>Fortemente acoplado simétrico.</li>
+                </ol>
+            </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+            <div class="w3-twothird w3-container">
+            <h4 class="w3-text-grey"; style=margin:22px>4.1.1. Sistemas Fortemente Acoplados Assimétricos</h4>
+              <P style=margin:22px>
+                Os sistemas fortemente acoplados assimétricos caracterizam-se por possuir <b>hierarquia entre os processadores</b>, existindo o <i>mestre e o escravo</i>, em que <b>o sistema operacional reside apenas no processador-mestre</b>, ele gerencia e distribui as solicitações para os processadores escravo. A principal desvantagem dessa arquitetura é <i>se o mestre falhar, pois dessa forma toda a estrutura é comprometida</i>.
+            </P>
+            <h4 class="w3-text-grey"; style=margin:22px>4.1.2. Sistemas Fortemente Acoplados Simétricos</h4>
+              <P style=margin:22px>
+                Os sistemas fortemente acoplados simétricos diferem do assimétrico, pois <b>não possuem hierarquia entre os processadores</b>. <i>Cada um deles possui uma cópia do sistema operacional e é ele o responsável pelo gerenciamento</i>. Caso algum processador seja paralisado por qualquer motivo, a estrutura não é comprometida, pois o sistema operacional fará o balanceamento de carga, ou seja, distribuirá a tarefa entre os processadores ativos.
+            </P>
+          <h3 class="w3-text-grey"; style=margin:17px>4.2. Sistemas Fracamente Acoplados</h3>
+          <P style=margin:17px>
+            Sua principal característica é possuir <b>dois ou mais sistemas conectados por meio de linhas de comunicação</b>. <i>Cada sistema é independente, possui seu próprio sistema operacional e gerencia seus recursos</i>. Baseado na <b>integração dos host da rede</b>, podem-se dividir em:
+            <ol> 
+                <li>Sistema Operacional de Rede</li><p>
+                <li>Sistema Operacional Distribuído</li>
+            </ol>
+        </P>
+        <h4 class="w3-text-grey"; style=margin:22px>4.2.1. Sistema Operacional de Rede</h4>
+        <P style=margin:22px>
+         <i>Cada sistema, também chamado de host ou nó, possui seus próprios recursos de hardware, como processadores, memória e dispositivos de E/S</i>. Os nós <b>são totalmente independentes dos demais</b>, sendo interconectados por uma rede de comunicação de dados formando uma <i>rede de computadores</i>. Os sistemas operacionais podem ser diferentes, mas, para se comunicarem, os nós precisam ter o <b>mesmo protocolo de rede</b>. Na internet, por exemplo, é o protocolo da família <b>TCP/IP</b> (Transmission Control Protocol / Internet Protocol).
+        </P>
+        <h4 class="w3-text-grey"; style=margin:22px>4.2.2. Sistema Operacional Distribuído</h4>
+        <P style=margin:22px>
+         Segundo Machado, um sistema distribuído é um <i>conjunto de sistemas autônomos, interconectados por uma rede de comunicação e que <b>funciona como se fosse um sistema fortemente acoplado</b></i>. Cada componente de um sistema distribuído possui seus próprios recursos, como processadores, memória principal, dispositivos de E/S, sistema operacional e espaço de endereçamento. <p style=margin:22px>Os tipos de sistemas operacionais que compõem o sistema distribuído não precisam ser necessariamente homogêneos. Nesses sistemas, é possível que <i>uma aplicação seja dividida em diferentes partes, e podem se comunicar por meio de linhas de comunicação, podendo cada parte ser executada em qualquer processador de qualquer sistema</i>. 
+        </P>
+        </div>
+    </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais201.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais201.html">1</a>
+          <a class="w3-button w3-black" href="#">2</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">3</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">4</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">5</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

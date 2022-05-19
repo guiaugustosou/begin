@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>8 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Sincronização de Processos -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Sicronização de Processos</h1>
+        <P>O núcleo do sistema operacional, o Kernel, pode atender várias solicitações (Kernel multithread). Para tal, alguns mecanismos de sincronização devem ser utilizados para <b>proteger suas estruturas de dados internas</b>. <p>Em ambientes distribuídos, threads são essenciais para solicitações de serviços remotos. Em um ambiente <b>monothread</b>, se uma aplicação solicita um serviço remoto, ela pode ficar <i>esperando indefinidamente</i>, enquanto aguarda pelo resultado. Em um ambiente <b>multithread</b>, um thread pode solicitar o serviço remoto, enquanto a aplicação pode <i>continuar realizando outras atividades úteis</i>. Já para o <b>processo</b> que atende a solicitação, <i>múltiplos threads permitem que diversos pedidos sejam atendidos concorrentemente e/ou simultaneamente</i>. Essas situações exigem o <b>sincronismo entre processos</b>. A figura abaixo ilustra uma sincronização entre dois processos que utilizam o Buffer:
+            <figure>
+            <img src="SO16.png" alt="SO16" class=center style="width:550px">
+        <figcaption>Sincronismo entre Dois Processos</figcaption>
+        </figure><p>
+       Importante: Buffer: é uma área reservada na RAM (memória física) utilizada para armazenar dados temporariamente. O Buffer é sempre utilizado para otimizar os processos, liberando recursos como o processador. Um outro exemplo de sincronismo é mostrado na figura abaixo:
+            <figure>
+            <img src="SO17.png" alt="SO17" class=center style="width:550px">
+        <figcaption>Sincronismo entre Três Processos com o Processo Prinicipal</figcaption>
+        </figure><p>
+            Na figura acima, notamos o sincronismo de atividades entre cada um dos 3 processos com o processo principal. <b>O sincronismo ocorre para que não ocorra um deadlock</b> (trava no Sistema) entre os processos envolvidos no processamento.
+        </P>
+     <h2 class="w3-text-grey">1. Pthreads</h2>
+        <P>Uma das grandes dificuldades da utilização de threads em aplicações em geral foi a ausência de um <b>padrão</b>. Em 1995, o padrão POSIX (Portable Operating System Interface) <b>P1003.1c</b> foi aprovado. Com este padrão, também conhecido como <b>Pthreads</b>, aplicações comerciais multithread tornaram-se mais comuns. O padrão Pthreads é largamente encontrado em <b>ambientes Unix</b>, geralmente implementado em aplicações escritas em <b>Linguagem C</b>. <p>No padrão POSIX.1c, <b>threads são criados e eliminados dinamicamente</b>, conforme a necessidade. Além disto, o padrão oferece <b>mecanismos de sincronização</b>, como <i>semáforos, mutexes e variáveis condicionais</i>. O Pthreads oferece inúmeras funções para a sincronização entre threads. A seguir descrevemos, resumidamente, estes mecanismos: 
+        <ul>
+            <li><b>Mutexes</b>: Uma variável mutex (Mutual Exclusion) permite implementar a <i>exclusão mútua</i>, ou seja, o acesso a uma região crítica é feito de forma a <i>impedir os problemas de sincronização</i> (<b>race conditions</b>);</li><p>
+            <li><b>Variáveis condicionais</b>: Uma variável condicional permite <i>associar uma variável a um evento</i>, que poder ser, por exemplo, um contador alcançando um determinado valor ou um flag sendo ligado/desligado. Em uma aplicação multithread, a utilização de variáveis condicionais permite criar um <i>mecanismo de comunicação entre os diversos threads</i>, que, por sua vez, permite a execução condicional em torno de eventos (<b>sincronização</b>);</li><p>
+            <li><b>Semáforos</b>: Semáforos são semelhantes aos mutexes, com a diferença que, <b>enquanto um mutex pode variar seu valor entre zero e um, semáforos podem assumir outros valores</b>, permitindo sua utilização como <i>contadores</i>. Semáforos estão disponíveis apenas em sistemas que oferecem suporte ao <i>padrão POSIX com extensões para tempo-real (POSIX.1b)</i>.</li>
+        </ul><p>Há uma grande difículdade em se determinar a ordem de ocorrência de um evento. Os <b>atrasos de comunicação em uma rede distribuída são imprevisíveis</b>, podem ocorrer em qualquer momento e em várias situações. Dessa forma foram definidas <b>ordens para as sincronizações</b>:
+        <ul>
+            <li><b>Ordenação causal</b><p>
+                <ul>
+                    <li>Assegura que todos os processos reconheçam que <b>um evento causalmente dependente deve ocorrer apenas após o evento do qual é dependente</b>;</li><p>
+                    <li>É implementada pela relação <b>acontece-antes</b>:
+                    <p> <ul>
+                            <li>Se os eventos <i>a</i> e <i>b</i> pertencerem ao mesmo processo, então <i>a → b</i> se <i>a</i> ocorrer antes de <i>b</i>;</li><p>
+                            <li>Se o evento <i>a</i> é o emissor de uma mensagem e o evento <i>b</i> é o receptor da mensagem, então <i>a → b</i>;</li><p>
+                            <li>Essa relação é transitiva.</li><p>
+                        </ul>
+                    </li><p>
+                    <li><b>Apenas uma ordenação parcial</b>:<p>
+                        <ul>
+                            <li>Os eventos em relação aos quais <b>não é possível determinar</b> qual ocorreu primeiro são considerados <i>concorrentes</i>.</li>
+                        </ul>
+                    </li>
+                </ul><p>
+            </li><p>
+            <li><b>Ordenação Total</b><p>
+                <ul>
+                    <li>Possibilita que <b>todos</b> os eventos sejam ordenados e que a causalidade seja preservada;</li><p>
+                    <li>Pode ser implementada por meio de um <b>relógio lógico</b> que atribui uma marca de tempo (<i>timestamp</i>) a cada evento que ocorre no sistema;</li><p>
+                    <li><b>Os relógios lógicos escalares sincronizam os relógios lógicos nos hospedeiros remotos e garantem a causalidade</b>.</li>
+                </ul>
+            </li><p>
+            <li>Vários métodos de sincronização são implementados para impor a <b>exclusão mútua</b> nos sistemas distribuídos:<p>
+                <ul>
+                    <li>Passagem de mensagem;</li><p>
+                    <li><b>Algoritmo de exclusão mútua distribuída de Agrawala e Ricart</b>.</li>
+                </ul>
+            </li><p>
+    </ul><p>
+    O sincronismo entre processos é uma providência que otimiza as execuções nos computadores. A distribuição e recebimento de retorno de informações nos processamentos, sob uma determinada ordem (sincronizadas) corroboram com a melhor maneira de serem processadas as tarefas (rotinas).
+    </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">6</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">7</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%208.html">8</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">9</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">10</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

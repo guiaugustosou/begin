@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>6 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Escalonamento de CPU -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Escalonamento de CPU</h1>
+        <P>Atualmente os SO são multitarefa/multiprogramação, porém, <i>apenas uma instrução de processo é executada por vez</i> nos computadores, ou seja, o processador divide “sua atenção” a espaços de tempo dedicados a cada processo, atendendo todos, porém, <b>uma instrução de cada um por vez</b>.
+        </P>
+        <h2 class="w3-text-grey">1. Escalonamento</h2>
+        <P>
+        Desde a criação dos computadores, houve a preocupação com a otimização de recursos. Executar as tarefas nos computadores no menor tempo possível sempre foi uma prioridade. Segundo Machado (2007), a <b>política de escalonamento</b> de um sistema operacional tem diversas funções básicas:
+        <ul>
+            <li>Manter o <b>processador ocupado</b> a maior parte do tempo;</li><p>
+            <li><b>Balancear o uso de CPU</b> entre processos;</li><p>
+            <li>Privilegiar a execução de <b>aplicações críticas</b>;</li><p>
+            <li><b>Maximizar o throughput</b> do Sistema;</li><p>
+            <li>Oferecer <b>tempo de respostas variáveis</b> para os usuários interativos.</li>
+        </ul><p>
+        <i>A principal função do SO é implementar os critérios da política de escalonamento, denominada <b>escalonador (scheduler)</b></i>. Escalonamento é a priorização de processamentos. Em um sistema multiprogramável, o escalonador é fundamental, porque <b>sem ele não é possível o compartilhamento do processador</b>, pois é por meio desse <i>algoritmo</i> que o sistema operacional consegue gerenciar os processos que fazem uso do processador. Há duas rotinas importantes para a gerência do processador, são elas:
+        <ul>
+            <li><b>Dispatcher</b>: responsável pela <i>troca de contexto</i> dos processos após o escalonador determinar qual processo deve fazer uso do processador;</li><p>
+            <li><b>Latência de Dispatcher</b>: <i>tempo gasto na substituição de um processo em execução por outro</i>.</li>
+        </ul><p>
+        <figure>
+            <img src="SO13.png" alt="SO13" class=center style="width:450px">
+        <figcaption>Escalonamento</figcaption>
+        </figure>
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+        <div class="w3-twothird w3-container">
+        <h2 class="w3-text-grey">2. Critérios de Escalonamento</h2>
+        <P>De acordo com as características do sistema operacional, determinam-se quais são os atributos para a implementação de um escalonamento adequado. Segundo Machado (2007), os critérios são:
+        <ul>
+            <li><b>Utilização do processador</b>: é desejável que o processador permaneça a maior parte do seu tempo ocupado. Uma utilização na faixa de 30% indica um sistema com uma carga de processamento baixa, enquanto na <b>faixa de 90%</b> indica um sistema bastante carregado, próximo da capacidade máxima;</li><p>
+            <li><b>Throughput</b>: representa o <b>número de processos executados em um determinado intervalo de tempo</b>. Quanto maior o throughput maior o número de tarefas executadas em função do tempo. A maximização do throughput é desejada na maioria dos sistemas operacionais;</li><p>
+            <li><b>Tempo de processador/tempo de CPU</b>: é o <b>tempo que um processo leva no estado de execução</b> durante seu processamento. As políticas de escalonamento não influenciam o tempo de processador de um processo, sendo este tempo função <i>apenas do código da aplicação e da entrada de dados</i>;</li><p>
+            <li><b>Tempo de espera</b>: é o tempo total que um processo permanece na fila de <b>pronto</b> durante seu processamento aguardando para ser executado. A redução do tempo de espera dos processos é desejada pela maioria das políticas de escalonamento;</li><p>
+            <li><b>Tempo de turnaround</b>: é o tempo que um processo leva <b>desde a sua criação até seu término</b>, levando em consideração todo o tempo gasto na espera para alocação de memória, espera na fila de pronto, processamento de CPU e na fila de espera, como nas operações de E/S. As políticas de escalonamento buscam minimizar o tempo de turnaround;</li><p>
+            <li><b>Tempo de resposta</b>: é o tempo decorrido entre uma <b>requisição ao sistema ou à aplicação e o instante em que a resposta é exibida</b>. Em sistemas interativos, pode-se entender como o <i>tempo decorrido entre a última tecla digitada pelo usuário e o início da execução do resultado no monitor</i>.</li>
+        </ul><p>
+        </P>
+        <h2 class="w3-text-grey">3. Escalonamentos Não Preemptivos e Preemptivos</h2>
+        <P>Podemos classificar os escalonamentos de acordo com a possibilidade ou não da <b>interrupção de um processo</b>. Se o sistema operacional consegue interromper um processo em execução <i>e substituí-lo</i> por outro, trata-se de um escalonamento do <b>Tipo Preempção</b>. Esses sistemas são mais complexos, porém possibilitam políticas  de escalonamentos mais flexíveis. Há também o Escalonamento <b>não Preemptivo</b>, o primeiro implementado nos sistemas operacionais multiprogramáveis. Nesse modelo, quando um processo está em execução, <i>nenhum evento externo irá ocasionar a perda do uso do processador</i>. Isso apenas acontecerá se o processo <b>concluir seu processamento ou executar instruções do próprio código</b> que promovam uma mudança de estado de espera. <p>A vantagem do escalonamento preemptivo é que <b>o sistema operacional pode interromper um processo em execução e passá-lo para o estado de pronto, no intuito de alocar outro processo na CPU</b>. Com a preempção, é possível ao sistema <i>priorizar a execução de processos</i>, como nas <b>aplicações de tempo real</b>, onde o fator tempo é crítico. <p>Outro benefício é a possibilidade de implementar <i>políticas de escalonamento que compartilhem o processador de maneira mais uniforme</i>, distribuindo de forma balanceada o uso da CPU entre os processos, aumentando a produtividade e diminuindo o tempo de turnaround.
+        </P>
+        </div>
+        <div class="w3-twothird w3-container">
+        <h2 class="w3-text-grey">4. Escalonamento First-Come-First-Served (FCFS)</h2>
+        <P>Conhecido também como <b>FIFO</b> (First-In_First_Out: <i>o primeiro a entrar é o primeiro a sair</i>). O conceito desse algoritmo de escalonamento é: <i>o processo que chegar primeiro ao estado de pronto é escolhido para execução</i>. É necessária apenas uma fila (atendidos como uma fila no caixa de um banco), onde os processos que passam para o estado de pronto entram no final e são escolhidos quando chegam ao seu início. Se um processo vai para o <b>estado de espera</b>, <i>o primeiro que estiver na fila de pronto é escalonado</i>. O grande problema é <b>prever quando um processo terá sua execução iniciada</b>, pois isso depende dos que estão na frente da fila. <p>Esse escalonamento é do tipo <b>não preemptivo</b>, ou seja, não interrompe, e foi inicialmente desenvolvido e implementado em sistemas monoprogramáveis com processamento batch, sendo inviável aplicar esse conceito em sistemas compartilhados.
+        </P>
+        <h2 class="w3-text-grey">5. Escalonamento Shortest Job First (SJF)</h2>
+        <P>Esse escalonamento atende <b>primeiramente os processos menores</b>, aqueles que menos utilizam a CPU. O cálculo de cada tempo médio é feito a partir de uma segunda alocação de CPU, ou seja, o processo que utilizar a CPU por menos tempo será executado primeiro. <p>Foi desenvolvido inicialmente para os sistemas operacionais batch (processamento em lotes). Esse tipo de escalonamento <i>pode ser preemptivo e não preemptivo</i>.
+        </P>
+        <h2 class="w3-text-grey" style=margin:17px>5.1 Escalonamento SJF não Preemptivo</h2>
+        <P style=margin:17px>Nesse escalonamento, o processo <b>faz uso do processador até o final da sua execução sem interrupção</b>. Nenhum evento externo influenciará essa execução. Ao concluir o processamento, verifica-se na fila de pronto qual é o próximo “menor processo” a ser executado.
+        </P>
+        <h2 class="w3-text-grey" style=margin:17px>5.2 Escalonamento SJF Preemptivo</h2>
+        <P style=margin:17px>Nesse modelo, <i>caso chegue um processo menor</i> que o processo que está sendo executado, <b>o “maior” (que utiliza mais CPU) será interrompido</b>, para atender o “menor” que chegou.
+        </P>
+    </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">«</a>
+          <a class="w3-button w3-black" href="#">6</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">7</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">8</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">9</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">10</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

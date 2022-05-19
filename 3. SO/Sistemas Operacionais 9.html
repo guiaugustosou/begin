@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>9 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Gerenciamento de Memória -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Gerenciamento de Memória</h1>
+        <P>Desde os primeiros computadores, os Mainframes, a memória sempre teve um papel importante nos processamentos. Essa importante área <b>armazena todos os processos (programas)</b> que estão em processamento (<b>em execução</b>) e, <i>assim que estes finalizam, a área se libera automaticamente para novas execuções</i>, pois ela é volátil (a RAM perde os dados após o processamento do programa). O verbo utilizado para a “reserva” de espaço na memória é “Alocar”, exemplo: <b>um espaço é alocado ou desalocado na memória</b>. A memória pode ser organizada de diferentes formas:
+        <ul>
+            <li>Um processo pode <b>usar todo o espaço de memória</b>: situação difícil hoje em dia em função dos grandes espaços de memória nos computadores;</li><p>
+            <li>Cada processo obtém uma <b>partição exclusão na memória</b>: situação comum;</li><p>
+            <li>Alocada <b>dinâmica ou estaticamente</b>.</li>
+        </ul>
+        <p>
+            Tendência: a necessidade de mais espaço alocado na memória, por parte das aplicações, sempre foi aumentando e tende a continuar assim, pois a cada dia, as aplicações tornam-se mais complexas.
+        </P>
+    <h2 class="w3-text-grey">1. Hierarquia de Memória</h2>
+        <P>
+            <ul>
+            <li><b>Mutexes</b>: Uma variável mutex (<i>Mutual Exclusion</i>) permite implementar a <b>exclusão mútua</b>, ou seja, o acesso a uma região crítica é feito de forma a <b>impedir os problemas de sincronização</b> (race conditions);</li><p>
+            <li><b>Variáveis condicionais</b>: Uma variável condicional permite <b>associar uma variável a um evento</b>, que poder ser, por exemplo, um <i>contador alcançando um determinado valor ou um flag sendo ligado/desligado</i>. Em uma aplicação multithread, a utilização de variáveis condicionais permite criar um <i>mecanismo de comunicação entre os diversos threads</i>, que, por sua vez, <b>permite a execução condicional em torno de eventos (sincronização)</b>;</li><p>
+            <li><b>Semáforos</b>: Semáforos são semelhantes aos mutexes, com a diferença que, enquanto um mutex pode variar seu valor <i>entre zero e um</i>, <b>semáforos podem assumir outros valores, permitindo sua utilização como contadores</b>. Semáforos estão disponíveis apenas em sistemas que oferecem suporte ao padrão <b>POSIX com extensões para tempo-real (POSIX.1b)</b>.</li>
+        </ul>
+        <p>Há uma grande difículdade em se determinar a <b>ordem de ocorrência de um evento</b>. <i>Os atrasos de comunicação, em uma rede distribuída, são imprevisíveis</i>, podem ocorrer em qualquer momento e em várias situações. Dessa forma foram definidas <b>ordens para as sincronizações</b>:
+        <ol>
+            <li><b>Memória Principal</b>: É conhecida como RAM (Random Access Memory) nos microcomputadores e armazena as instruções de programa que estão sendo executados (estão <b>em processamento</b>) e também os dados processados por estes.</
+            li><p>
+            <li><b>Armazenamento Secundário</b>: São os discos (disco rígido, Hard Disk – HD, fitas e cartuchos), estes armazenam dados (em arquivos) e programas (em bibliotecas) que são acessados sempre que necessários: quando um programa é chamado <b>para ser executado</b>, o SO faz uma busca na biblioteca referente e o carrega na RAM.</li><p>
+            <li><b>Memória Cache</b><p>
+                <ul>
+                    <li>Sua <b>velocidade é extremamente alta</b>;</li><p>
+                    <li>Normalmente se localiza no <b>próprio processador</b>;</li><p>
+                    <li><b>Os dados mais comumente usados</b> são copiados para o cache para que possam ser acessados mais rapidamente;</li><p>
+                    <li>Uma <b>pequena quantidade de cache é suficiente</b> para melhorar o desempenho.</li>
+                </ul>
+            </li><p>
+        </ol>
+        <p>
+        Dessa forma, os programas são armazenados em <b>memórias secundárias (armazenamento secundário)</b>, como discos ou fitas, por serem um <b>meio não volátil</b> (que não se perde), pois seu custo é baixo se comparado ao da memória principal. Essa diferença de custo se dá em função do material utilizado na RAM ser mais caro que o material utilizado na construção dos HDs e demais meios de armazenamento.<p> <b>O processador somente executa tarefas que estiverem alocadas na memória principal</b>. Para isso, o sistema operacional deve sempre transferir programas da memória secundária para a memória principal antes de serem executados.<p> <b>O tempo de acesso à memória secundária é maior do que o do acesso à memória principal</b>. Para resolver isso, o sistema operacional deve buscar reduzir o número de operações de I/O (Input/Output: E/S, Entrada e Saída) à memória secundária, senão poderá ocorrer problemas no desempenho do sistema. Surge então a <b>primeira função da gerência de memória</b>: <i>manter na memória principal o maior número de processos</i>, permitindo aperfeiçoar o compartilhamento do processador e demais recursos.<p> Os processos só serão recusados no caso da capacidade da memória principal e da memória virtual estarem 100% utilizadas (caso raro hoje em dia). Em tempo, <b>a memória virtual é uma extensão da memória principal, localizada no HD</b>. O mecanismo que faz a <i>transferência de processos da memória principal para a memória secundária (liberando espaço na memória principal)</i> é conhecido como <b>swapping</b>.<p>Na multiprogramação, <b>o sistema operacional deve proteger as áreas de memória ocupadas por cada processo e a área onde está alocado o próprio sistema</b>. Se uma tarefa tentar acessar indevidamente algum endereço de memória, o sistema deverá impedir.  Mesmo a gerência garantindo a proteção de áreas da memória, os SO (Sistemas Operacionais) não estão impedidos de possuir mecanismos de compartilhamento, para que os processos possam trocar dados de forma segura.
+        </P>
+     <h2 class="w3-text-grey">2. Alocação de Espaço na Memória</h2>
+        <P>Esse algoritmo foi desenvolvido e implementado nos primeiros sistemas operacionais, porém ainda está presente em alguns <b>sistemas monoprogramáveis</b>. Visa dividir a memória principal em <b>duas áreas</b>: uma <i>para o SO</i> e outra para o <i>programa do usuário final</i>. O programador, ao desenvolver suas aplicações, deve se preocupar apenas em <b>não ultrapassar o espaço de memória disponível à sua aplicação</b>, que será a <i>diferença entre o tamanho total da memória principal e a área ocupada pelo SO</i>.<p> Nessa arquitetura <b>o usuário possui total controle sobre a memória principal</b>, podendo acessar inclusive a área destinada ao sistema operacional. Para impedir violação do endereço de memória, os sistemas operacionais implementam um <b>registrador que limita a área do usuário e do sistema operacional</b>. Sendo assim, ao tentar acessar a memória, o sistema faz a verificação: se não estiver dentro do permitido, a tarefa será cancelada e uma <b>mensagem de erro</b> será demonstrada para o usuário. Dessa forma, temos a alocação de <b>memória contígua (espaços sequentes)</b> e <b>não contígua (espaços não sequentes)</b>:
+    <ul>
+        <li><b>Alocação contígua</b>:<p>
+            <ul>
+                <li>O programa deve estar em um <i>bloco único de endereços contíguos</i> alocados na memória;</li><p>
+                <li>Às vezes é impossível encontrar um bloco grande o suficiente;</li><p>
+                <li>Sua <b>sobrecarga é baixa</b>.</li>
+            </ul><p>
+        </li><p>
+        <li><b>Alocação não contígua</b>:<p>
+            <ul>
+                <li>O programa é dividido em porções denominadas <i>segmentos</i>;</li><p>
+                <li>Os segmentos podem ser posicionados em <i>partes diferentes da memória</i>;</li><p>
+                <li>É fácil encontrar “lacunas” nas quais o segmento possa se encaixar;</li><p>
+                <li>Pelo fato de poder haver <i>mais processos simultâneos</i> na memória, isso compensa a sobrecarga própria dessa técnica.</li>
+            </ul>
+        </li>
+    </ul>
+    </P>
+    <h2 class="w3-text-grey">3. Swapping</h2>
+        <P>Segundo Machado (2007), swapping é uma técnica que foi introduzida para contornar o problema de insuficiência de memória principal, aplicada à gerência de memória para programas que esperam por memória livre para serem executados. Nessa situação, <b>o sistema escolhe um processo residente, que é transferido da memória principal para a memória secundária (<i>swap out</i>)</b>, geralmente disco. Posteriormente, o processo é carregado de volta <b>da memória secundária para a memória principal (<i>swap in</i>)</b> e pode continuar sua execução como se nada tivesse ocorrido.<p> Para selecionar a tarefa a ser retirada da memória principal, o sistema operacional deve <i>priorizar aquele com menores chances de ser escalonado </i>para evitar o swapping desnecessário. Normalmente esses processos encontram-se no <b>estado de espera</b>, mas ainda existe a possibilidade de um processo no estado de pronto também ser selecionado para swapping.
+    <figure>
+        <img src="SO18.jpg" alt="SO18" class=center style="width:600px">
+        <figcaption>Multiprogramação em um sistema de troca de processos (swapping) no qual há somente um único processo por vez na memória principal</figcaption>
+    </figure>
+    </P>
+    <h2 class="w3-text-grey">4. Paginação</h2>
+        <P>O processo de paginação faz com que o programa seja alocado em <b>áreas não contíguas na memória</b>. Dessa forma:
+        <ul>
+            <li>O espaço de endereçamento lógico de um processo (programa em execução) é dividido em <b>páginas lógicas de tamanho fixo</b>;</li><p>
+            <li>A memória física é dividida em <b>páginas com tamanho fixo</b>, com tamanho igual ao da página lógica;</li><p>
+            <li>O programa é carregado página a página, <b>cada página lógica ocupa uma página física</b>;</li><p>
+            <li>As páginas físicas <i>não são necessariamente contíguas</i>.</li>
+        </ul><p>
+        O <b>endereço lógico</b> é inicialmente dividido em duas partes:
+        <ul>
+            <li>Um <b>número de página lógica</b> (usado como <i>índice</i> no acesso a tabela de páginas, de forma a obter o número da página física correspondente);</li><p>
+            <li>Um <b>deslocamento</b> dentro da página.</li>
+        </ul><p>
+    <figure>
+        <img src="SO19.jpg" alt="SO19" class=center style="width:600px">
+        <figcaption>Paginação</figcaption>
+    </figure>
+    </P>
+    <h2 class="w3-text-grey">5. Segmentação</h2>
+        <P>É uma técnica onde programas são <b>divididos em segmentos de tamanhos variados</b>, cada um com seu próprio espaço de endereçamento. A principal diferença entre a paginação e a segmentação é a <b>alocação da memória de maneira não fixa</b>, a alocação depende da lógica do programa. <p>O mapeamento é feito através das <b>tabelas de mapeamento de segmentos</b>, e os endereços são compostos pelos:
+        <ul>
+            <li><b>Número do segmento</b>;</li><p>
+            <li><b>Deslocamento</b> dentro do segmento.</li>
+        </ul>
+    <p>
+    Cada entrada na tabela mantém o <i>endereço físico do segmento, o tamanho do segmento, se ele está ou não na memória e sua proteção</i>. Para isso ocorrer sem problemas, o SO mantém uma <b>tabela com as áreas livres e ocupadas da memória</b> e somente segmentos referenciados são transferidos para a memória principal. A seguir um exemplo de Segmentação:
+    <figure>
+        <img src="SO20.jpg" alt="SO20" class=center style="width:600px">
+        <figcaption>Segmentação</figcaption>
+    </figure>
+    </P>
+    <h2 class="w3-text-grey">6. Overlay</h2>
+        <P>Para Deitel (2005, p. 243), uma maneira de o desenvolvedor superar a limitação da memória principal seria criar overlays (<b>sobreposições</b>) que permitam ao sistema executar <b>programas maiores do que a memória principal</b>. Quando um programa não necessita de memória para uma seção, o sistema poderá substituí-la, total ou parcialmente, pela memória para uma seção que necessite. A figura a seguir ilustra o Overlay:
+         <figure>
+        <img src="SO21.jpg" alt="SO21" class=center style="width:600px">
+        <figcaption>Overlay</figcaption>
+    </figure>
+    </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">6</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">7</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">8</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%209.html">9</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">10</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

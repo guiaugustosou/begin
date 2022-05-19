@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>11 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Gerenciamento de Armazenamento -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Gerenciamento de Armazenamento</h1>
+        <P>É chamado de armazenamento secundário os armazenamentos de dados que são feitos em <b>locais diferentes da memória principal (armazenamento primário)</b>, ou seja, são os armazenamentos em disco rígido ou hard disk <b>(HD), CD-ROM, floppy disks, memórias flash, fita, cartuchos, pendrives, etc</b>. Desde os primeiros computadores, os HD se mostraram os mais potentes meios de armazenamento de dados e sua eficiência permanence até os dias de hoje. Suas vantagens frente aos demais se dão devido:
+        <ul>
+            <li><b>Capacidade de armazenamento</b>: muito grande e não para de crescer;</li><p>
+            <li>Velocidade de gravação e recuperação dos dados: <b>só mais lenta que a velocidade da memória RAM</b>.</li>
+        </ul>
+        <p>
+        No início, as cabeças de leitura dos HD encostavam neles, era necessário para que os dispositivos eletrônicos antigos pudessem ler os campos magnéticos. Com o avanço da eletrônica, atualmente, as cabeças de leitura “flutuam”, quanto mais próximas as cabeças de leitura ficam do disco, melhor. Organização:
+        <ul>
+            <li>HD: conjunto de ‘pratos’ empilhados;</li><p>
+            <li>Dados são gravados desses pratos;</li><p>
+            <li>Superfícies: são organizadas em trilhas;</li><p>
+            <li>Trilhas: são organizadas em setores;</li><p>
+            <li>Cilindro: conjunto de trilhas na mesma posição.</li>
+        </ul>
+        <figure>
+                <img src="SO26.png" alt="SO26" class=center style="width:400px">
+                <figcaption>Organização das Trilhas e Setores no HD</figcaption>
+        </figure>
+        <figure>
+                <img src="SO27.png" alt="SO27" class=center style="width:400px">
+                <figcaption>Organização das Trilhas e Setores no HD com as Cabeças de Leitura/Gravação</figcaption>
+        </figure><p>
+    O armazenamento secundário armazena grande quantidade de dados permanentes a um baixo custo quando comparado ao custo da memória RAM, porém acessar dados em um disco rígido é mais vagaroso que na memória principal:
+     <ul>
+        <li>Movimento mecânico do cabeçote de leitura/gravação;</li><p>
+        <li>Latência rotacional;</li><p>
+        <li>Tempo de transferência.</li>
+    </ul><p>
+    O armazenamento secundário removível facilita o backup e a tranferência de dados:
+    <ul>
+        <li>HD externo;</li><p>
+        <li>CD;</li><p>
+        <li>DVD;</li><p>
+        <li>Disco Zip;</li><p>
+        <li>Cartão de memória Flash;</li><p>
+        <li>Fita;</li><p>
+        <li>Cartucho;</li><p>
+        <li>Pendrive, etc.</li>
+    </ul><p>
+    </P>
+    <h2 class="w3-text-grey">1. Gerenciamento do Armazenamento Secundário</h2>
+        <P>
+            Os SO (Sistemas Operacionais) variam na forma com que gerenciam os dados armazenados pois, a maioria possui seu próprio sistema de arquivos. Em geral, há sempre uma <b>estrutura hierárquica de arquivos</b>, ramificada, em árvore ou plana:
+            <ul>
+                <li>Mainframe: arquivos gerados dentro de <b>catálogos</b>;</li><p>
+                <li>Servidores e PC: arquivos gerados dentro de <b>diretórios</b>.</li>
+            </ul><p>
+        Segue uma descrição das <b>operações</b> em arquivos encontradas na maioria dos sistemas de arquivo:
+        <ul>
+            <li><b>Criação</b>: geração do arquivo;</li><p>
+            <li><b>Abertura</b>: abertura do arquivo, para colocar na memória os atributos e a lista de endereços para tornar as operações posteriores mais rápidas;</li><p>
+            <li><b>Fechamento</b>: remover as referências dos arquivos da memória principal;</li><p>
+            <li><b>Leitura</b>: abertura do arquivo para leitura do seu conteúdo;</li><p>
+            <li><b>Atualização</b>: processo de atualização ou inserção de dados no arquivo;</li><p>
+            <li><b>Concatenação</b>: união sequencial de arquivos, ou seja, trata-se de adicionar dados no final do arquivo;</li><p>
+            <li><b>Busca</b>: pesquisa dentro do arquivo;</li><p>
+            <li><b>Ver atributos</b>: permite a visualização das características do arquivo, como: permissões, localização, etc;</li><p>
+            <li><b>Definir atributos</b>: define ou altera os atributos de certos arquivos;</li><p>
+            <li><b>Renomeação</b>: troca do nome do arquivo;</li><p>
+            <li><b>Destruição</b>: eliminação, remoção do arquivo para liberação do espaço.</li>
+        </ul><p>
+            Em alguns sistemas de arquivos, os nomes de arquivos são <b>estruturados</b>, com <i>sintaxes especiais para extensão de arquivos e números de versão</i>. Em outros, os nomes de arquivos são simplesmente correntes de texto. A localização precisa de um arquivo no HD, que é chamada de "rota" ou "caminho" (<b>path</b> em inglês). A rota é determinada por uma sucessão de nomes de <b>catálogos e arquivos</b> (Mainframes) e de <b>diretórios e subdiretórios</b>, ordenados <i>hierarquicamente da esquerda para a direita</i> (Servidores e PC).
+        São responsabilidades do SO:
+        <ul>
+            <li><b>Gerenciamento de espaço livre</b>: o SO controla a quantidade de bytes que tem disponível no HD (ou HDs) a fim de permitir (ou não) a criação ou atualização de arquivos;</li><p>
+            <li><b>Alocação de armazenamento</b>: o SO possui as informações da localização de cada arquivo gerado e armazenado, possui todas as informações necessárias para o controle de cada arquivo;</li><p>
+            <li><b>Escalonamento de disco</b>: ordenação e seleção das operações para a utilização dos discos;</li><p>
+            <li><b>Ferramentas de apoio</b>: o SO disponibiliza ferramentas como Backup (cópia de segurança de arquivos) e Restore (restauração de arquivos);</li><p>
+            <li><b>Segurança</b>: controla as permissões de usuários para a manipulação e entrada de comandos.</li>
+        </ul><p>
+    IMPORTANTE:
+“A importância de um dispositivo se mede pelo impacto de sua perda”, essa frase resume bem a importância do armazenamento secundário num computador.
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">«</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%2011.html">11</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">12</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">13</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

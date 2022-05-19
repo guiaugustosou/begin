@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>7 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- DeadLock -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">DeadLock</h1>
+        <P>Por mais inteligentes que pareçam, os computadores são máquinas programadas para receberem conjuntos de informações específicas (comandos), qualquer informação recebida que não faça parte do conjunto dessas infomações, o computador a rejeita e informa: ”Informação (ou comando) desconhecida(o)”, ou seja, resumindo, por si só o computador não toma providência alguma, ele sempre precisará ter aquela situação previamente prevista para poder atuar. <p>O termo Deadlock foi dado como nome a uma <b>ocorrência de travamento em um processo ou thread</b> onde, sem que haja uma intervenção, ela não será resolvida. O Deadlock ocorre quando um processo ou thread aguarda um evento que não ocorrerá, ou seja, a espera será eterna: o sistema trava. <p>A figura abaixo ilustra uma situação de travamento, onde, sem alguma intervenção, o trânsito não voltará a andar. É uma boa comparação de situação com o Deadlock:
+            <figure>
+            <img src="SO14.png" alt="SO14" class=center style="width:400px">
+        <figcaption>Exemplo de DeadLock</figcaption>
+        </figure><p>
+       Essa dependência mútua gerará um travamento e assim permanecerá até que alguma providência seja tomada. Essas providências variam com a prioridade de execução de cada processo e também com o tipo de informação (evento) que está sendo aguardado por ambos. A figura abaixo ilustra essa situação:
+            <figure>
+            <img src="SO15.png" alt="SO15" class=center style="width:550px">
+        <figcaption>DeadLock entre dois processos</figcaption>
+        </figure><p>
+            Na figura acima, o sistema entrou em Deadlock porque cada processo (P1 e P2) retém um recurso que está sendo requisitado pelo outro processo e nenhum processo está preparado para liberar seu recurso sem antes obter o recurso que precisa.
+        </P>
+     <h2 class="w3-text-grey">1. Condições para o DeadLock</h2>
+        <P>Há quatro condições em que ocorrem os Deadlocks:
+        <ul>
+            <li><b>Condição de exclusão mútua</b>: Um recurso pode ser adquirido (utilizado) <i>apenas por um processo por vez</i>;</li><p>
+            <li><b>Condição de espera (condição de posse e espera)</b>: Um processo que obteve um recurso exclusivo pode <i>reter esse recurso</i> enquanto espera para obter outros recursos;</li><p>
+            <li><b>Condição de não-preempção</b>: Uma vez que o processo obtenha um recurso, o sistema <i>não pode retirá-lo do controle do processo até que esse tenha terminado</i> de utilizar o recurso;</li><p>
+            <li><b>Condição de espera circular</b>: Dois ou mais processos ficam travados em uma ‘cadeia circular’ na qual um processo está aguardando um ou mais recursos que o processo seguinte da cadeia detém.</li>
+        </ul><p>Importante:
+        <ol>
+            <li>Não preemptivo:<p>
+                <ul>
+                    <li>Processo <b>nunca é interrompido</b>: execução só para quando o processo termina ou é bloqueado;</li><p>
+                    <li>É mais simples que o preemptivo.</li><p>
+                </ul>
+            </li><p>
+            <li>Preemptivo:<p>
+                 <ul>
+                    <li>Processo <b>pode ser interrompido</b> antes de terminar ou sem ser bloqueado;</li><p>
+                    <li>Possui um melhor tempo de resposta.</li><p>
+                </ul>
+            </li>
+        </ol>
+        </P>
+    <h2 class="w3-text-grey">2. Soluções para o DeadLock</h2>
+        <P>Há quatro soluções possíveis para os Deadlocks:
+        <ol>
+            <li>Prevenção de deadlock;</li><p>
+            <li>Evitação de deadlock;</li><p>
+            <li>Detecção de deadlock;</li><p>
+            <li>Recuperação de deadlock.</li>
+        </ol><p>
+        Vejamos cada uma delas.
+            </P>
+    <h3 class="w3-text-grey" style="margin:17px">2.1 Prevenção de DeadLock</h3>
+        <P style="margin:17px">
+        <ul>
+            <li>Condiciona um sistema a <b>afastar qualquer possibilidade</b> de ocorrência de deadlocks;</li><p>
+            <li><b>Não é possível ocorrer deadlock se uma das quatro condições (descritas acima) necessárias for negada</b>;</li><p>
+            <li>A primeira condição (<b>exclusão mútua</b>) <i>não pode ser quebrada</i>.</li>
+        </ul></P>
+        <h3 class="w3-text-grey" style="margin:17px">2.2. Evitação de Deadlock:</h3>
+        <P style="margin:17px">
+        Há três maneiras de se evitar o deadlock:
+        <ul>
+            <li><b>evitando-se</b> a condição de '<i>espera</i>';</li><p>
+            <li><b>negando</b> a condição de '<i>não-preempção</i>'; e</li><p>
+                <li><b>negando</b> a condição de '<i>espera circular</i>'.</li>
+        </ul></P>
+        <h4 class="w3-text-grey" style="margin:22px">2.2.1. Evitação da Condição de Espera</h4>
+        <P style="margin:22px">
+        <ul>
+            <li>Todos os recursos que um processo precisa para concluir suas tarefas devem ser <b>solicitados de uma vez</b>;</li><p>
+            <li><b>Problema</b>: <i>prejudica a alocação de recursos</i>, tornando-a ineficaz.</li>
+        </ul></P>
+        <h4 class="w3-text-grey" style="margin:22px">2.2.2. Negação da Condição de 'Não-Preempção'</h4>
+        <P style="margin:22px">
+        <ul>
+            <li>Os processos podem perder trabalho quando os recursos sofrem preempção;</li><p>
+            <li>Isso pode sobrecarregar substancialmente o sistema, visto que os processos precisam ser reiniciados.</li>
+        </ul></P>
+        <h4 class="w3-text-grey" style="margin:22px">2.2.3. Negação da Condição de 'Espera Circular'</h4>
+        <P style="margin:22px">
+        <ul>
+            <li>Usa uma <b>ordenação linear de recursos</b> para evitar deadlock;</li><p>
+            <li>Utilização de recursos mais eficaz que a de outras estratégias.</li><p>
+            <li><b>Exige que o programador determine a ordenação ou os recursos para cada sistema</b>.</li>
+        </ul></P>
+        <h3 class="w3-text-grey" style="margin:17px">2.3. Detecção de DeadLock</h3>
+        <P style="margin:17px">
+        <ul>
+            <li>Usada em sistemas nos quais é possível ocorrer deadlocks;</li><p>
+            <li>Determina se ocorreu deadlock;</li><p>
+            <li>Identifica os processos e recursos envolvidos no deadlock;</li><p>
+            <li>Os algoritmos de detecção de deadlock podem exigir um tempo de execução significativo.</li>
+        </ul></P>
+        <h3 class="w3-text-grey" style="margin:17px">2.4. Recuperação de DeadLock</h3>
+        <P style="margin:17px">
+        <ul>
+            <li>Remove os deadlocks do sistema de modo que os processos em deadlock possam ser executados até o fim e liberar seus recursos;</li><p>
+            <li><b>Mecanismo de suspensão/retomada</b>: Permite que o sistema fique <i>temporariamente retido</i> e <b>os processos suspensos podem ser retomados sem que haja perda de trabalho</b>;</li><p>
+            <li><b>Verificação/reversão de estado</b>: <b>Simplifica</b> a capacidade de suspensão/retomada e <b>restringe</b> a perda de trabalho ao instante em que se realizou a última verificação.</li>
+        </ul><p style="margin:17px">
+        <b>O deadlock é considerado uma complicação insignificante no sistema dos computadores pessoais</b>.
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">6</a>
+          <a class="w3-button w3-black" href="#">7</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">8</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">9</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">10</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

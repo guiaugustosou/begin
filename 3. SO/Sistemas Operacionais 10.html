@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>10 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Gerenciamento de Memória Virtual -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Gerenciamento de Memória Virtual</h1>
+        <P>Com objetivo de otimização dos recursos do computador, foi criada a Memória Virtual. A Memória Virtual é uma <b>extenção da memória principal, localizada no HD (Hard Disk)</b>. Segundo Deitel (2005), sistemas de memória virtual dão aos processos a <b>ilusão de que tem mais memória do que a contida no computador</b>. Por esse motivo, há <i>dois tipos de endereços em sistemas de memória virtual</i>:
+        <ul>
+            <li>Os referenciados por processos: chamados de <b>endereços virtuais</b>;</li><p>
+            <li>Os disponíveis na memória principal: <b>endereços físicos ou reais</b>.</li>
+        </ul>
+        <p>
+        Para Machado (2007), o conceito de memória virtual fundamenta-se em <b>não vincular o endereçamento feito pelo programa dos endereços físicos da memória principal</b>. Dessa forma, programas e suas estruturas de dados <i>deixam de estar limitados ao tamanho da memória física disponível</i>, pois podem possuir endereços associados à memória secundária.
+    </P>
+    <h2 class="w3-text-grey">1. Espaço de Endereçamento Virtual</h2>
+        <P>
+        O conceito de memória virtual é muito parecido com o conceito de um vetor existente nas linguagens de programação. Quando um programa faz referência a um elemento do vetor, não há preocupação em saber a posição de memória, porque <b>o compilador</b> é responsável por gerar as instruções que implementam esse mecanismo. <p>Com relação aos endereços dos programas e dados, a memória virtual trabalha da mesma forma. A tarefa que estiver no ambiente de memória virtual <b>não faz referência a endereços físicos de memória (endereços reais), mas apenas a endereços virtuais</b>. <i>Quando for chegado o momento da execução de uma  instrução, o endereço virtual referenciado é traduzido para um endereço físico</i>, pois o processador manipula apenas posições da memória principal (já tratamos disso anteriormente). O mecanismo de tradução do endereço virtual para endereço físico é denominado <b>mapeamento</b>. <p>Um processo é composto pelo <b>contexto de hardware, contexto de software e espaço de endereçamento</b>. Em ambientes que implementam memória virtual, <i>o espaço de endereçamento do processo é conhecido como espaço de endereçamento virtual e representa o conjunto de endereços virtuais que o processo pode endereçar</i>. (MACHADO, 2007).<p> O programa, ao ser executado, apenas <b>uma parte do seu código fica alocado na memória principal</b>, <i>permanecendo o restante na memória secundária até o momento de ser referenciado</i>. Dessa forma, pode-se aumentar o compartilhamento da memória principal entre muitos processos, <b>aumentando o grau da multiprogramação</b>.<p> Para os desenvolvedores de software, não existe os endereços de memória virtual, os <b>compiladores</b> são responsáveis por gerar o código executável de acordo o espaço de endereçamento virtual, e o sistema operacional cuida dos detalhes durante sua execução.
+        </P>
+     <h2 class="w3-text-grey">2. Mapeamento</h2>
+        <P>O processador só executa instruções que estejam alocados em endereçamentos reais, portanto, tem que existir uma rotina  que <b>transforme endereços virtuais em endereços reais</b>. Esse é o conceito de mapeamento, que permite <i>traduzir um endereço localizado no espaço virtual para  um associado no espaço real</i>. (MACHADO, 2007).<p> Para controlar o mapeamento, o sistema operacional necessita de uma <b>tabela contendo a estrutura de dados de cada processo</b>. Quando uma tarefa está em execução, o sistema utiliza a tabela de mapeamento dessa tarefa para fazer a tradução de seus endereços virtuais. Se por ventura outro processo entrar no estado de execução, o sistema operacional deverá referenciar a tabela de mapeamento do novo processo, isso só é possível por causa do <b>uso de um registrador</b>.
+        <figure>
+            <img src="SO22.jpg" alt="SO22" class=center style="width:400px">
+            <figcaption>Mapeamento</figcaption>
+        </figure>
+        </P>
+    <h2 class="w3-text-grey">3. Gerência de Memória Virtual</h2>
+        <P>Para Machado (2007), memória virtual é uma técnica sofisticada e poderosa gerência de memória, em que as <b>memórias principal e secundária são combinadas dando ao usuário a ilusão de existir uma memória muito maior que a capacidade real da memória principal</b>. O conceito de memória virtual fundamenta-se em <i>não vincular o endereçamento feito pelo programa dos endereços físicos da memória principal</i>. Dessa forma, programas e suas estruturas de dados deixam de estar limitados ao tamanho da memória física disponível, pois podem possuir endereços associados à memória secundária.
+    </P>
+    <h2 class="w3-text-grey">4. Memória Virtual por Paginação</h2>
+        <P> Nesse algoritmo, os espaços de endereçamento virtual e o espaço de endereçamento real são divididos em <b>blocos de mesmo tamanho denominados páginas</b>. Se estiverem no espaço virtual, as páginas são denominadas <b>páginas virtuais</b>, senão são chamadas de <b>páginas reais ou frames</b>. <p>Para transformar o endereço virtual em real, é necessário que os processos possuam as <b>tabelas de páginas</b>, e cada página virtual possua um apontamento de <b>entrada na ETP (Entrada na Tabela de Páginas)</b>, com <i>informações de mapeamento que irão possibilitar ao sistema localizar a página real correspondente</i>. Quando um programa entra para ser executado, as páginas virtuais são transferidas da memória secundária para a memória principal (lembre-se de que o processo só executa instruções que estiverem alocadas na memória principal) e colocadas nos frames.
+    <figure>
+        <img src="SO23.jpg" alt="SO23" class=center style="width:400px">
+        <figcaption>Paginação na Memória Virtual</figcaption>
+    </figure>
+     <figure>
+        <img src="SO24.jpg" alt="SO24" class=center style="width:450px">
+        <figcaption>Paginação na Memória Virtual</figcaption>
+    </figure>
+    <figure>
+        <img src="SO25.jpg" alt="SO25" class=center style="width:600px">
+        <figcaption>Swapping de Memória Virtual</figcaption>
+    </figure><p>
+    Quando um programa faz solicitação a um endereço virtual, a rotina de mapeamento localizará, na <b>ETP (Entrada na Tabela de Páginas)</b> da tabela do processo, o endereço físico do frame no qual se encontra o endereço real correspondente. Dessa forma, o endereço virtual será formado pelo <b>número da página virtual (NPV)</b> e por um <b>deslocamento</b>. O NPV <i>identifica a página virtual que contém o endereço, agindo como um índice na tabela de páginas</i>, o deslocamento, por sua vez, <i>indica a posição do endereço virtual em relação ao início da página na qual se encontra</i>. Logo <b>o endereço físico é obtido combinando-se o endereço do frame, localizado na tabela de páginas, com o deslocamento, contido no endereço virtual</b>.<p> A ETP possui outras informações, como por exemplo, o bit de validade (<b>valid bit</b>), que <i>indica se uma página está ou não na memória principal</i>. <b>Se o bit tem o valor 0, está na página virtual, se é igual a 1, a página está localizada na memória principal</b>.<p>Ao fazer referência a um endereço virtual, a unidade de gerência de memória checa, por meio do <b>bit de validade</b>, se a página que contém o endereço referenciado está ou não na memória principal (através do 0 e 1, citado no parágrafo anterior). Se a página não estiver na memória, é correto afirmar que ocorreu um <b>page  fault</b>. Nessa situação, o sistema <i>transfere a página da memória secundária (discos ou fitas) para a memória principal, realizando uma operação de E/S conhecida como <b>page in</b>, ou paginação</i>.<p>A quantidade de <b>page faults</b> gerados por cada processo em um determinado intervalo de tempo é definida como <b>taxa de paginação do processo</b>. Para Machado (2007), quando um processo referencia um endereço e ocorre um page fault, o processo em questão passa <b>do estado de execução para o estado de espera</b>, até que a página seja transferida do disco para a memória principal. <i>Na troca de contexto, as informações sobre a tabela de mapeamento são salvas e as informações do novo processo escalonado são restauradas</i>. Após a transferência da página para a memória principal, o processo é relocado na fila de processos no <b>estado de pronto</b>, e quando for reescalonado poderá continuar sua execução.
+    </P>
+    <h2 class="w3-text-grey">5. Swapping em Memória Virtual</h2>
+        <P>A técnica de swapping, que segundo Machado (2007), é uma técnica que foi introduzida para contornar o problema de insuficiência de memória principal, aplicada à gerência de memória para programas que esperam por memória livre para serem executados, também pode ser aplicada em sistemas com memória virtual, permitindo <b>aumentar o número de processos que compartilham a memória principal</b> e, consequentemente, o grau  de multiprogramação do sistema, que é a função dessa rotina.<p> Se existirem novos processos para serem executados e não houver memória principal livre suficiente para alocação, o sistema utiliza swapping, selecionando um ou mais processos para <b>saírem da memória e oferecer espaço para novos processos</b>. Depois de escolhidos, o sistema retira os processos da memória principal para a memória secundária (<b>swap out</b>), em que as páginas ou segmentos são gravados em um arquivo de swap (<b>swap file</b>). Com os processos salvos na memória secundária, os frames ou segmentos alocados são liberados para novos processos. Posteriormente, os processos que foram retirados da memória devem retornar para a memória principal (<b>Swap in</b>) para serem novamente executados.
+    </P>
+    <h2 class="w3-text-grey">6. Thrashing</h2>
+        <P>Se o sistema operacional não possuir uma boa gerência de memória, haverá muitas ocorrências de programas mudando-se da memória principal para a secundária. Essa <i>excessiva transferência de páginas/segmentos entre a memória principal e a memória secundária recebe o nome de <b>thrashing</b></i>. Encontraremos esse problema em sistemas que implementam tanto paginação como segmentação. Na memória virtual por paginação, o trashing ocorre em dois níveis:
+        <ul>
+            <li><b>Processo</b> – <i>a excessiva de paginação ocorre em consequência do elevado número de page faults gerado pelo programa em execução</i>. Esse problema faz com que o processo <i>passe mais tempo esperando por páginas do que realmente sendo executado</i>, o que determina o seu tempo de espera médio (TEM, visto na aula 11) maior do que o necessário, <b>diminuindo a eficiência do sistema</b>;</li><p>
+            <li><b>Sistema</b> – se houver concorrência entre os processos, ou seja, se existirem mais processos competindo por memória principal que no espaço disponível. A primeira solução é a <b>redução do número de páginas de cada processo na memória</b>, <i>mas esse mecanismo leva ao thrashing de processo</i>. Se redução não for suficiente, o sistema inicia o swapping, retirando os processos da memória principal para a memória secundária. Se esse mecanismo for levado ao extremo, o sistema passará mais tempo realizando swapping que atendendo outros processos, aumentando também o tempo de espera médio do sistema, <b>comprometendo a produtividade e a eficiência</b> do sistema operacional.</li>
+        </ul><p>
+        O thrashing em sistemas que implementam segmentação também ocorre em dois níveis:
+        <ul>
+            <li><b>Processo</b> – a transferência excessiva de segmentos é devida à modularidade <b>extrema do programa</b>;</li><p>
+            <li><b>Sistema</b> – é semelhante ao da paginação, com a <b>ocorrência do swapping de processos</b> para liberar memória para os demais.</li>
+        </ul>
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">6</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">7</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">8</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">9</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%2010.html">10</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

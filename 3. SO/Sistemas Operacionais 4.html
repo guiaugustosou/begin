@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>4 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Processos -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Processos nos SO</h1>
+        <P>Ao longo do tempo, acompanhando os computadores, os sistemas operacionais evoluíram também. Desde o surgimento da informática, a evolução é constante, pois sempre surgem novos softwares e hardwares, mais potentes e mais adaptados às necessidades dos seres humanos (mais "userfriends"). Essa evolução tem um preço: <b>problemas de gerenciamento generalizado</b> (o SO gerencia todos os softwares e hardware). Os softwares estão cada vez mais complexos, pois antes era apenas “uma rotina” a ser gerenciada; com a evolução passaram a ser várias e executadas ao mesmo tempo, simultaneamente. Para que o SO garanta a <b>integridade e confiabilidade</b> de cada tarefa solicitada pelo usuário, ele (SO) a trata como um “Processo”, alocando recursos e registradores específicos para cada tarefa. Este tópico visa demonstrar como isso é feito.
+        </P>
+        <h2 class="w3-text-grey">1. Estrutura do Processo</h2>
+        <P>
+        Em um primeiro momento, <i>processo pode ser definido como um “programa em execução”</i>. Em função da evolução, atualmente seu conceito e responsabilidade é bem maior. Pode ser definido como sendo “<i>toda a estrutura necessária para que um programa seja executado (alocação de processador, memória e dispositivos de E/S)</i>”. Segundo Machado, processo pode ser definido como um “<i>conjunto necessário de informações para que o sistema operacional implemente a concorrência de programas</i>”.<p> No sistema multiusuário, cada usuário tem seu programa associado a um processo. O usuário tem a impressão de possuir todos os recursos exclusivamente para ele, mas todos os recursos estão sendo compartilhados, inclusive a CPU - Central Processing Unit (Unidade Central de Processamento). Ocorre que o processador executa o programa de um usuário durante um intervalo de tempo e, no instante seguinte, estará processando outro programa. <i>Se houver falta de recursos, o sistema operacional poderá impedir a execução, com sucesso, de um programa</i>.<p> Um processo é formado por três partes: <b>contexto de hardware, contexto de software e espaço de endereçamento</b>.            
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.1. Contexto de Hardware</h3>
+        <P style=margin:17px>
+        Esse contexto armazena o <b>conteúdo dos registradores gerais da CPU</b> - Central Processing Unit (Unidade Central de Processamento), além dos <b>registradores de uso específico</b>, como <i>program counter, stack pointer e registrador de status</i>.<p style=margin:17px> O contexto de hardware é fundamental para a implementação dos <b>sistemas multiprogramáveis</b>, pois, como já discutimos anteriormente, há várias tarefas, mas são executadas simultaneamente, e não ao mesmo tempo. Para que isso seja possível, o sistema operacional trabalha com interrupções junto aos registradores. Vamos exemplificar: o usuário está conectado na internet e ouvindo musica. A sensação é de que ambas as tarefas estão sendo executadas no mesmo instante. O sistema operacional aloca processador apenas para uma, no momento, e reveza essa alocação entre as tarefas. Ao interromper a internet, o sistema operacional salva o registrador, aloca para o outro recurso, no caso, a música, posteriormente retorna a conexão da internet, restaura o registrador e continua a execução de onde houve a interrupção.
+        <figure>
+            <img src="SO7.png" alt="SO7" class=center style="width:400px">
+            <figcaption>Contexto de Hardware num Processo</figcaption>
+        </figure>
+          </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.2. Contexto de Software</h3>
+        <P style=margin:17px>
+        Nesse contexto <b>são especificados limites e características dos recursos que podem ser alocados pelo processo</b> (processador, memória, dispositivos de E/S). Muitas dessas características são determinadas no <i>momento da criação do  processo, enquanto outras podem ser alteradas durante sua existência</i>.<p style=margin:17px> É composto por três grupos de informações:
+        <ul>
+            <li>Identificação;</li><p>
+            <li>Quotas; e</li><p>
+            <li>Privilégios.</li>
+        </ul>
+        </P>
+        <h4 class="w3-text-grey"; style=margin:22px>1.2.1. Identificação</h4>
+        <P style=margin:22px>
+        Ao ser criado, o processo recebe duas identificações: <b>PID (Process Identification)</b>, representado por um número. É por meio dele que o sistema operacional faz o <i>gerenciamento</i>; há também o <b>UID (User Identification)</b>, que permite implementar o <i>modelo de segurança</i>, em que apenas os objetos que possuem a mesma UID do usuário podem ser acessados.
+        </P>
+        <h4 class="w3-text-grey"; style=margin:22px>1.2.2. Quotas</h4>
+        <P style=margin:22px>
+        Refere-se aos <b>limites de recursos a serem atribuídos para a tarefa</b>. Caso não seja suficiente, o processo pode ser <i>executado lentamente, ser interrompido ou não ser executado</i>.<p style=margin:22px> Alguns exemplos de quota:
+        <ul>
+            <li><b>Número máximo de arquivos</b> abertos simultaneamente;</li><p>
+            <li><b>Tamanho máximo de memória</b> principal e secundária que o processo pode alocar;</li><p>
+            <li><b>Número máximo de operações</b> de E/S pendentes;</li><p>
+            <li><b>Número máximo de processos, subprocessos e threads</b> que podem ser criados.</li>
+        </ul>    
+        </P>
+        <h4 class="w3-text-grey"; style=margin:22px>1.2.3. Privilégios</h4>
+        <P style=margin:22px>
+        Define <b>ações que um processo pode fazer</b> em relação a ele mesmo, aos demais processos e ao sistema operacional.
+        </P>
+        <h2 class="w3-text-grey" style=margin:17px>1.3. Espaço de Endereçamento</h2>
+          <P style=margin:17px>
+            Ele pertence à <b>área de memória do processo em que instruções e dados do programa  são  armazenados  para  execução</b>.  Cada  processo  possui  seu próprio espaço de endereçamento, que deve ser devidamente protegido do acesso dos demais processos.
+          </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+        <div class="w3-twothird w3-container">
+            <h2 class="w3-text-grey">2. Bloco de Controle do Processo (Process Control Block - PCB)</h2>
+            <P>O processo é implementado pelo SO por meio de uma estrutura chamada <b>PCB - Process Control Block</b> (Bloco de Controle de Processos). A partir do PCB, o SO mantém todas as informações sobre os processos em execução, ou seja, sobre o <b>contexto de hardware, o contexto de software e o espaço de endereçamento de cada processo</b>. Os PCBs de todos os processos ativos residem na <b>memória principal</b>, em  uma área exclusiva do sistema operacional. O <b>tamanho</b> dessa área geralmente é limitado por um parâmetro do sistema operacional que permite especificar o <b>número máximo de processos</b> que podem ser suportados simultaneamente pelo sistema.         
+                <figure>
+                    <img src="SO8.png" alt="SO8" class=center style="width: 400px">
+                    <figcaption>PCB - Process Control Block: Bloco de Controle de Processo</figcaption>
+                </figure>
+            </P>
+        <h2 class="w3-text-grey">3. Estados dos Processos</h2>
+        <P>No sistema multiprogramável, <i>um processo não deve alocar exclusivamente a CPU</i>, pois existe o compartilhamento no uso do processador e demais recursos computacionais. Por esse motivo, os processos alteram-se em diferentes “<b>estados</b>” ao longo do seu processamento, em consequência de eventos gerados pelo sistema operacional ou pelo próprio processo.<p> Um processo em execução pode passar pelos seguintes estados:
+        <ul>
+            <li><b>Novo</b>: ao ser criado;</li><p>
+            <li><b>Pronto</b>: o processo encontra-se no estado de pronto quando <i>aguarda para ser executado</i>. O sistema operacional é quem determina a ordem e os  critérios para que o processo saia do estado de pronto de acordo com o algoritmo de escalonamento;</li><p>
+            <li><b>Em execução</b>: quando o processo <i>está fazendo uso do processador</i>. Os processos se revezam na utilização do processador seguindo uma <b>política de escalonamento determinado pelo sistema operacional</b>;</li><p>
+            <li><b>Em espera</b>: quando o processo <i>aguarda por algum evento externo ou por algum recurso computacional de entrada ou saída para seguir com o seu processamento</i>. Por exemplo, pressionamento de uma tecla, ou o clique em um botão;</li><p>
+            <li><b>Encerrado</b>: quando o processo é finalizado e destruído pelo sistema operacional.</li>
+        </ul>
+            </P>
+            <h2 class="w3-text-grey">4. Mudanças de Estado do Processo</h2>
+              <P>
+                Todo processo muda de estado durante sua execuçao e seu ciclo de vida (desde quando é criado até não ser mais processado) em razão  de dois tipos de eventos:
+                <ul>
+                    <li><b>Criados por ele próprio</b>: <i>eventos voluntários</i> como, por exemplo, a leitura de arquivos para entrada de informações e gravação de informações em arquivos de saída;</li><p>
+                    <li><b>Criados pelo SO</b>: <i>eventos involuntários</i> como uma chamada para execução, previamente escalonada no SO (chamada automática), exemplo: quando você liga seu computador, vários processos entram em execução automáticamente (confira isso acessando a aba “Processos” do “Gerenciador de Tarefas”).</li>
+                </ul><p>
+                As <b>mudanças de estado</b> que podem acontecer com um processo são:
+                <ul>
+                    <li><b>Pronto → Execução</b>: após a criação de um processo, o sistema operacional coloca em uma lista de processos no estado de pronto, em que aguarda para ser executado. Como já citado anteriormente, cada sistema operacional tem seus próprios critérios;</li><p>
+                    <li><b>Execução → Espera</b>: um processo em execução passa para o estado de espera por eventos gerados pelo próprio processo (eventos voluntários), como uma operação de E/S, ou por eventos externos (eventos gerados pelo sistema operacional);</li><p>
+                    <li><b>Espera → Pronto</b>:  um processo passa no estado de espera para o estado  de pronto. A solicitação é atendida ou o recurso que aguarda é concedido. Para sair do estado de espera e passar para o estado de execução, <b>ele obrigatoriamente vai para o estado de pronto, pois o sistema operacional só seleciona processos para execução dos que estiverem no estado de pronto</b>;</li><p>
+                    <li><b>Execução → Pronto</b>: um processo em execução passa para o estado de pronto por eventos externos, como por exemplo, se o tempo estimado para execução do processo expirar. Se isso ocorrer, o processo volta para a fila de pronto, em que irá esperar por uma nova oportunidade para continuar seu processamento.</li>
+                </ul><p>
+            </P>
+        <h2 class="w3-text-grey">5. Criação e Eliminação de Processos</h2>
+              <P>
+
+                  <figure>
+                    <img src="SO9.png" alt="SO9" class=center style="width:400px">
+                    <figcaption>Mudanças de Estados de um Processo</figcaption>
+                </figure>
+            </P>
+        </div>
+    </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">1</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">2</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">3</a>
+          <a class="w3-button w3-black" href="#">4</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">5</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

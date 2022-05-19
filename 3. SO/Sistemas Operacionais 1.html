@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>1 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Histórico e Conceitos de Sistemas Operacionais</h1>
+            <P>
+              O homem sempre buscou por alternativas para facilitar suas atividades cotidianas. A história conta inúmeros descobrimentos (utilizados até os dias atuais) para esse fim, tais como: descoberta do fogo, desenvolvimento de armas para caça, invenção da roda, utilização de animais para transporte, etc. Nos últimos 100 anos ocorreu uma grande evolução da eletrônica, esta deu um grande salto. A área de informática sempre esteve diretamente relacionada à eletrônica, ambas resultam no fantástico mundo tecnológico. Essa união vencedora fez surgir os computadores. Alguns historiadores divergem exatamente com respeito a qual foi o 1º computador inventado, não vamos aqui tentar solucionar essa questão, antes vamos expor os dois "candidatos".
+            </P>
+            <h2 class="w3-text-grey">1. Mark I</h2>
+            <P>
+              Concebido em 1930 por dois alunos de pós-graduação em Física Teórica na Universidade de Harvard, <b>Grace Hopper e Howard</b>. ASCC (Automatic Sequence Controlled Calculator) ficou conhecido como Mark I, a ideia era construir uma calculadora digital de larga escala. Posteriormente, em 1944 (durante a 2ª Guerra Mundial) foi desenvolvido e construído numa parceria entre a Universidade de Harvard e a IBM. Era <b>eletromecânico e pesava cerca de 5 toneladas e foi a primeira e maior calculadora digital</b> desenvolvida nos Estados Unidos da América.
+                <figure>
+                    <img src="mark1.jpg" alt="mark1" style=width:100%>
+                    <figcaption>IBM ASCC - Mark I: considerado por muitos como o primeiro computador inventado pelo homem</figcaption>
+                </figure></P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+            <!-- Tópico -->
+            <div class="w3-twothird w3-container">
+               <h2 class="w3-text-grey">2. EINIAC</h2>
+                <P>
+                  Criado em 1946 por dois cientistas da Electronic Control Company, <b>John Eckert e John Mauchly</b>, foi chamado de ENIAC (Electronic Numerical Integrator and Computer). Foi o primeiro computador <b>totalmente eletrônico digital</b> de grande escala. Desenvolvido inicialmente em 1943 durante a 2ª Guerra Mundial, seu objetivo era executar cálculos balísticos, porém só se tornou operacional após o final da guerra. Pesava cerca de 30 toneladas, possuia quase 17.500 válvulas e conseguia processar <b>5.000 operações por segundo</b>, ou seja, era imenso e ocupava um grande espaço físico.
+                    <figure>
+                        <img src="einiac.jpg" alt="eniac" style=width:100%>
+                        <figcaption>ENIAC: O Primeiro Computador Completamente Eletrônico Digital</figcaption>
+                    </figure>
+                  </P>
+              <h2 class="w3-text-grey">3. Máquina de Turing</h2>
+              <P>Considerado o "Pai da Ciência da Computação", <b>Alan Mathison Turing</b> foi um matemático, lógico, criptoanalista, pioneiro em inteligência artificial e cientista da computação britânico. Foi influente no desenvolvimento do conceito de algoritmo e computação com uma máquina que ele construiu, chamada de "Máquina de Turing". <b>Essa máquina embasou conceitos para o desenvolvimento dos computadores modernos</b>. Durante a Segunda Guerra Mundial, Turing trabalhou para a inteligência britânica como chefe da seção responsável pela criptoanálise da frota naval alemã. <i>Sua missão era descriptografar os códigos alemães da máquina Enigma (máquina alemã que criptografava mensagens)</i>. Faleceu em junho de 1954, aparentemente, cometeu suicídio.
+                  <figure>
+                        <img src="turing1.jpg" alt="turing1" style=width:70% class="center">
+                        <figcaption>Alan Turing</figcaption>
+                    </figure>
+                  <figure>
+                        <img src="turing.jpg" alt="turing" style=width:100%>
+                        <figcaption>Máquina de Turing</figcaption>
+                    </figure>
+              </P>
+            
+            <h2 class="w3-text-grey">4. Evolução</h2>
+              <P>Baseados nesses inventos, os computadores evoluíram. A computação, comprovadamente baseada na eletrônica, possui uma evolução constante e certamente, nunca parará:
+              <ul>
+                  <li>Crescimento sem precedentes da computação durante as últimas décadas, na sequência: <b>Mainframes, Microcomputadores, Servidores, Celulares, Tablets</b>;</li><p>
+                  <li>Surgem <b>estações de trabalho (workstation)</b> de 2 tipos:<p>
+                      <ul>
+                          <li>Workstations de mesa: <b>computadores com capacidades superiores aos de utilização doméstica</b> (executam bilhões de instruções por segundo: BIPS);</li><p>
+                          <li>Nas empresas: quando os <b>micro computadores passaram a ser uma ferramenta de trabalho comum</b>, cada funcionário utiliza uma workstation para desenvolver suas atividades;</li><p>
+                      </ul>
+                  </li><p>
+                  <li>Computadores que executam <b>mais de um trilhão de instruções por segundo</b>, geralmente essa informação é medida em MIPS (Millions of Instructions     	Per Second: milhões de informações por segundo). Os mips sugerem o preço de um mainframe, pois quanto mais mips mais velocidade de processamento o computador possui, logo, mais caro será;</li><p>
+                  <li>Os computadores atualmente estão sendo empregados em quase todas as situações da vida.</li>
+              </ul>
+              </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        <!-- Tópico -->
+        <div class="w3-twothird w3-container">
+          <h2 class="w3-text-grey">5. Conceitos</h2>
+            <h3 class="w3-text-grey"; style=margin:17px>5.1. Hardware</h3>
+              <P style=margin:17px>
+                Segundo Machado (2007, p.24), <i>sistema computacional é um conjunto de circuitos eletrônicos interligados, formado por processadores, memória, registradores, barramentos, monitores de vídeo, impressoras, mouse, discos magnéticos, além de outros dispositivos físicos</i>. Os componentes são agrupados em três subsistemas conhecidos como unidade funcional: <b>processador ou unidade central de processamento (UCP), memória principal e dispositivos de Entrada / Saída (Input / Output)</b>.
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>5.2. Processador</h3>
+              <P style=margin:17px>
+                Também chamado de Unidade Central de Processamento (UCP), gerencia todo o sistema computacional, controlando as operações realizadas por unidade funcional. Sua principal função é <b>controlar e executar instruções que se encontram na memória principal, por meio de operações básicas como somar, subtrair, comparar e movimentar dados</b>. Cada processador é composto por: 
+                  <ul>
+                      <li><b>Unidade de Controle (UC)</b>: responsável por <i>gerenciar as atividades de todos os componentes do computador</i>, como a gravação de dados em discos ou a busca de instruções na memória;</li><p>
+                      <li><b>Unidade Lógica Aritmética (ULA)</b>: responsável pela realização de <i>operações lógicas (testes e comparações) e aritméticas (soma e subtração)</i>.</li><p>
+                  </ul><p style=margin:17px>
+                Os registradores têm a função principal de <b>armazenar dados temporariamente</b>. O número de registradores e sua capacidade de armazenamento variam em função da arquitetura de cada processador. Há registradores específicos que são responsáveis por <b>armazenar informações de controle de processador e Sistema Operacional</b>, entre eles: 
+                <ul>
+                    <li><b>Contador de Instruções (CI) ou program counter (PC)</b>, contém o <i>endereço da próxima instrução que o processador deve buscar e executar</i>. Sempre que o processador busca nova instrução, esse registrador é atualizado com o endereço de memória da instrução seguinte a ser realizada;</li><p>
+                    <li><b>Apontador da pilha (AP) ou stack Pointer (SP)</b>: contém o <i>endereço de memória do topo da pilha</i>, que é a estrutura de dados de onde o sistema mantém as informações sobre programas que estão sendo executados e tiveram que ser interrompidos;</li><p>
+                    <li><b>Registrador de status ou program status Word (PSW)</b>: é responsável por armazenar <i>informações sobre execução de instruções, como a ocorrência de overflow</i>. A maioria das instruções, quando executadas, altera o registrador de status conforme o resultado. </li>
+                </ul>
+              </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+        <!-- Tópico -->
+        <div class="w3-twothird w3-container">
+          <h2 class="w3-text-grey">6. Memória Principal</h2>
+            <P>
+            Composta por <b>unidades de acesso chamadas células</b>, sendo cada célula composta por um determinado número de bits (0 ou 1). <i>O acesso ao conteúdo da célula é realizado por meio da especificação de um número chamado endereço</i>. Trata-se de uma referência única, que se pode fazer a uma célula de memória. Para que o programa acesse a célula de memória, é necessário informar o endereço de memória desejado. A especificação do endereço é realizada por meio de um registrador denominado <b>registrador de endereço de memória (Memory Address Register – MAR)</b>. Por meio do conteúdo desse registrador, a unidade de controle sabe qual célula de memória será acessada. 
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>6.1. Memória Cache</h3>
+              <P style=margin:17px>
+                Trata-se de uma memória volátil (que se perde) de alta velocidade, porém com pequena capacidade de armazenamento. Seu tempo de acesso a um dado nela contido é muito menor que se o mesmo estivesse na memória principal. A maioria dos processadores trabalha com uma arquitetura de memória cache com <b>múltiplos níveis</b>. O funcionamento dessa arquitetura tem como base o princípio de quanto menor for a capacidade de armazenamento da memória cache, mais rápido será o acesso dos dados, contudo a probabilidade da ocorrência de <i>cachê hits</i> (se o dado estiver armazenado na memória cache). Caso a informação não estiver na cachê, será obrigatório o acesso à memória principal (cachê miss). Segundo Machado (2007, pg. 28), um processador pode ser projetado com diversos níveis de cachê, conforme especificação do fabricante. Como exemplos, o processador da Motorola Power PC G4 possui cachê de nível 2, enquanto o processador Intel Xeon MP possui cachê de nível 3. 
+              </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+            <!-- Tópico -->
+            <div class="w3-twothird w3-container">
+              <h2 class="w3-text-grey">7. Dispositivos de Entrada e Saída (Input/Output)</h2>
+                <P>
+                São dispositivos utilizados para a <i>comunicação entre o sistema computacional e o mundo externo</i>, como por exemplo: teclado, impressora e mouse.
+                </P>
+            <!-- Tópico -->
+              <h2 class="w3-text-grey">8. Software</h2>
+                <P>
+                Para que o hardware tenha utilidade, deve existir o software, que segundo Machado (2007, p.34), é um <i>conjunto de programas utilizado como interface entre as necessidades do usuário e as capacidades do hardware</i>. A utilização de softwares adequados às diversas tarefas e aplicações torna o trabalho dos usuários muito mais simples e eficiente. Para gerenciar tudo isso foi necessário o desenvolvimento de um <b>software (programa) que foi batizado com o nome de Sistema Operacional (SO)</b>.
+                </P>
+            <h2 class="w3-text-grey">9. História dos SO</h2>
+            <h3 class="w3-text-grey"; style=margin:17px>9.1. Décadas de 40, 50 e 60</h3>
+              <P style=margin:17px>
+                Conforme já comentamos, o primeiro computador considerado digital e eletrônico foi o ENIAC, era imenso pois utilizava muitas válvulas (tecnologia eletrônica da época). Para manuseá-lo, era indispensável o conhecimento de hardware, pois não existia sistema operacional, e a programação era realizada por meio de <b>painéis</b>, nos quais se utilizava a linguagem de máquina (binária 0 e 1 em interruptores, ou seja, ligado ou desligado).<p style=margin:17px> Na década de 1950, com a chegada do <b>transistor</b>, houve o <i>aumento de velocidade e confiabilidade no processamento das informações</i> à memória magnética e o acesso mais rápido às informações. O tamanho físico dimiuiu, porém ainda eram computadores muito grandes (ocupavam grandes espaços). Surgem as <b>primeiras linguagens de programação FORTRAN, ALGOL e COBOL</b>, dessa forma, <i>os programas deixaram de ter relação direta com o hardware, agilizando o desenvolvimento e manutenção das rotinas</i>.<p style=margin:17px> A década de 1960 foi importante. Podemos afirmar que nasceram técnicas utilizadas até hoje em sistemas operacionais, como a <b>multiprogramação</b>, pois até então em todas as tarefas (Jobs), <i>quando se realizavam operações de entrada/saída, o processador ficava ocioso, aguardando o término da operação</i>. Em 1964, a IBM lançou a <b>família System/360</b>, que revolucionaria a história dos computadores, pois permitia a <i>compatibilidade entre diferentes modelos de máquinas</i>; para esses computadores, foi desenvolvido o sistema operacional <b>OS/360</b>.<p style=margin:17px> Apesar de os sistemas batch implementarem o conceito de multiprogramação, como o OS/360, o trabalho de desenvolvimento e depuração das aplicações ainda era moroso. O próximo desafio foi desenvolver rotinas, nas quais se proporcionasse aos usuários o <b>tempo de respostas menores e uma interface que permitisse interagir rapidamente com o sistema</b>. Para esse objetivo, <i>cada programa poderia utilizar o processador por pequenos intervalos de tempo</i>. A esse sistema de divisão de tempo chamou-se de <b>tempo compartilhado (time-sharing)</b>. <p style=margin:17px>Também era necessário melhorar a interface entre o computador e os usuários, e para isso foram  introduzidos novos dispositivos de entrada/saída, como o <b>terminal de vídeo e teclado</b>. 
+              </P>
+            <h3 class="w3-text-grey"; style=margin:17px>9.2. Décadas de 70, 80 e 90</h3>
+              <P style=margin:17px>
+                Na década de 1970, surgem as <b>redes distribuídas (wide area network – WANs)</b>, <i>permitindo acesso a outros sistemas computacionais independentemente da distância geográfica</i>. <b>O primeiro Personal Computer (PC)</b> foi criado na década de 70, porém sua utilização corporativa veio acontecer somente na década de 80. Na década de 1980, a IBM lança o IBM PC (Personal Computer), criando a <b>era dos computadores pessoais</b>. O primeiro PC utilizava o processador <b>Intel 8088 de 16 bits e Sistema Operacional DOS (Disk Operating System), da Microsoft</b>. Surgem também as estações de trabalho (<b>Workstations</b>) que permitiam a execução de diversas tarefas concorrentemente (<i>multitarefa</i>).<p style=margin:17px> A família Intel evoluiu e apareceram os <i>primeiros sistemas operacionais comerciais que oferecem interface gráfica</i>, como o <b>Microsoft Windows e OS/2</b>. O software de rede passa a estar fortemente relacionado ao sistema operacional e <b>surgem sistemas operacionais de rede</b>, com destaque para Novell Netware e o Microsoft LAN Manager (Machado, 2007, p. 13). Com o crescimento da internet, o <b>protocolo TCP/IP (criado pelo Departamento de Defesa dos EUA)</b> passou a ser um padrão de mercado, obrigando os fabricantes de sistemas operacionais a oferecer suporte para ele.
+              </P>
+            <h3 class="w3-text-grey"; style=margin:17px>9.3. Década de 2000 em diante</h3>
+              <P style=margin:17px>
+                Como tudo na informática evolui, os novos sistemas operacionais receberam <i>mecanismos automáticos de detecção e correção de erros</i>. Surgiram os <b>sistemas em cluster</b>. Nesses sistemas, <i>computadores são agrupados de forma a oferecer serviços como se fossem um único sistema centralizado</i>. Além de melhorar a disponibilidade, sistemas em cluster permitem aumentar o desempenho e a escabilidade das aplicações (Machado, 2007, p. 14).<p style=margin:17px> É difundido o conceito de <b>processamento distribuído</b>, em que as <i>aplicações são espalhadas por vários processadores por meio de redes locais e distribuídas</i>. A família Microsoft evolui com a linha do Windows. Os sistemas Windows 2000 e Windows XP, lançados no início de 2000, evoluíram para o Windows 2003 e o Windows Vista e Windows 7. A comunidade de software livre adota o sistema operacional Linux como referência para o desenvolvimento de novas aplicações gratuitas ou de baixo custo.
+              </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-black" href="#">1</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">2</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">3</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">4</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">5</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

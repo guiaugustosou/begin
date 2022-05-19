@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>12 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Gerenciamento de Entrada e Saída -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Gerenciamento de Entrada e Saída</h1>
+        <P>Os dispositivos de Entrada e Saída (E/S) ou Input/Output – I/O são também chamados de “Periféricos”, pois permitem a interação do processador com o usuário, possibilitando a entrada e/ou a saída de dados. Os dispositivos de <b>Entrada</b> são os responsáveis pela por fazer a “ponte” entre o <i>desejo do usuário com a correspondente ação no computador</i>. Eles codificam a informação que entra em dados a fim de que possam ser processados pelo SO. Os dispositivos de <b>Saída</b> fazem a “ponte” contrária, eles <i>decodificam os dados em informações que podem ser compreendidas pelo usuário</i>. Há dispositivos que foram desenvolvidos tanto para Entrada como para Saída de dados, por exemplo: o <b>HD (Hard Disk), Pendrive, Modem, etc</b>.<p> Os dispositivos de E/S são os responsáveis pelo fornecimento de informações, e esse fornecimento ocorre:
+         <ul>
+            <li><b>Do usuário para o computador</b>: entrada de dados ou informações via teclado, mouse, scanners, etc;</li><p>
+            <li><b>Do computador para o usuário</b>: saída de dados ou informações via monitor, tablet, celular, pendrives, papel, etc.</li><p>
+            <li><b>Do computador para o computador</b>: entrada e saída de dados ou informações via arquivos, por exemplo: um arquivo gerado (chamado “Arquivo de Saída”) ao final de um processamento será a entrada de informações (chamado de “Arquivo de Entrada”) para um outro processamento. A figura abaixo ilustra essa situação: o processamento do “Programa Cálculo da Folha de Pagamento” gerou o arquivo de saída “Arquivo de Hollerites”, esse arquivo será o arquivo de entrada do processamento do “Programa que emite Hollerites”.</li>
+        </ul><p>
+            <figure>
+                <img src=SO28.jpg alt="SO28" class=center>
+                <figcaption>Fluxo de Processamento: Arquivos de Entrada e Arquivos de Saída</figcaption>
+            </figure><p>
+    A figura (a) a seguir ilustra a sequência que o SO executa quando uma informação armazenada num HD é necessária num processamento:
+    <ul>
+        <li>A CPU (Central Processing Unit: Unidade de Processamento Central) aciona o Controlador de Disco, fazendo uma solicitação ao HD;</li><p>
+        <li>O Controlador de Disco aciona o HD e passa a solicitação feita pela CPU. O HD atende a solicitação e responde ao Controlador de Disco;</li><p>
+        <li>A Controlador de Disco se comunica com o Controlador de Interrupção (dispositivo que controla o fluxo de informações);</li><p>
+        <li>O Controlador de Interrupção retorna as informações do HD à CPU.</li>
+    </ul><p>
+        <figure>
+                <img src=SO29.jpg alt="SO29" class=center>
+                <figcaption>Fluxo de Comunicação desde a CPU até um dispositivo de disco (HD)</figcaption>
+        </figure><p>
+    Todos os dispositivos de E/S possuem um <b>Controlador (ou Controladora)</b>. Esse componente tem a função de <i>intermediar as solicitações do SO com o dispositivos de E/S</i> e também:
+        <ul>
+            <li>Converte fluxo serial de bits em <b>bloco de bytes</b>b>;</li><p>
+            <li>Traduz operações genéricas: <b>leitura/gravação</b>;</li><p>
+            <li>Gerar seqüência de acionamentos para manipulação do dispositivo;</li><p>
+            <li>Realizar correções de erro se necessário.</li>
+        </ul><p>
+        E quando ocorre uma interrupção?
+        <ul>
+            <li>A <b>finalização</b> de uma tarefa por um dispositivo gera interrupção;</li><p>
+            <li><b>Sinal de interrupção concentrado em um controlador de interrupção</b>: os dispositivos enviam sinal via barramento. <i>Cada dispositivo possui uma identificação de interrupção</i>;</li><p>
+            <li><b>Controlador de interrupção</b>: processa a interrupção conforme disponibilidade/prioridade e repassa o sinal para interromper a CPU. Coloca um número nas linhas de endereço do barramento;</li><p>
+            <li><b>Na CPU</b>: o número das linhas de endereço definem índice do vetor de interrupções. O Vetor de interrupções contem o endereço base da rotina de tratamento.</li>
+        </ul><p>
+    </P>
+    <h2 class="w3-text-grey">1. Gerenciamento dos dispositivos de Entrada e Saída</h2>
+        <P>
+            É a maneira pela qual o SO irá lidar com o hardware (HW). Há diferentes formas de tratar as diversas situações apresentadas pelas implementações de HW.
+
+Objetivos do gerenciamento de E/S:
+        <ul>
+            <li>Garantir a independência do dispositivo de E/S;</li><p>
+            <li>Permitir que programas possam acessar qualquer dispositivo de E/S;</li><p>
+            <li>Garantir a nomeação uniforme de arquivos: nome/caminho (path) de arquivo ou dispositivo;</li><p>
+            <li>Garantir o tratamento de erros;</li><p>
+            <li>Utilização de buffer para armazenamento temporário: recepção de pacotes da rede a serem tratados num Segundo momento;</li><p>
+            <li>Controlar os dispositivos compartilhados e os dedicados.</li>
+        </ul>
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">11</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%2012.html">12</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">13</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

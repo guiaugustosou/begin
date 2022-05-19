@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>3 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-row w3-padding-64">
+    <!-- Arquitetura SO -->
+            <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Arquitetura e Estrutura de Sistemas Operacionais</h1>
+            <P>O sistema operacional é formado por um conjunto de rotinas que oferece serviços aos usuários e às suas aplicações, ou seja, o SO disponibiliza uma grande variedade de atividades que nós usuários podemos solicitar para satisfazer nossas necessidades. Esse variedade de atividades (softwares) são executadas utilizando os hardwares. <i>A função do núcleo do SO ou Kernel é conectar ambos: software e hardware, permitindo assim uma eficiente comunicação</i>. A estrutura do núcleo, ou seja, a maneira como o código do sistema é organizado e o inter-relacionamento entre seus diversos componentes podem variar conforme a concepção do SO.
+            </P>
+            <h2 class="w3-text-grey">1. Núcleo do SO (Kernel)</h2>
+            <P>
+              O núcleo sempre <b>gerencia</b> a execução das rotinas (<b>processos</b>). Segundo Machado (2002, p. 51), as rotinas do sistema são executadas concorrentemente (simultaneamente, ao mesmo tempo), sem uma ordem predefinida, com base em eventos dissociados do tempo (eventos assíncronos). Muitos desses eventos estão <b>relacionados ao hardware</b> e às <b>tarefas internas do próprio SO</b>. Suas principais funções são:
+            <ul>
+                <li>Tratamento de <b>interrupções</b> e exceções;</li><p>
+                <li>Criação e eliminação de <b>processos e threads</b>;</li><p>
+                <li>Sincronização e comunicação entre <b>processos e threads</b>;</li><p>
+                <li>Escalonamento e controle de <b>processos e threads</b>;</li><p>
+                <li>Gerência de <b>memória</b>;</li><p>
+                <li>Gerência do <b>sistema de arquivos</b>;</li><p>
+                <li>Gerência de dispositivos de <b>E/S</b>;</li><p>
+                <li>Suporte a <b>redes</b> locais e distribuídas;</li><p>
+                <li>Contabilização do <b>uso do sistema</b>;</li><p>
+                <li><b>Auditoria e segurança</b> do sistema.</li>
+            </ul><p>
+            Com a multiprogramação, é natural que usuários diferentes utilizem o mesmo recurso computacional (memória e processador, por exemplo). Nesse caso o  sistema operacional tem que garantir a confiabilidade na execução das tarefas e a integridade do próprio sistema operacional. Para garantir essa integridade e segurança existem os <b>modos de acesso ao núcleo do sistema operacional</b>.
+            </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.1. Modos de acesso ao Kernel</h3>
+          <P style=margin:17px>
+            Para que o usuário não comprometa o sistema operacional, alguns <b>mecanismos de proteção ao núcleo</b> são implementados, os quais são conhecidos como modo de acesso. Normalmente, são dois modos:
+            <ul>
+            <li><b>Modo usuário</b>: é o que executa as <i>instruções não privilegiadas</i>, tem acesso ao <i>número reduzido de instruções</i> e não oferece risco ao Sistema;</li><p>
+            <li><b>Modo kernel</b>: é o modo que executa as <i>instruções consideradas privilegiadas</i>. Somente usuários com permissões específicas possuem autorização para manipular no modo kernel.</li>
+            </ul><p style=margin:17px>
+          Essas instruções necessitam de supervisão, pois podem comprometer o sistema, como a atualização de um arquivo em disco, pois se trata de um dispositivo compartilhado e necessita do gerenciamento do sistema operacional.
+          </P>
+        <h2 class="w3-text-grey";>2. Interpretador de comandos (Shell)</h2>
+          <P>
+            O interpretador de comandos, como o próprio nome sugere, interpreta as solicitações feitas pelo usuário. Segundo Silberschatz, alguns sistemas operacionais incluem o interpretador de comandos no kernel. Outros, como Windows e UNIX, tratam-no como um programa especial que está sendo executado  quando  uma tarefa é iniciada e o usuário faz a solicitação. Existem basicamente dois tipos:
+            <ul>
+            <li><b>Texto</b>: quando as solicitações são feitas por <i>linhas de comando</i>, como o MS-DOS. São commandos específicos e técnicos, parametrizados sob uma <i>rigorosa sintaxe</i>;</li><p>
+            <li><b>Gráfico</b>: a interface gráfica surgiu na década de 1970, por meio da Xerox. A primeira versão do Windows era baseada em uma interface gráfica, para o sistema operacional MS-DOS. Esse tipo de interpretador de comandos se caracteriza pelas <i>janelas e ícones</i>. O usuário faz sua solicitação utilizando normalmente o mouse. Atualmente, com o desenvolvimento da eletrônica, temos a possibilidade de fazer as solicitações via <i>“touch screen”</i>, ou seja, com toques na tela.</li>
+            </ul><p>
+          </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+        <div class="w3-twothird w3-container">
+            <h2 class="w3-text-grey">3. Chamadas de Sistemas (System Calls)</h2>
+            <P>O sistema operacional é composto por rotinas. Essas compõem o núcleo do sistema, oferecendo serviços aos usuários e suas aplicações. Todas as funções do núcleo são implementadas por meio de rotinas do sistema que necessariamente possuem em seu código <b>instruções de modo kernel</b>. Dessa forma, o processador deve estar obrigatoriamente em modo kernel, o que exige a inserção de  mecanismos de proteção para garantir a confiabilidade do sistema. <i>Todo o controle de execução de rotinas do sistema operacional é realizado pelo mecanismo conhecido como <b>system call</b></i>. <p>Toda vez que uma aplicação desejar chamar uma rotina do sistema operacional, o mecanismo de system call é ativado. O sistema operacional <i>verificará se a aplicação possui privilégios necessários para executar a rotina solicitada</i>. Em caso negativo, o sistema operacional impedirá o desvio para a rotina do sistema, sinalizando ao programa chamador que a operação não é possível. <i>Se a aplicação possuir o privilégio para chamar a rotina, o sistema  operacional primeiramente salva o conteúdo dos registradores, troca o modo de acesso do processador de usuário para kernel e realiza o desvio para a rotina alterando o registrador PC com o endereço da rotina chamada</i>. Ao terminar a execução da rotina do sistema, o modo de acesso é alterado de kernel para usuário, e também o contexto dos registradores restaurados, para que a aplicação continue a ser executada a partir da instrução que chamou a rotina do sistema. <p>Os mecanismos de system call e de proteção por hardware devem garantir a segurança e a integridade do sistema. Dessa forma, as aplicações serão impedidas de executarem instruções privilegiadas sem autorização e a supervisão do sistema operacional.
+                <figure>
+                    <img src="SO2.png" alt="SO2" class=center style="width: 630px">
+                    <figcaption>Fluxo de Interação das System Calls</figcaption>
+                </figure>
+            </P>
+        <h2 class="w3-text-grey">4. Serviços do SO</h2>
+        <P>O sistema operacional se prepara para execução de programas e requer um conjunto de <b>serviços e funções úteis ao usuário</b>. São eles:
+        <ul>
+            <li><b>Interface do usuário</b>: atualmente a interface utilizada pelos usuários é a <i>GUI (Interface Gráfica com o Usuário)</i>, composta por <b>janelas</b>, com dispositivo de <b>apontamentos de E/S</b>, <b>menus</b> e <b>teclado</b> para entrada de texto;</li><p>
+            <li><b>Execução de programa</b>: o sistema precisa carregar um programa para executá-lo, e o programa precisa encerrar sua execução;</li><p>
+            <li><b>Operações de E/S</b>: o usuário não consegue <i>controlar os dispositivos de E/S</i> diretamente e necessita que o sistema operacional proporcione meios para realizar essas tarefas;</li><p>
+            <li><b>Manipulação do sistema de arquivos</b>: é necessário <i>ler, gravar e renomear os arquivos e diretórios, sistemas de pesquisa por meio de nomes ou algum atributo da propriedade (extensão, data criação, aplicativo)</i>;</li><p>
+            <li><b>Comunicações</b>: em algumas situações os processos necessitam trocar informações que estão em um mesmo computador ou não. Essa  comunicação pode ser implementada por meio da <i>memória compartilhada ou troca de mensagens</i>, em que o pacote de informações é movido entre processos do sistema operacional;</li><p>
+            <li><b>Detecção de erros</b>: o sistema operacional precisa estar preparado para os possíveis erros. Eles podem ocorrer na CPU (Unidade Central de Processamento), na memória, nos dispositivos de E/S e no programa do usuário. Para cada tipo de erro, o sistema operacional deve ter uma ação adequada para resolvê-lo.</li>
+        </ul><p>
+            As funções citadas a seguir são para garantir a eficiência do sistema operacional:
+            <ul>
+                <li><b>Alocação de recursos</b>: com a multiprogramação, alguns recursos podem ser solicitados simultaneamente. O sistema operacional precisa alocar recursos a cada um deles. É necessário conhecer a tarefa para que se possa adequar o <i>melhor uso de CPU</i>, dispositivos de E/S e memória;</li><p>
+                <li><b>Contabilidade</b>: os contadores normalmente são destinados para pesquisadores, com o intuito de <i>descobrir quais são os usuários e quanto utilizam dos recursos</i>, com o objetivo de configuração e melhoria do sistema;</li><p>
+                <li><b>Proteção e segurança</b>: <i>quando existem diversos usuários fazendo uso do mesmo sistema, há a necessidade da proteção e a não interferência entre processos</i>. A proteção permite a garantia de controle de todo acesso aos recursos do sistema, iniciando-se com a identificação dos usuários, normalmente por meio de senhas.</li>
+            </ul>
+            </P>
+        <h2 class="w3-text-grey">5. Arquiteturas de SO</h2>
+            <P>
+            Com a evolução dos computadores, o gerenciamento que o SO desenvolvia complicou, se tornou mais complexo, pois havia a possibilidade de multiprocessamentos com time sharing. Para que esse suporte fosse feito da maneira mais eficiente possível, foram desenvolvidas no núcleo, 3 tipos de arquiteturas:
+            <ul>
+                <li>Sistema Monolítico;</li><p>
+                <li>Sistema em Camadas;</li><p>
+                <li>Sistema Microkernel.</li>
+            </ul><p>
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>5.1. Sistema Monolítico</h3>
+              <P style=margin:17px>
+                Segundo Machado, o sistema monolítico pode ser comparado com uma aplicação formada por <b>vários módulos que são compilados separadamente e depois linkados</b>, formando um grande e único programa executável, em que os módulos podem interagir livremente. Por exemplo: MS-DOS e os primeiros sistemas Unix.
+            <figure>
+                <img src="so3.png" alt="SO3" class=center style="width: 600px">
+                <figcaption>Sistema Monolítico</figcaption>
+            </figure>
+            </P>
+            <h3 class="w3-text-grey"; style=margin:17px>5.2. Sistemas em Camadas</h3>
+              <P style=margin:17px>
+                Nessa arquitetura com o sistema dividido em camadas sobrepostas, cada  uma recebe um conjunto de <i>funções que podem ser utilizadas apenas em camadas superiores ou inferiores</i>. Vantagem: <b>isola as funções do sistema operacional</b>, facilitando sua manutenção e depuração, e também criar uma <b>hierarquia de níveis  de modo de acesso</b>, protegendo as camadas mais internas. Desvantagem: <b>desempenho comprometido</b>, pois a camada só pode se comunicar com a camada acima ou com a camada abaixo. <i>Atualmente a maioria das versões do Unix e o Windows, da Microsoft, estão baseados nesse modelo</i>.
+                <figure>
+                    <img src="SO4.png" alt="SO4" class=center style="width: 520px">
+                    <figcaption>Sistema em Camadas</figcaption>
+                </figure><p style=margin:17px>
+                Numa visão diferente das camadas:
+                 <figure>
+                    <img src="SO5.png" alt="SO5" class=center>
+                    <figcaption>Sistema em Camadas</figcaption>
+                </figure><p>
+              </P>
+            <h3 class="w3-text-grey"; style=margin:17px>5.3. Microkernel (Cliente Servidor: <i>Client Server</i>)</h3>
+              <P style=margin:17px>
+                Nesse modelo, <i>o núcleo é menor e o mais simples possível</i>, os sistemas são oferecidos por meio de processos, em que cada um é responsável por oferecer um conjunto específico de funções. Dessa forma, se um serviço parar o sistema, não fica comprometido, por exemplo: em um sistema microkernel, existem os <b>servidores</b> – arquivos, impressão e internet. Se, por algum motivo, <i>o servidor de internet parar, o serviço cessa, mas a rede não</i>.<p style=margin:17px> <b>A aplicação que faz a solicitação é denominada <i>cliente</i></b> e o <b>processo que responde à solicitação é chamado de <i>servidor</i></b>. <i>Para que essa comunicação seja realizada, é utilizado o sistema de troca de mensagem. A principal função do núcleo é realizar a comunicação, ou seja, a troca de mensagens entre cliente e servidor</i>. <p style=margin:17px> Segundo Machado, esse conceito surgiu com o sistema operacional Mach, na década de 1980, na Universidade Carnegie-Mellon. O núcleo do sistema Mach oferece basicamente quatro serviços: <i>gerência de processos, gerência de memória, comunicação por troca de mensagens e operações de E/S, todos em modo usuário</i>. Os servidores podem executar em modo usuário e não têm acesso direto a alguns componentes do sistema, apenas o núcleo, que é o responsável pela comunicação entre clientes e servidores, executa em modo kernel. Como os serviços se comunicam por meio de troca de mensagens, não há problema se as tarefas forem executadas em um único processador. Dessa forma <b>essa arquitetura permite sistemas com múltiplos processadores (fortemente acoplado) ou sistema distribuído (fracamente acoplado)</b>.<p style=margin:17px> Vantagens:
+                <ul>
+                    <li>Permite <b>acrescentar novos servidores</b> à medida que o numero de clientes aumenta;</li><p>
+                    <li>Permite <b>isolar as funções do sistema</b> por diversos processos em servidores pequenos e dedicados, tornando o núcleo menor, mais fácil de depurar e, consequentemente, aumentando a <b>confiabilidade</b>;</li><p>
+                    <li><b>Manutenção mais fácil</b>, pois, ao parar o processo, não precisa interromper toda a rede.</li>
+                </ul><p style=margin:17px>
+                Desvantagens:
+                <ul>
+                    <li>Implementação:    dividir    o    kernel    em diversos    processos    requer <b>alto conhecimento em sistemas operacionais</b>;</li><p>
+                    <li>Mudança constante no modo de acesso de usuário para kernel, envolvendo <b>muitas interrupções</b>.</li>
+                </ul><p>
+                <figure>
+                    <img src="SO6.png" alt="SO6" class=center style=width:520px>
+                    <figcaption>Sistema Cliente/Servidor</figcaption>
+                </figure><p>
+              </P>
+            </div>
+            <!-- Adsense -->
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+              <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+            <!-- Tipos de SO -->
+            <div class="w3-twothird w3-container">
+            <h2 class="w3-text-grey">6. Máquina Virtual (Virtual Machine)</h2>
+            <P>Segundo Machado (2007, p. 60), um sistema computacional é formado por <b>vários níveis,</b> em que <i>cada camada de nível mais baixo é o hardware</i>. <b>Acima dessa camada, encontra-se o sistema operacional que oferece suporte para as aplicações</b>. O modelo de máquina virtual, ou virtual machine (VM), cria um <b>nível intermediário entre o hardware</b>. Esse nível cria <i>diversas máquinas virtuais independentes, no qual cada uma oferece uma cópia virtual do hardware, incluindo os modos de acesso, interrupções, dispositivos de E/S</i>. Cada máquina virtual é independente. <i>É possível que cada VM tenha seu próprio sistema operacional</i> e que seus usuários executem suas aplicações como se todo computador estivesse dedicado a cada um deles. <p>Na década de 1960, a IBM implementou esse modelo no sistema VM/370, permitindo que <i>aplicações batch</i>, originadas de antigos sistemas OS/360, e <i>aplicações de tempo compartilhado</i> pudessem conviver na mesma máquina, de forma transparente a seus usuários e aplicações.
+            </P>
+        </div>
+    </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais201.html">1</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">2</a>
+          <a class="w3-button w3-black" href="#">3</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">4</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">5</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

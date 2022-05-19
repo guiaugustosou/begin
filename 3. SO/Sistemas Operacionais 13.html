@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>13 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Segurança de Sistemas Operacionais -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Segurança de Sistemas Operacionais</h1>
+        <P>Desde os primeiros computadores, a preocupação com a segurança teve grande peso na área de informática, pelo simples fato de que <b>informações que não são íntegras não são confiáveis</b>, logo, <i>não faz sentido armazenar e/ou utilizar informações não confiáveis</i>. O Sistema Operacional (SO) é o software que gerencia todo o hardware e os outros softwares, além de cuidar das informações nos computadores. <b>O SO é o principal envolvido na garantia da segurança dos computadores</b> e tem como funções principais:
+         <ul>
+            <li>Criar uma camada de <b>controle entre o hardware e as aplicações</b>;</li><p>
+            <li>Gerenciá-las de forma <b>segura, rápida e inteligente</b>.</li>
+        </ul><p>
+        O avanço computacional fez com que surgissem novos SO, com novas funcionalidades e novos aplicativos, um grande exemplo foi a criação da rede de computadores (década de 80) que interliga um computador a outro e também a grande rede mundial, a Internet (“www”: World Wide Web), mas toda essa evolução teve um preço: a segurança das informações foi e continua cada vez mais violada. <b>Windows, Linux e Mac</b> são três exemplos de Sistemas Operacionais mais presentes nos computadores, ou seja, são os chamados de <b>terceira geração</b>. Cada um deles possui um conceito próprio de segurança, rotulado pelo mercado:
+            </P>
+    <h2 class="w3-text-grey">1. Windows</h2>
+        <P>
+        Desenvolvido pela empresa Microsoft, tem a preferência mundial, tanto para utilização doméstica (uso em cada, particular) como corporativa (nas empresas). Está instalado na grande maioria dos computadores de todo o mundo. Porém, <b>em se tratando de segurança, muitos profissionais de TI descartam o Windows por ter uma ampla quantidade de usuários</b>, ou seja, quanto mais popular, mais aplicativos e ferramentas estarão à disposição dos usuários, tendo como referência uma maior manifestação de malicias dos hackers.
+        </P>
+    <h2 class="w3-text-grey">2. Mac OS X</h2>
+        <P>
+        O MacOS desenvolvido pela empresa Apple, tem sua seleção de usuários em função do seu elevado custo: <b>é o sistema operacional mais caro do mercado</b>. É um SO bem detalhado e funcional, e também possui belos temas. <b>No quesito segurança, o Mac é bem instável devido a pouca popularidade</b>. Por não ser comercializado em sistemas computacionais que utilizam Linux e Windows (PCs), <b>o Mac não é atingido por vírus desses sistemas</b>. Apesar de possuir um sistema pouco diferente e não ter brechas de seguranças parecidas com Windows e Linux, <b>nenhum sistema possuí 100% de segurança e está sempre vulnerável</b>.
+        </P>
+    <h2 class="w3-text-grey">3. Linux</h2>
+        <P>
+        O Linux, por sua vez é um sistema totalmente funcional, principalmente para <b>servidores de web</b>, e também preferido por desenvolvedores de sistemas e aplicativos por possuir código aberto e ser <b>totalmente editável</b>. Devido ao Linux ser pouco popular por usuários comuns, isso pode representar uma <b>segurança mais aprimorada</b> neste caso, mas, quando o assunto está relacionado aos servidores, isso pode mudar.
+        </P>
+    <h2 class="w3-text-grey">4. Vírus em Sistemas Operacionais</h2>
+        <P>
+        Vírus são um dos problemas mais abrangentes que podemos enfrentar em segurança de sistemas operacionais. Eles causam enormes problemas e chegam acarretar milhões em prejuízos financeiros em todo o mundo. Um Vírus é um programa projetado para <b>infectar outros programas e causar algum dano</b>. Ele se aproveita de falhas na segurança, brechas deixadas por programadores em seus sistemas para se instalar e infectar em outras maquinas que estejam conectadas na mesma rede. Os SO de computadores <b>Mainframes não são suscetíveis a ataques de virus</b>, em contra partida, os Mainframes são utilizados somente por <b>empresas que possuem grandes volumes de dados para processamento e estejam dispostas a arcar também com altos custos</b>. Geralmente, os vírus agem de maneira simples:
+        <ul>
+            <li>Primeiro tentam <b>se esconder</b> da melhor maneira possível;</li><p>
+            <li>Depois ele tenta <b>se replicar</b>: infectar outros programas ou computadores que estejam na mesma rede;</li><p>
+            <li>Após infectar, cumprem seu papel para o qual foi escrito: <b>roubar dados, espionar ou até mesmo danificar o equipamento</b>.</li>
+        </ul><p>
+        Os Vírus podem ser categorizados em diversos segmentos, abaixo citamos alguns:
+        </P>
+     <h3 class="w3-text-grey" style="margin: 17px">4.1. Vírus de programa executáveis</h3>
+        <P style="margin: 17px">
+        Um vírus de programa executável é complexo: suas ações consistem em <i>sobrepor o arquivo executável de um programa com seu próprio código binário e quando o usuário invocar esse programa o vírus é executado</i>. Essa técnica chama-se <b>vírus sobreposição</b>. Outra tática desse tipo de vírus é de <i>alterar o atalho do programa executável para que execute primeiramente o vírus e depois execute o programa invocado</i> pelo atalho <b>sem que o usuário perceba</b>. Esse tipo de vírus é geralmente <i>disseminado junto com programas pagos que são crakeados e levam junto com seu executável o código malicioso ou infectam o equipamento</i> invadindo e se multiplicando, anexando seu próprio código a outros programas.
+        </P>
+     <h3 class="w3-text-grey" style="margin: 17px">4.2. Vírus de memória</h3>
+        <P style="margin: 17px">
+        Um vírus de memória, ao contrário de um vírus de programa executável, <b>fica residente na memória por um longo período alocado na parte superior da memória ou nas inferiores onde é raramente utilizado pelo sistema</b>. Alguns vírus têm até mesmo a capacidade de <i>disfarçar esse espaço de memória onde estão alocados como espaço em uso para evitar que seu código seja sobrescrito pelo sistema</i>. Esses tipos de vírus podem fazer alterações no <b>controle de chamadas</b> ao sistema.
+        </P>
+        <h3 class="w3-text-grey" style="margin: 17px">4.3. Vírus de setor de boot</h3>
+        <P style="margin: 17px">
+        O computador quando é ligado faz uma leitura de um pequeno programa gravado em sua placa mãe que chamamos de BIOS. Esse pequeno espaço de memória é lido e executado. Nele, o computador encontra informações sobre o <i>funcionamento da placa mãe e a localização do setor de boot</i>. Na maioria dos computadores modernos, esses <b>programas da BIOS podem ser reescritos</b>, o que permite o fabricante lançar <b>atualizações e correções do programa</b>, mas também abre uma <b>brecha na segurança</b>. Um vírus que consegue reescrever a BIOS pode <i>danificar o setor de boot impedido que o sistema operacional carregue, ou até mesmo que carregue o vírus juntamente com o S.O</i>.
+        </P>
+    <h3 class="w3-text-grey" style="margin: 17px">4.4. Vírus de drivers de dispositivo</h3>
+        <P style="margin: 17px">
+            É um vírus parasita que consegue infectar um driver de dispositivo e, com isso, terá a oportunidade de ser <i>carregado diretamente no sistema durante o processo de boot</i> sem muita dificuldade e com uma grave consequência, os drivers são carregados em <b>modo kernel</b> (núcleo: instruções privilegiadas), o que permite ao vírus capturar o <b>controle das chamadas</b> ao sistema (System Calls).
+        </P>
+    <h3 class="w3-text-grey" style="margin: 17px">4.5. Vírus de macro</h3>
+        <P style="margin: 17px">
+            Programas como o Word, Excel e Power Point da Microsoft permitem a criação de <b>macros</b> usando linguagem <b>Visual Basic</b> que é uma linguagem de programação completa. <i>As macros existem para permitir que o usuário carregue uma sequência de comandos gravados</i>. Porém, isso também permite que vírus possam ser codificados usando Visual Basic. Um vírus de macro pode <b>apagar arquivos, modificar propriedades e causar grandes transtornos</b>. Importante lembrar que <i>sempre que um arquivo com macro for aberto o programa informa que existem macros no arquivo e pergunta se deseja executar</i>, se executar e a macro for um código malicioso é problema certo.
+        </P>
+        <h3 class="w3-text-grey" style="margin: 17px">4.5. Vírus de código fonte</h3>
+        <P style="margin: 17px">
+            Um vírus de código fonte consiste em um programa que <i>busca, por exemplo, arquivos de códigos em C</i> e faz a <b>alteração de arquivo incluindo seu próprio código no contexto do código original</b>, de maneira que, <i>quando o arquivo for copilado, o vírus também é copilado e executado junto ao programa aparentemente seguro</i>. É possível que o programador desconfie da alteração do seu próprio código, mas na maioria das vezes os <b>códigos mal organizados facilitam essa pratica de manipulação de arquivo</b>.
+        </P>
+    <h2 class="w3-text-grey">5. Hackers e Crackers</h2>
+        <P>
+        Atualmente, é comum lermos ou ouvirmos nas mídias “Hackers invadiram…” ou “Hackers roubaram as informações da…” ou ainda “Hackers derrubaram o site…”. Há muito tempo, o comprometimento da segurança dos computadores vem sendo equivocadamente divulgado pelas mídias. <b>Hackers não praticam atos ilícitos digitais, não sao criminosos digitais, antes são exímios profissionais, especialistas altamente técnicos e responsáveis</b>. Foram Hackers que ajudaram grandemente nas estratégias de segurança dos computadores, desenvolvimento e aprimoramento de SO e programas antivirus. <b>Os responsáveis pelos crimes digitais são os Crackers</b> (o nome vem de “quebra”). História: no final da década de 80 e início de 90, tendo ciência de seu conhecimento técnico e das vulnerabilidades dos computadores, alguns Hackers resolveram praticar atos ilícitos: fazer o mal e causar prejuízos. <b>Os outros Hackers os nomearam de Crackers para que sua imagem não fosse afetada</b>.
+        </P>
+     <h2 class="w3-text-grey">6. Conclusão da  Segurança de SO</h2>
+        <P>
+        A escolha de um SO pode ser dada por muitos motivos, desde a lista de aplicativos compatíveis a ele, quanto aos próprios recursos oferecidos pelo SO. A segurança da execução do SO aplica-se a requisitos que vão além dos softwares antivírus ou outros específicos para segurança. Os três SO citados têm seus pontos negativos com falhas de segurança. Porém, é importante citar que <b>todos são atualizados constantemente com correções</b>. Ainda, as vulnerabilidades dos sistemas estão ligadas ao <b>grau de comportamento de cada usuário</b>, salientando que a atuação comercial do SO é também muito significativa para que um Cracker se empenhe ou não em fabricar um programa malicioso para quais fins este desejar.
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+     </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">11</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">12</a>
+          <a class="w3-button w3-black" href="Sistemas%20Operacionais%2013.html">13</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>

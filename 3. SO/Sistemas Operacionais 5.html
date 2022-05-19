@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>5 Sistemas Operacionais</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guilherme Augusto"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1so.css">
+    <link rel="stylesheet" href="2so.css">
+    <link rel="stylesheet" href="3so.css">
+    <link rel="stylesheet" href="4so.css">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+        p, ul, ol {text-align: justify;}
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit;}
+        .center{display: block; margin-left: auto; margin-right: auto;}
+        figure {margin-left:auto; margin-right: auto}
+        figcaption {text-align: center; font-style:italic; color: #888888; font-family: "Roboto", sans-serif;}
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+        </div>
+    </div>
+<!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+          </a>
+          <h4 class="w3-bar-item"><b>Sumário SO</b></h4>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%201.html">História</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">Tipos de SO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">Arquiteturas</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">Processos</a>
+          <a class="w3-bar-item w3-button w3-black" href="Sistemas%20Operacionais%205.html">Threads</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">Escalonamento CPU</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%207.html">DeadLock</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%208.html">Sincronização de Processos</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%209.html">Gerenciamento de Memória</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2010.html">Gerenciamento de Memória Virtual</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2011.html">Gerenciamento de Armazenamento</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2012.html">Gerenciamento de IO</a>
+          <a class="w3-bar-item w3-button w3-hover-black" href="Sistemas%20Operacionais%2013.html">Segurança de SO</a>
+    </nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+<!-- Threads -->
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Threads</h1>
+        <P>Processos (programas em execução) podem ser divididos em instruções ou grupo de instruções e, cada uma delas ser executada em <i>processadores diferentes</i>. Esse é o conceito de Thread. Segundo Machado, a utilização comercial de <b>sistemas operacionais multithread</b> é crescente em função do aumento de popularidade dos sistemas com <b>múltiplos processadores</b>, do modelo cliente-servidor e dos sistemas distribuídos.
+        </P>
+        <h2 class="w3-text-grey">1. Thread</h2>
+        <P>
+        A execução de um programa acontece ou por meio de uma ação do SO ou por meio de uma intervenção do usuário (que “abre” o aplicativo”). Quando o usuário abre um aplicativo, o SO interpreta a ação e requisita tudo o que é necessário para que esse aplicativo (software) seja executado – nesse momento ele é carregado na memória RAM. <p>Todo programa em execução gera um processo e, <i>alguns programas possuem uma árvore de processos</i>, ou seja, cada qual com uma <b>lista de instruções</b> a serem executadas pelo processador. A lista é composta por <i>linhas de instruções (código fonte)</i> módulos executáveis, os quais contêm linhas de código para que a execução do programa seja realizada apropriadamente, ou seja, informam ao processador os passos a serem executados. <b>O Thread é uma divisão do processo principal (são linhas de instruções de um processo principal)</b>. Essa divisão de linhas de instruções dentro dos processos tem duas espécies:
+        <ul>
+            <li>Monothread;</li><p>
+            <li>Multithread.</li>
+        </ul>
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.1. Monothread</h3>
+        <P style=margin:17px>
+        Nesse ambiente, um processo suporta <b>apenas um programa no seu espaço de endereçamento</b>. Aplicações concorrentes são implementadas apenas com o <i>uso de múltiplos processos independentes ou subprocessos</i>. Para os processos independentes (são processos que não interferem na execução de outros processos) e subprocessos, torna-se viável <i>dividir uma aplicação em partes e fazer com que executem concorrentemente</i>. MS-DOS e as primeiras versões do Ms Windows utilizavam ambiente monothread.
+          </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.2. Multithread</h3>
+        <P style=margin:17px>
+        Nessa configuração o processo tem pelo menos um thread de execução, mas <b>pode compartilhar o seu espaço de endereçamento com outros threads</b>. Para Machado, <i>thread pode ser definida como uma sub-rotina de um programa e pode ser executada de forma assíncrona, ou seja, executada concorrentemente ao programa chamador</i>. O programa deve especificar os threads, associando-os às sub-rotinas assíncronas. Dessa forma,<b> um ambiente multithread possibilita a execução concorrente de sub-rotinas dentro de um mesmo processo</b>.<p style=margin:17px> Em ambiente com múltiplos processadores, cada processo pode responder a várias solicitações concorrentemente ou simultaneamente. A vantagem no uso de threads é a possibilidade de <b>minimizar a alocação de recursos do sistema</b>, tais como processador e memória. As threads compartilham contexto de software e espaço de endereçamento, mas o contexto de hardware cada um tem o seu.
+        <figure>
+            <img src="SO10.jpg" alt="SO10" class=center style="width:400px">
+            <figcaption>Multithread</figcaption>
+        </figure>
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>1.3. Monothread vs Multithread</h3>
+        <P style=margin:17px>
+        A principal diferença entre os ambientes monothread e multithread está no uso do <b>espaço de endereçamento (alocação de memória)</b>. Threads <i>compartilham o espaço dentro de um único processo</i>. Dessa forma, permite que o <b>compartilhamento de dados entre threads de um mesmo processo seja mais simples e rápido</b>, tendo como base os ambientes monothread. <p style=margin:17px>Conforme acima, threads de um único processo compartilham o <b>mesmo espaço de endereçamento</b>, portanto, <i>não há proteção no acesso à memória, permitindo que um thread possa alterar facilmente dados alheios</i>. Por isso, é fundamental que a aplicação implemente <b>mecanismos de comunicação e sincronização entre threads</b>, com o objetivo de garantir o acesso seguro aos dados compartilhados na memória.
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+        <div class="w3-twothird w3-container">
+        <h2 class="w3-text-grey">2. Pacotes de Threads</h2>
+        <P>
+        O uso de threads traz para o sistema operacional muitos benefícios, pois <b>programas concorrentes com múltiplos threads são mais rápidos do que implementados com múltiplos processos</b>, pois operações de criação e troca geram <i>menor overhead</i>. Como dito anteriormente, threads dentro de um processo dividem o mesmo espaço de endereçamento, logo, a comunicação entre eles pode ser realizada de forma rápida, causando <i>menos interrupção no sistema operacional</i>.<p>
+        Segundo Machado (2007, pg. 96), existem diversas abordagens na implementação dos pacotes de threads em um sistema operacional, o que influenciará no desempenho, na concorrência e na modularidade das aplicações multithread. Threads podem ser oferecidos por uma biblioteca de rotinas:
+            <ul>
+                <li>fora do núcleo do sistema operacional (modo usuário);</li><p>
+                <li>pelo núcleo do sistema operacional (modo kernel); e</li><p>
+                <li>uma combinação de ambos (modo híbrido).</li>
+            </ul>
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>2.1. Thread de Usuário</h3>
+        <P style=margin:17px> Essa modalidade de thread é <i>implantada por aplicações e não pelo sistema operacional</i>. Para que isso seja possível, deverá existir uma biblioteca de <b>rotinas que permita à aplicação realizar a criação/eliminação de threads, a comunicação e o escalonamento</b>. O sistema operacional não tem a responsabilidade de gerenciamento e sincronização entre as threads.
+        <figure>
+            <img src="SO11.jpg" alt="SO11" class=center style="width:550px">
+            <figcaption>Thread de Usuário</figcaption>
+        </figure>
+        <p style=margin:17px>
+       Nesse modelo é possível implementar aplicações multithreads. Caso o sistema operacional não dê suporte para threads, por meio de bibliotecas, múltiplos threads podem ser criados, compartilhando o mesmo espaço de endereçamento do processo, além de outros recursos como o processador, por exemplo. <p style=margin:17px>Os threads de modo usuário são mais rápidos porque <b>não necessitam  acessar o núcleo do sistema operacional</b>, evitando assim, a mudança de modo de acesso (usuário-kernel-usuário). Na ótica de escalonamento em ambientes com mais processadores, <b>não é possível que múltiplos threads de um processo possam ser executados em diferentes processadores simultaneamente</b>, porque o sistema operacional executa apenas processos e não threads. Com isso <i>existe um limite com relação ao grau de paralelismo da aplicação, pois as threads de um mesmo processo podem ser executadas em somente um processador por vez</i>.
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>2.2. Thread de Kernel</h3>
+        <P style=margin:17px> Diferente das threads de modo usuário, as threads de modo kernel são implementadas pelo kernel (núcleo do sistema operacional) com as <b>system calls</b> (chamadas do sistema), que <i>disponibilizam todo o gerenciamento e comunicação</i>. 
+        <p style=margin:17px>O problema desses pacotes em modo kernel é a <b>velocidade de execução</b>, pois em modo usuário todo o tratamento é feito sem a ajuda do sistema operacional, ou seja, sem a mudança do modo de acesso (usuário-kernel-usuário). Nos pacotes em modo kernel são necessárias chamadas às rotinas do sistema (system calls) e, consequentemente, <b>várias mudanças no modo de acesso</b>.
+        <figure>
+            <img src="SO12.jpg" alt="SO12" class=center style="width:550px">
+            <figcaption>Thread de Kernel</figcaption>
+        </figure>
+        </P>
+        <h3 class="w3-text-grey"; style=margin:17px>2.3. Threads em Modo Híbrido</h3>
+        <P style=margin:17px> Segundo Machado (2007), a arquitetura de threads em modo híbrido <b>combina as vantagens de threads implementados em modo usuário e modo kernel</b>. <i>Um processo pode ter vários threads de modo usuário e, por sua vez, um thread de modo kernel pode ter vários threads de modo usuário</i>. O núcleo do sistema operacional reconhece os threads de modo kernel e pode escaloná-los individualmente. Um thread de modo usuário pode ser executado em modo kernel, em um determinado momento, e no instante seguinte ser executado em outro. Quando o programador desenvolve a aplicação em termos de threads de usuário, ele deve especificar <b>quantos threads de modo kernel estão associados ao processo</b>. Os threads de modo usuário são marcados em modo kernel, no momento em que o processo está sendo executado.<p style=margin:17px> Nesse modelo, apesar da maior flexibilidade, há problemas, por exemplo: quando um thread de modo kernel realiza uma <b>chamada bloqueante</b>, todos os threads de modo usuário são colocados no estado de espera. <b>Threads de modo usuário que desejam utilizar vários processadores devem utilizar diferentes threads de modo kernel</b>, o que influenciará no desempenho.
+        </P>
+        </div>
+        <!-- Adsense -->
+        <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+          <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+        </div>
+    </div>
+    <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">«</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais201.html">1</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%202.html">2</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%203.html">3</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%204.html">4</a>
+          <a class="w3-button w3-black" href="#">5</a>
+          <a class="w3-button w3-hover-black" href="Sistemas%20Operacionais%206.html">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+          <h4>Footer</h4>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+      </footer>
+    </div>
+<!-- END MAIN -->
+<script>
+    // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+    // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {if (mySidebar.style.display === 'block') {mySidebar.style.display = 'none';overlayBg.style.display = "none";} else {mySidebar.style.display = 'block'; overlayBg.style.display = "block";}}3
+    // Close the sidebar with the close button
+        function w3_close() {mySidebar.style.display = "none"; overlayBg.style.display = "none";}
+</script>
+</body>
+</html>
